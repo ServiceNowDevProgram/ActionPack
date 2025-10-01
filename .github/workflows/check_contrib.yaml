@@ -17,18 +17,37 @@ jobs:
     runs-on: ubuntu-latest
     name: Check PR
     steps:
-      - name: Shallow checkout
-        uses: actions/checkout@v5
-        with:
-          ref: ${{ github.event.pull_request.base.sha }}
-          fetch-depth: 0
+      - name: Init safe git workspace
+        run: |
+          set -euo pipefail
+          git init .
+          git remote add origin "https://github.com/${{ github.repository }}.git"
+          git fetch --no-tags --depth=1 origin main
 
-      - name: Detect allowed file changes
+      - name: Resolve latest main and PR head SHAs
+        id: shas
+        run: |
+          set -euo pipefail
+
+          # Latest tip of main (base repo)
+          MAIN_SHA="$(git rev-parse FETCH_HEAD)"
+
+          # Fetch PR head from the fork without checking out
+          PR_CLONE_URL="${{ github.event.pull_request.head.repo.clone_url }}"
+          PR_REF="refs/heads/${{ github.event.pull_request.head.ref }}"
+          git fetch --no-tags --depth=1 "${PR_CLONE_URL}" "+${PR_REF}:refs/remotes/_prhead"
+
+          PR_SHA="$(git rev-parse refs/remotes/_prhead)"
+
+          echo "main_sha=$MAIN_SHA" >> "$GITHUB_OUTPUT"
+          echo "pr_sha=$PR_SHA" >> "$GITHUB_OUTPUT"
+
+      - name: Use tj-actions/changed-files against explicit SHAs
         id: changes
         uses: tj-actions/changed-files@823fcebdb31bb35fdf2229d9f769b400309430d0 # v46
         with:
-          base_sha: ${{ github.event.pull_request.base.sha }}
-          ref: ${{ github.event.pull_request.head.sha }}
+          base_sha: ${{ steps.shas.outputs.main_sha }}
+          ref: ${{ steps.shas.outputs.pr_sha }}
 
           files: |
             b812ceb69337a210633378917cba10bc/checksum.txt
@@ -53,9 +72,6 @@ jobs:
                 throw e;
               }
             }
-
-            console.log(`Non-compliant: ${nonCompliant}`);
-            console.log(`All changed: ${allChanged}`);
 
             const body = [
               '🚫 **Unexpected files changed in PR**',
