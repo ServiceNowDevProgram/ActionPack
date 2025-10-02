@@ -1,0 +1,3865 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <attributes>{labelCacheCleanUpExecuted=true}</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>For a given Store Application ID, get the installed state and available versions</description>
+        <flow_priority/>
+        <ih_action>false</ih_action>
+        <internal_name>get_available_store_app_versions_by_id</internal_name>
+        <label_cache>[{"name":"{{action.app_id}}","label":"action➛App ID","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.scope_id}}","label":"action➛Scope ID","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[a249e810-cb32-45e8-8c20-f99314ca4cab].count}}","label":"step➛Get App Versions➛Count","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[a249e810-cb32-45e8-8c20-f99314ca4cab].records}}","label":"step➛Get App Versions➛Application Version Records","type":"step","ref":"","reference_display":"","base_type":"records","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[5b7bd443-69dc-4268-9cba-755a887d7113].message}}","label":"step➛Handle results➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[5b7bd443-69dc-4268-9cba-755a887d7113].scope_installed}}","label":"step➛Handle results➛Scope Installed","type":"step","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[5b7bd443-69dc-4268-9cba-755a887d7113].count}}","label":"step➛Handle results➛Count","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[5b7bd443-69dc-4268-9cba-755a887d7113].records}}","label":"step➛Handle results➛Records","type":"step","ref":"sys_app_version","reference_display":"Application Version","base_type":"records","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
+        <master_snapshot>f2f77d92979c3a10910bf85ef053af28</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Get Available Store App Versions by Scope ID</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:16:07</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8dd0795a975c3a10910bf85ef053af53</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Get Available Store App Versions by Scope ID</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_8dd0795a975c3a10910bf85ef053af53</sys_update_name>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=8dd0795a975c3a10910bf85ef053af53"/>
+    <sys_variable_value action="delete_multiple" query="document_key=8dd0795a975c3a10910bf85ef053af53"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>8dd0795a975c3a10910bf85ef053af53</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>3af73d92979c3a10910bf85ef053affa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">2af73d92979c3a10910bf85ef053afdf</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>8dd0795a975c3a10910bf85ef053af53</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>72f73d92979c3a10910bf85ef053affb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <value>{"version":"1.0","serializationFormat":"JSON","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"794bc342-9c9d-444b-a3f2-dd4b6a5a0173\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}}}</value>
+        <variable display_value="Action Status">22f73d92979c3a10910bf85ef053afd6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>8dd0795a975c3a10910bf85ef053af53</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>bef73d92979c3a10910bf85ef053affa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <value/>
+        <variable display_value="Version count">aaf73d92979c3a10910bf85ef053afea</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>8dd0795a975c3a10910bf85ef053af53</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>faf73d92979c3a10910bf85ef053affa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Scope installed">6af73d92979c3a10910bf85ef053afe6</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=8dd0795a975c3a10910bf85ef053af53"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>message</field>
+        <id>8dd0795a975c3a10910bf85ef053af53</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>32f73d92979c3a10910bf85ef053affa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <table>var__m_sys_hub_action_output_8dd0795a975c3a10910bf85ef053af53</table>
+        <value>{{step[5b7bd443-69dc-4268-9cba-755a887d7113].message}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>scope_installed</field>
+        <id>8dd0795a975c3a10910bf85ef053af53</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>7ef73d92979c3a10910bf85ef053aff9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <table>var__m_sys_hub_action_output_8dd0795a975c3a10910bf85ef053af53</table>
+        <value>{{step[5b7bd443-69dc-4268-9cba-755a887d7113].scope_installed}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>versions</field>
+        <id>8dd0795a975c3a10910bf85ef053af53</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>f6f73d92979c3a10910bf85ef053aff9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <table>var__m_sys_hub_action_output_8dd0795a975c3a10910bf85ef053af53</table>
+        <value>{{step[5b7bd443-69dc-4268-9cba-755a887d7113].records}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>version_count</field>
+        <id>8dd0795a975c3a10910bf85ef053af53</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>f2f73d92979c3a10910bf85ef053affa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <table>var__m_sys_hub_action_output_8dd0795a975c3a10910bf85ef053af53</table>
+        <value>{{step[5b7bd443-69dc-4268-9cba-755a887d7113].count}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>8dd0795a975c3a10910bf85ef053af53</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>b6f73d92979c3a10910bf85ef053affa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <table>var__m_sys_hub_action_output_8dd0795a975c3a10910bf85ef053af53</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>8dd0795a975c3a10910bf85ef053af53</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>baf73d92979c3a10910bf85ef053aff9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <table>var__m_sys_hub_action_output_8dd0795a975c3a10910bf85ef053af53</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=8dd0795a975c3a10910bf85ef053af53^sys_idNOT IN1af73d92979c3a10910bf85ef053af92,5af73d92979c3a10910bf85ef053afa0"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Get Available Store App Versions by Scope ID">8dd0795a975c3a10910bf85ef053af53</action>
+        <cid>a249e810-cb32-45e8-8c20-f99314ca4cab</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>Get App Versions</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Look Up Records">48526b2dc32a32002841b63b12d3ae72</step_type>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:20</sys_created_on>
+        <sys_id>1af73d92979c3a10910bf85ef053af92</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1af73d92979c3a10910bf85ef053af92"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>1af73d92979c3a10910bf85ef053af92</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>1ef73d92979c3a10910bf85ef053af9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <value>publish_date</value>
+        <variable display_value="Order by">2df79dd187003300663ca1bb36cb0b33</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>1af73d92979c3a10910bf85ef053af92</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>92f73d92979c3a10910bf85ef053af9f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <value>sys_app_version</value>
+        <variable display_value="Table">4d19bb21c36a32002841b63b12d3aeef</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>1af73d92979c3a10910bf85ef053af92</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>d2f73d92979c3a10910bf85ef053af9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <value>sort_desc</value>
+        <variable display_value="Sort Type">6a88151587003300663ca1bb36cb0b14</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>1af73d92979c3a10910bf85ef053af92</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>def73d92979c3a10910bf85ef053af9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <value>100</value>
+        <variable display_value="Max Results">0677f8e053200300f5bf435723dc34e3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=1af73d92979c3a10910bf85ef053af92"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>1af73d92979c3a10910bf85ef053af92</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>9ef73d92979c3a10910bf85ef053af9d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_48526b2dc32a32002841b63b12d3ae72</table>
+        <value>scope={{action.scope_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>limit</field>
+        <id>1af73d92979c3a10910bf85ef053af92</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>52f73d92979c3a10910bf85ef053af9d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_48526b2dc32a32002841b63b12d3ae72</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sort_column</field>
+        <id>1af73d92979c3a10910bf85ef053af92</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>daf73d92979c3a10910bf85ef053af9d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_48526b2dc32a32002841b63b12d3ae72</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sort_type</field>
+        <id>1af73d92979c3a10910bf85ef053af92</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>1af73d92979c3a10910bf85ef053af9d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_48526b2dc32a32002841b63b12d3ae72</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>1af73d92979c3a10910bf85ef053af92</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>52f73d92979c3a10910bf85ef053af9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_48526b2dc32a32002841b63b12d3ae72</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_translated_text action="delete_multiple" query="documentkey=1af73d92979c3a10910bf85ef053af92"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=1af73d92979c3a10910bf85ef053af92"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=1af73d92979c3a10910bf85ef053af92"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=1af73d92979c3a10910bf85ef053af92"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Get Available Store App Versions by Scope ID">8dd0795a975c3a10910bf85ef053af53</action>
+        <cid>5b7bd443-69dc-4268-9cba-755a887d7113</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Handle results</label>
+        <order>2</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>5af73d92979c3a10910bf85ef053afa0</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5af73d92979c3a10910bf85ef053afa0"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>5af73d92979c3a10910bf85ef053afa0</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>22f73d92979c3a10910bf85ef053afd1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>5af73d92979c3a10910bf85ef053afa0</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>a6f73d92979c3a10910bf85ef053afd2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <value/>
+        <variable display_value="">56f73d92979c3a10910bf85ef053afa6</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>5af73d92979c3a10910bf85ef053afa0</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>e2f73d92979c3a10910bf85ef053afd1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <value>(function execute(inputs, outputs) {&#13;
+    const recCount = inputs.count;&#13;
+    outputs.count = recCount;&#13;
+    outputs.records = inputs.records;&#13;
+&#13;
+    if(recCount == 0){&#13;
+        outputs.message = `Scope ${inputs.scope_id} does not have any version records available.`;&#13;
+        outputs.scope_installed = false;&#13;
+    } else {&#13;
+        inputs.records.next();&#13;
+        const installed = gs.nil(inputs.records.getValue('store_application')) ? false : true;&#13;
+        outputs.scope_installed = installed&#13;
+        outputs.message = `Scope ${inputs.scope_id} has ${recCount} versions available, and is${installed ? '' : ' not'} installed.`&#13;
+    }&#13;
+})(inputs, outputs);&#13;
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=5af73d92979c3a10910bf85ef053afa0"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>5af73d92979c3a10910bf85ef053afa0</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>eaf73d92979c3a10910bf85ef053afd0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>count</field>
+        <id>5af73d92979c3a10910bf85ef053afa0</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>aef73d92979c3a10910bf85ef053afd1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_5af73d92979c3a10910bf85ef053afa0</table>
+        <value>{{step[a249e810-cb32-45e8-8c20-f99314ca4cab].count}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>records</field>
+        <id>5af73d92979c3a10910bf85ef053afa0</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>62f73d92979c3a10910bf85ef053afd2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_5af73d92979c3a10910bf85ef053afa0</table>
+        <value>{{step[a249e810-cb32-45e8-8c20-f99314ca4cab].records}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>scope_id</field>
+        <id>5af73d92979c3a10910bf85ef053afa0</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>26f73d92979c3a10910bf85ef053afd2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_5af73d92979c3a10910bf85ef053afa0</table>
+        <value>{{action.scope_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>5af73d92979c3a10910bf85ef053afa0</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>aef73d92979c3a10910bf85ef053afd0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_5af73d92979c3a10910bf85ef053afa0^id=5af73d92979c3a10910bf85ef053afa0"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=5af73d92979c3a10910bf85ef053afa0"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=5af73d92979c3a10910bf85ef053afa0"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=5af73d92979c3a10910bf85ef053afa0^sys_idNOT IN56f73d92979c3a10910bf85ef053afa6,eaf73d92979c3a10910bf85ef053afa9,eef73d92979c3a10910bf85ef053afab"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>count</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Handle results">5af73d92979c3a10910bf85ef053afa0</model>
+        <model_id>5af73d92979c3a10910bf85ef053afa0</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_5af73d92979c3a10910bf85ef053afa0</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>56f73d92979c3a10910bf85ef053afa6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=records,uiTypeLabel=Records</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>records</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Records">records</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>1024</max_length>
+        <model display_value="Handle results">5af73d92979c3a10910bf85ef053afa0</model>
+        <model_id>5af73d92979c3a10910bf85ef053afa0</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_5af73d92979c3a10910bf85ef053afa0</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>eaf73d92979c3a10910bf85ef053afa9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>scope_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Handle results">5af73d92979c3a10910bf85ef053afa0</model>
+        <model_id>5af73d92979c3a10910bf85ef053afa0</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_5af73d92979c3a10910bf85ef053afa0</name>
+        <next_element/>
+        <order>200</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>eef73d92979c3a10910bf85ef053afab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=5af73d92979c3a10910bf85ef053afa0^sys_idNOT IN22f73d92979c3a10910bf85ef053afba,26f73d92979c3a10910bf85ef053afb3,aaf73d92979c3a10910bf85ef053afb6,eaf73d92979c3a10910bf85ef053afae"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=710d139a-8d4a-4c81-ae66-13e893e264d2</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>scope_installed</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Scope Installed</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Handle results">5af73d92979c3a10910bf85ef053afa0</model>
+        <model_id>5af73d92979c3a10910bf85ef053afa0</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_5af73d92979c3a10910bf85ef053afa0</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>22f73d92979c3a10910bf85ef053afba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=dc584395-1f2a-4491-8cb7-8b29a36a3aec</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>message</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Message</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Handle results">5af73d92979c3a10910bf85ef053afa0</model>
+        <model_id>5af73d92979c3a10910bf85ef053afa0</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_5af73d92979c3a10910bf85ef053afa0</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>26f73d92979c3a10910bf85ef053afb3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=records,uiTypeLabel=Records,uiUniqueId=0a5495bd-e7eb-49cb-b3e4-455edfd4073f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>records</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Records">records</internal_type>
+        <label>Records</label>
+        <mandatory>false</mandatory>
+        <max_length>1024</max_length>
+        <model display_value="Handle results">5af73d92979c3a10910bf85ef053afa0</model>
+        <model_id>5af73d92979c3a10910bf85ef053afa0</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_5af73d92979c3a10910bf85ef053afa0</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_app_version">sys_app_version</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>aaf73d92979c3a10910bf85ef053afb6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=f68c58e2-5fa5-4586-88c5-1ddd0a47fa9a</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>count</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Count</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Handle results">5af73d92979c3a10910bf85ef053afa0</model>
+        <model_id>5af73d92979c3a10910bf85ef053afa0</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_5af73d92979c3a10910bf85ef053afa0</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>eaf73d92979c3a10910bf85ef053afae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5af73d92979c3a10910bf85ef053afa0"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>records</element>
+        <help/>
+        <hint/>
+        <label>Records</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_5af73d92979c3a10910bf85ef053afa0</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>62f73d92979c3a10910bf85ef053afb9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>count</element>
+        <help/>
+        <hint/>
+        <label>Count</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_5af73d92979c3a10910bf85ef053afa0</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>66f73d92979c3a10910bf85ef053afb2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>scope_installed</element>
+        <help/>
+        <hint/>
+        <label>Scope Installed</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_5af73d92979c3a10910bf85ef053afa0</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>e6f73d92979c3a10910bf85ef053afbc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>message</element>
+        <help/>
+        <hint/>
+        <label>Message</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_5af73d92979c3a10910bf85ef053afa0</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>eaf73d92979c3a10910bf85ef053afb5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_input action="delete_multiple" query="model=8dd0795a975c3a10910bf85ef053af53^sys_idNOT INdaf73d92979c3a10910bf85ef053af67"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=0721bf02-3e40-466b-8683-52c0d8be6d76</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>scope_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Scope ID</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Get Available Store App Versions by Scope ID">8dd0795a975c3a10910bf85ef053af53</model>
+        <model_id>8dd0795a975c3a10910bf85ef053af53</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_8dd0795a975c3a10910bf85ef053af53</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:20</sys_created_on>
+        <sys_id>daf73d92979c3a10910bf85ef053af67</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=daf73d92979c3a10910bf85ef053af67"/>
+    <sys_hub_action_output action="delete_multiple" query="model=8dd0795a975c3a10910bf85ef053af53^sys_idNOT IN22f73d92979c3a10910bf85ef053afd6,2af73d92979c3a10910bf85ef053afdf,6af73d92979c3a10910bf85ef053afe6,a6f73d92979c3a10910bf85ef053afdb,aaf73d92979c3a10910bf85ef053afea,faf73d92979c3a10910bf85ef053afee"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDACTIONSTATUS,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=44d55f36-d16b-4eb4-951a-570a22b2f9e6</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Get Available Store App Versions by Scope ID">8dd0795a975c3a10910bf85ef053af53</model>
+        <model_id>8dd0795a975c3a10910bf85ef053af53</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_8dd0795a975c3a10910bf85ef053af53</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:21</sys_created_on>
+        <sys_id>22f73d92979c3a10910bf85ef053afd6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=22f73d92979c3a10910bf85ef053afd6"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=22f73d92979c3a10910bf85ef053afd6"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=dac0cf99-a230-4caa-b9b2-a244f61e6aa4,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Get Available Store App Versions by Scope ID">8dd0795a975c3a10910bf85ef053af53</model>
+        <model_id>8dd0795a975c3a10910bf85ef053af53</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_8dd0795a975c3a10910bf85ef053af53</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>2af73d92979c3a10910bf85ef053afdf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2af73d92979c3a10910bf85ef053afdf"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=2af73d92979c3a10910bf85ef053afdf"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=b1571815-a034-4710-b397-bc2877b3c9a0</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>scope_installed</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Scope installed</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Get Available Store App Versions by Scope ID">8dd0795a975c3a10910bf85ef053af53</model>
+        <model_id>8dd0795a975c3a10910bf85ef053af53</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_8dd0795a975c3a10910bf85ef053af53</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>6af73d92979c3a10910bf85ef053afe6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6af73d92979c3a10910bf85ef053afe6"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6af73d92979c3a10910bf85ef053afe6"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=1cea190e-04f4-45db-870e-5cc9e7de90eb</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>message</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Message</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Get Available Store App Versions by Scope ID">8dd0795a975c3a10910bf85ef053af53</model>
+        <model_id>8dd0795a975c3a10910bf85ef053af53</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_8dd0795a975c3a10910bf85ef053af53</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>a6f73d92979c3a10910bf85ef053afdb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a6f73d92979c3a10910bf85ef053afdb"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=a6f73d92979c3a10910bf85ef053afdb"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=5d9f16d6-c859-4115-9145-18a859f564f5</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>version_count</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Version count</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Get Available Store App Versions by Scope ID">8dd0795a975c3a10910bf85ef053af53</model>
+        <model_id>8dd0795a975c3a10910bf85ef053af53</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_8dd0795a975c3a10910bf85ef053af53</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>aaf73d92979c3a10910bf85ef053afea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=aaf73d92979c3a10910bf85ef053afea"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=aaf73d92979c3a10910bf85ef053afea"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=records,uiTypeLabel=Records,uiUniqueId=c0a9e2cb-5f34-4d82-bf05-146497a1a141</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sys_app_version</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>versions</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="Records">records</internal_type>
+        <label>Versions</label>
+        <mandatory>false</mandatory>
+        <max_length>1024</max_length>
+        <model display_value="Get Available Store App Versions by Scope ID">8dd0795a975c3a10910bf85ef053af53</model>
+        <model_id>8dd0795a975c3a10910bf85ef053af53</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_8dd0795a975c3a10910bf85ef053af53</name>
+        <next_element/>
+        <order>6</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_app_version">sys_app_version</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>faf73d92979c3a10910bf85ef053afee</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=faf73d92979c3a10910bf85ef053afee"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=faf73d92979c3a10910bf85ef053afee"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=8dd0795a975c3a10910bf85ef053af53"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=8dd0795a975c3a10910bf85ef053af53^sys_idNOT IN76f73d92979c3a10910bf85ef053affd"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="Get Available Store App Versions by Scope ID">8dd0795a975c3a10910bf85ef053af53</action_type_id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>76f73d92979c3a10910bf85ef053affd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=76f73d92979c3a10910bf85ef053affd"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>scope_id</element>
+        <help/>
+        <hint/>
+        <label>Scope ID</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_8dd0795a975c3a10910bf85ef053af53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:20</sys_created_on>
+        <sys_id>5af73d92979c3a10910bf85ef053af6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_8dd0795a975c3a10910bf85ef053af53"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>version_count</element>
+        <help/>
+        <hint/>
+        <label>Version count</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_8dd0795a975c3a10910bf85ef053af53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>2ef73d92979c3a10910bf85ef053afed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>message</element>
+        <help/>
+        <hint/>
+        <label>Message</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_8dd0795a975c3a10910bf85ef053af53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>6af73d92979c3a10910bf85ef053afde</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_8dd0795a975c3a10910bf85ef053af53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>aaf73d92979c3a10910bf85ef053afe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>versions</element>
+        <help/>
+        <hint/>
+        <label>Versions</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_8dd0795a975c3a10910bf85ef053af53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>baf73d92979c3a10910bf85ef053aff3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_8dd0795a975c3a10910bf85ef053af53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>e6f73d92979c3a10910bf85ef053afda</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>scope_installed</element>
+        <help/>
+        <hint/>
+        <label>Scope installed</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_8dd0795a975c3a10910bf85ef053af53</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:22</sys_created_on>
+        <sys_id>eaf73d92979c3a10910bf85ef053afe9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_8dd0795a975c3a10910bf85ef053af53"/>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=8dd0795a975c3a10910bf85ef053af53^sys_idNOT IN2bf7bd92979c3a10910bf85ef053af13"/>
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="Get Available Store App Versions by Scope ID">8dd0795a975c3a10910bf85ef053af53</action_id>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"2bf7bd92979c3a10910bf85ef053af13","name":"plan","plan_signature":null}}</plan>
+        <snapshot>97f77d92979c3a10910bf85ef053afcb</snapshot>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:26</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2bf7bd92979c3a10910bf85ef053af13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:26</sys_updated_on>
+    </sys_hub_action_plan>
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <annotation/>
+        <attributes>{labelCacheCleanUpExecuted=true}</attributes>
+        <authored_on_release_version>27000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>For a given Store Application ID, get the installed state and available versions</description>
+        <flow_priority/>
+        <internal_name>get_available_store_app_versions_by_scope_id</internal_name>
+        <label_cache>[{"name":"{{action.app_id}}","label":"action➛App ID","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.scope_id}}","label":"action➛Scope ID","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[a249e810-cb32-45e8-8c20-f99314ca4cab].count}}","label":"step➛Get App Versions➛Count","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[a249e810-cb32-45e8-8c20-f99314ca4cab].records}}","label":"step➛Get App Versions➛Application Version Records","type":"step","ref":"","reference_display":"","base_type":"records","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[5b7bd443-69dc-4268-9cba-755a887d7113].message}}","label":"step➛Handle results➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[5b7bd443-69dc-4268-9cba-755a887d7113].scope_installed}}","label":"step➛Handle results➛Scope Installed","type":"step","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[5b7bd443-69dc-4268-9cba-755a887d7113].count}}","label":"step➛Handle results➛Count","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[5b7bd443-69dc-4268-9cba-755a887d7113].records}}","label":"step➛Handle results➛Records","type":"step","ref":"sys_app_version","reference_display":"Application Version","base_type":"records","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
+        <master>true</master>
+        <name>Get Available Store App Versions by Scope ID</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="Get Available Store App Versions by Scope ID">8dd0795a975c3a10910bf85ef053af53</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:23</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>f2f77d92979c3a10910bf85ef053af28</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:23</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=f2f77d92979c3a10910bf85ef053af28"/>
+    <sys_variable_value action="delete_multiple" query="document_key=f2f77d92979c3a10910bf85ef053af28"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>f2f77d92979c3a10910bf85ef053af28</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>1ff77d92979c3a10910bf85ef053afc8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <value/>
+        <variable display_value="Version count">1ff77d92979c3a10910bf85ef053afb8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>f2f77d92979c3a10910bf85ef053af28</document_key>
+        <order>4</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>5bf77d92979c3a10910bf85ef053afc8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Scope installed">57f77d92979c3a10910bf85ef053afa8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>f2f77d92979c3a10910bf85ef053af28</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>97f77d92979c3a10910bf85ef053afc8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">97f77d92979c3a10910bf85ef053afa2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>f2f77d92979c3a10910bf85ef053af28</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>dff77d92979c3a10910bf85ef053afc8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <value>{"version":"1.0","serializationFormat":"JSON","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"794bc342-9c9d-444b-a3f2-dd4b6a5a0173\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}}}</value>
+        <variable display_value="Action Status">0bf77d92979c3a10910bf85ef053af99</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=f2f77d92979c3a10910bf85ef053af28"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>message</field>
+        <id>f2f77d92979c3a10910bf85ef053af28</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>9ff77d92979c3a10910bf85ef053afc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <table>var__m_sys_hub_action_output_f2f77d92979c3a10910bf85ef053af28</table>
+        <value>{{step[5b7bd443-69dc-4268-9cba-755a887d7113].message}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>scope_installed</field>
+        <id>f2f77d92979c3a10910bf85ef053af28</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>dbf77d92979c3a10910bf85ef053afc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <table>var__m_sys_hub_action_output_f2f77d92979c3a10910bf85ef053af28</table>
+        <value>{{step[5b7bd443-69dc-4268-9cba-755a887d7113].scope_installed}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>versions</field>
+        <id>f2f77d92979c3a10910bf85ef053af28</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>57f77d92979c3a10910bf85ef053afc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <table>var__m_sys_hub_action_output_f2f77d92979c3a10910bf85ef053af28</table>
+        <value>{{step[5b7bd443-69dc-4268-9cba-755a887d7113].records}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>version_count</field>
+        <id>f2f77d92979c3a10910bf85ef053af28</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>53f77d92979c3a10910bf85ef053afc8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <table>var__m_sys_hub_action_output_f2f77d92979c3a10910bf85ef053af28</table>
+        <value>{{step[5b7bd443-69dc-4268-9cba-755a887d7113].count}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>f2f77d92979c3a10910bf85ef053af28</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>17f77d92979c3a10910bf85ef053afc8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <table>var__m_sys_hub_action_output_f2f77d92979c3a10910bf85ef053af28</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>f2f77d92979c3a10910bf85ef053af28</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>1bf77d92979c3a10910bf85ef053afc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <table>var__m_sys_hub_action_output_f2f77d92979c3a10910bf85ef053af28</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=f2f77d92979c3a10910bf85ef053af28^sys_idNOT IN87f77d92979c3a10910bf85ef053af41,c7f77d92979c3a10910bf85ef053af4b"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Get Available Store App Versions by Scope ID">f2f77d92979c3a10910bf85ef053af28</action>
+        <cid>a249e810-cb32-45e8-8c20-f99314ca4cab</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>Get App Versions</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Look Up Records">48526b2dc32a32002841b63b12d3ae72</step_type>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:23</sys_created_on>
+        <sys_id>87f77d92979c3a10910bf85ef053af41</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:23</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=87f77d92979c3a10910bf85ef053af41"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>87f77d92979c3a10910bf85ef053af41</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:23</sys_created_on>
+        <sys_id>03f77d92979c3a10910bf85ef053af4a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:23</sys_updated_on>
+        <value>publish_date</value>
+        <variable display_value="Order by">2df79dd187003300663ca1bb36cb0b33</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>87f77d92979c3a10910bf85ef053af41</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:23</sys_created_on>
+        <sys_id>4ff77d92979c3a10910bf85ef053af49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:23</sys_updated_on>
+        <value>sort_desc</value>
+        <variable display_value="Sort Type">6a88151587003300663ca1bb36cb0b14</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>87f77d92979c3a10910bf85ef053af41</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:23</sys_created_on>
+        <sys_id>87f77d92979c3a10910bf85ef053af4a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:23</sys_updated_on>
+        <value>sys_app_version</value>
+        <variable display_value="Table">4d19bb21c36a32002841b63b12d3aeef</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>87f77d92979c3a10910bf85ef053af41</document_key>
+        <order>500</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:23</sys_created_on>
+        <sys_id>c3f77d92979c3a10910bf85ef053af4a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:23</sys_updated_on>
+        <value>100</value>
+        <variable display_value="Max Results">0677f8e053200300f5bf435723dc34e3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=87f77d92979c3a10910bf85ef053af41"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>conditions</field>
+        <id>87f77d92979c3a10910bf85ef053af41</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:23</sys_created_on>
+        <sys_id>0bf77d92979c3a10910bf85ef053af49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:23</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_48526b2dc32a32002841b63b12d3ae72</table>
+        <value>scope={{action.scope_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>limit</field>
+        <id>87f77d92979c3a10910bf85ef053af41</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:23</sys_created_on>
+        <sys_id>cff77d92979c3a10910bf85ef053af48</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:23</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_48526b2dc32a32002841b63b12d3ae72</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sort_column</field>
+        <id>87f77d92979c3a10910bf85ef053af41</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:23</sys_created_on>
+        <sys_id>47f77d92979c3a10910bf85ef053af49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:23</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_48526b2dc32a32002841b63b12d3ae72</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sort_type</field>
+        <id>87f77d92979c3a10910bf85ef053af41</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:23</sys_created_on>
+        <sys_id>83f77d92979c3a10910bf85ef053af49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:23</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_48526b2dc32a32002841b63b12d3ae72</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>87f77d92979c3a10910bf85ef053af41</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:23</sys_created_on>
+        <sys_id>cbf77d92979c3a10910bf85ef053af49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:23</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_48526b2dc32a32002841b63b12d3ae72</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_translated_text action="delete_multiple" query="documentkey=87f77d92979c3a10910bf85ef053af41"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=87f77d92979c3a10910bf85ef053af41"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=87f77d92979c3a10910bf85ef053af41"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=87f77d92979c3a10910bf85ef053af41"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Get Available Store App Versions by Scope ID">f2f77d92979c3a10910bf85ef053af28</action>
+        <cid>5b7bd443-69dc-4268-9cba-755a887d7113</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Handle results</label>
+        <order>2</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:23</sys_created_on>
+        <sys_id>c7f77d92979c3a10910bf85ef053af4b</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=c7f77d92979c3a10910bf85ef053af4b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>c7f77d92979c3a10910bf85ef053af4b</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>4ff77d92979c3a10910bf85ef053af94</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <value>(function execute(inputs, outputs) {&#13;
+    const recCount = inputs.count;&#13;
+    outputs.count = recCount;&#13;
+    outputs.records = inputs.records;&#13;
+&#13;
+    if(recCount == 0){&#13;
+        outputs.message = `Scope ${inputs.scope_id} does not have any version records available.`;&#13;
+        outputs.scope_installed = false;&#13;
+    } else {&#13;
+        inputs.records.next();&#13;
+        const installed = gs.nil(inputs.records.getValue('store_application')) ? false : true;&#13;
+        outputs.scope_installed = installed&#13;
+        outputs.message = `Scope ${inputs.scope_id} has ${recCount} versions available, and is${installed ? '' : ' not'} installed.`&#13;
+    }&#13;
+})(inputs, outputs);&#13;
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>c7f77d92979c3a10910bf85ef053af4b</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>8bf77d92979c3a10910bf85ef053af94</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>c7f77d92979c3a10910bf85ef053af4b</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>8ff77d92979c3a10910bf85ef053af95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <value/>
+        <variable display_value="count">0bf77d92979c3a10910bf85ef053af4f</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=c7f77d92979c3a10910bf85ef053af4b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>c7f77d92979c3a10910bf85ef053af4b</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>47f77d92979c3a10910bf85ef053af94</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>count</field>
+        <id>c7f77d92979c3a10910bf85ef053af4b</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>87f77d92979c3a10910bf85ef053af95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_c7f77d92979c3a10910bf85ef053af4b</table>
+        <value>{{step[a249e810-cb32-45e8-8c20-f99314ca4cab].count}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>records</field>
+        <id>c7f77d92979c3a10910bf85ef053af4b</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>4bf77d92979c3a10910bf85ef053af95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_c7f77d92979c3a10910bf85ef053af4b</table>
+        <value>{{step[a249e810-cb32-45e8-8c20-f99314ca4cab].records}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>scope_id</field>
+        <id>c7f77d92979c3a10910bf85ef053af4b</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>0ff77d92979c3a10910bf85ef053af95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_c7f77d92979c3a10910bf85ef053af4b</table>
+        <value>{{action.scope_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>c7f77d92979c3a10910bf85ef053af4b</id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>0bf77d92979c3a10910bf85ef053af94</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_c7f77d92979c3a10910bf85ef053af4b^id=c7f77d92979c3a10910bf85ef053af4b"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=c7f77d92979c3a10910bf85ef053af4b"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=c7f77d92979c3a10910bf85ef053af4b"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=c7f77d92979c3a10910bf85ef053af4b^sys_idNOT IN0bf77d92979c3a10910bf85ef053af4f,4bf77d92979c3a10910bf85ef053af53,8ff77d92979c3a10910bf85ef053af56"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>count</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>count</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Handle results">c7f77d92979c3a10910bf85ef053af4b</model>
+        <model_id>c7f77d92979c3a10910bf85ef053af4b</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_c7f77d92979c3a10910bf85ef053af4b</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:23</sys_created_on>
+        <sys_id>0bf77d92979c3a10910bf85ef053af4f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=records,uiTypeLabel=Records</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>records</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Records">records</internal_type>
+        <label>records</label>
+        <mandatory>true</mandatory>
+        <max_length>1024</max_length>
+        <model display_value="Handle results">c7f77d92979c3a10910bf85ef053af4b</model>
+        <model_id>c7f77d92979c3a10910bf85ef053af4b</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_c7f77d92979c3a10910bf85ef053af4b</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:23</sys_created_on>
+        <sys_id>4bf77d92979c3a10910bf85ef053af53</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>scope_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>scope_id</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Handle results">c7f77d92979c3a10910bf85ef053af4b</model>
+        <model_id>c7f77d92979c3a10910bf85ef053af4b</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_c7f77d92979c3a10910bf85ef053af4b</name>
+        <next_element/>
+        <order>200</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:23</sys_created_on>
+        <sys_id>8ff77d92979c3a10910bf85ef053af56</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=c7f77d92979c3a10910bf85ef053af4b^sys_idNOT IN0ff77d92979c3a10910bf85ef053af5e,4ff77d92979c3a10910bf85ef053af8a,c7f77d92979c3a10910bf85ef053af87,cbf77d92979c3a10910bf85ef053af5a"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=dc584395-1f2a-4491-8cb7-8b29a36a3aec</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>message</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Message</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Handle results">c7f77d92979c3a10910bf85ef053af4b</model>
+        <model_id>c7f77d92979c3a10910bf85ef053af4b</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_c7f77d92979c3a10910bf85ef053af4b</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>0ff77d92979c3a10910bf85ef053af5e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=710d139a-8d4a-4c81-ae66-13e893e264d2</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>scope_installed</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Scope Installed</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Handle results">c7f77d92979c3a10910bf85ef053af4b</model>
+        <model_id>c7f77d92979c3a10910bf85ef053af4b</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_c7f77d92979c3a10910bf85ef053af4b</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>4ff77d92979c3a10910bf85ef053af8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=records,uiTypeLabel=Records,uiUniqueId=0a5495bd-e7eb-49cb-b3e4-455edfd4073f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>records</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Records">records</internal_type>
+        <label>Records</label>
+        <mandatory>false</mandatory>
+        <max_length>1024</max_length>
+        <model display_value="Handle results">c7f77d92979c3a10910bf85ef053af4b</model>
+        <model_id>c7f77d92979c3a10910bf85ef053af4b</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_c7f77d92979c3a10910bf85ef053af4b</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_app_version">sys_app_version</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>c7f77d92979c3a10910bf85ef053af87</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=f68c58e2-5fa5-4586-88c5-1ddd0a47fa9a</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>count</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Count</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Handle results">c7f77d92979c3a10910bf85ef053af4b</model>
+        <model_id>c7f77d92979c3a10910bf85ef053af4b</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_c7f77d92979c3a10910bf85ef053af4b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:23</sys_created_on>
+        <sys_id>cbf77d92979c3a10910bf85ef053af5a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c7f77d92979c3a10910bf85ef053af4b"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>scope_installed</element>
+        <help/>
+        <hint/>
+        <label>Scope Installed</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_c7f77d92979c3a10910bf85ef053af4b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>07f77d92979c3a10910bf85ef053af8d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>message</element>
+        <help/>
+        <hint/>
+        <label>Message</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_c7f77d92979c3a10910bf85ef053af4b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>0bf77d92979c3a10910bf85ef053af86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>count</element>
+        <help/>
+        <hint/>
+        <label>Count</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_c7f77d92979c3a10910bf85ef053af4b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:23</sys_created_on>
+        <sys_id>4ff77d92979c3a10910bf85ef053af5d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>records</element>
+        <help/>
+        <hint/>
+        <label>Records</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_c7f77d92979c3a10910bf85ef053af4b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>8ff77d92979c3a10910bf85ef053af89</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_input action="delete_multiple" query="model=f2f77d92979c3a10910bf85ef053af28^sys_idNOT IN07f77d92979c3a10910bf85ef053af2b"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=0721bf02-3e40-466b-8683-52c0d8be6d76</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>scope_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Scope ID</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Get Available Store App Versions by Scope ID">f2f77d92979c3a10910bf85ef053af28</model>
+        <model_id>f2f77d92979c3a10910bf85ef053af28</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_f2f77d92979c3a10910bf85ef053af28</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:23</sys_created_on>
+        <sys_id>07f77d92979c3a10910bf85ef053af2b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=07f77d92979c3a10910bf85ef053af2b"/>
+    <sys_hub_action_output action="delete_multiple" query="model=f2f77d92979c3a10910bf85ef053af28^sys_idNOT IN0bf77d92979c3a10910bf85ef053af99,1ff77d92979c3a10910bf85ef053afb8,1ff77d92979c3a10910bf85ef053afbc,47f77d92979c3a10910bf85ef053af9e,57f77d92979c3a10910bf85ef053afa8,97f77d92979c3a10910bf85ef053afa2"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDACTIONSTATUS,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=44d55f36-d16b-4eb4-951a-570a22b2f9e6</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Get Available Store App Versions by Scope ID">f2f77d92979c3a10910bf85ef053af28</model>
+        <model_id>f2f77d92979c3a10910bf85ef053af28</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_f2f77d92979c3a10910bf85ef053af28</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>0bf77d92979c3a10910bf85ef053af99</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0bf77d92979c3a10910bf85ef053af99"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0bf77d92979c3a10910bf85ef053af99"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=5d9f16d6-c859-4115-9145-18a859f564f5</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>version_count</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="Integer">integer</internal_type>
+        <label>Version count</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Get Available Store App Versions by Scope ID">f2f77d92979c3a10910bf85ef053af28</model>
+        <model_id>f2f77d92979c3a10910bf85ef053af28</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_f2f77d92979c3a10910bf85ef053af28</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>1ff77d92979c3a10910bf85ef053afb8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1ff77d92979c3a10910bf85ef053afb8"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=1ff77d92979c3a10910bf85ef053afb8"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=records,uiTypeLabel=Records,uiUniqueId=c0a9e2cb-5f34-4d82-bf05-146497a1a141</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table>sys_app_version</choice_table>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>versions</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="Records">records</internal_type>
+        <label>Versions</label>
+        <mandatory>false</mandatory>
+        <max_length>1024</max_length>
+        <model display_value="Get Available Store App Versions by Scope ID">f2f77d92979c3a10910bf85ef053af28</model>
+        <model_id>f2f77d92979c3a10910bf85ef053af28</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_f2f77d92979c3a10910bf85ef053af28</name>
+        <next_element/>
+        <order>6</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sys_app_version">sys_app_version</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>1ff77d92979c3a10910bf85ef053afbc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1ff77d92979c3a10910bf85ef053afbc"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=1ff77d92979c3a10910bf85ef053afbc"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=1cea190e-04f4-45db-870e-5cc9e7de90eb</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>message</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Message</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Get Available Store App Versions by Scope ID">f2f77d92979c3a10910bf85ef053af28</model>
+        <model_id>f2f77d92979c3a10910bf85ef053af28</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_f2f77d92979c3a10910bf85ef053af28</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>47f77d92979c3a10910bf85ef053af9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=47f77d92979c3a10910bf85ef053af9e"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=47f77d92979c3a10910bf85ef053af9e"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=b1571815-a034-4710-b397-bc2877b3c9a0</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>scope_installed</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Scope installed</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Get Available Store App Versions by Scope ID">f2f77d92979c3a10910bf85ef053af28</model>
+        <model_id>f2f77d92979c3a10910bf85ef053af28</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_f2f77d92979c3a10910bf85ef053af28</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>57f77d92979c3a10910bf85ef053afa8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=57f77d92979c3a10910bf85ef053afa8"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=57f77d92979c3a10910bf85ef053afa8"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=dac0cf99-a230-4caa-b9b2-a244f61e6aa4,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Get Available Store App Versions by Scope ID">f2f77d92979c3a10910bf85ef053af28</model>
+        <model_id>f2f77d92979c3a10910bf85ef053af28</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_f2f77d92979c3a10910bf85ef053af28</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>97f77d92979c3a10910bf85ef053afa2</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=97f77d92979c3a10910bf85ef053afa2"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=97f77d92979c3a10910bf85ef053afa2"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=f2f77d92979c3a10910bf85ef053af28"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=f2f77d92979c3a10910bf85ef053af28^sys_idNOT INd3f77d92979c3a10910bf85ef053afcb"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="Get Available Store App Versions by Scope ID">f2f77d92979c3a10910bf85ef053af28</action_type_id>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>d3f77d92979c3a10910bf85ef053afcb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=d3f77d92979c3a10910bf85ef053afcb"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>scope_id</element>
+        <help/>
+        <hint/>
+        <label>Scope ID</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_f2f77d92979c3a10910bf85ef053af28</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:23</sys_created_on>
+        <sys_id>4bf77d92979c3a10910bf85ef053af3b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_f2f77d92979c3a10910bf85ef053af28"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>scope_installed</element>
+        <help/>
+        <hint/>
+        <label>Scope installed</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_f2f77d92979c3a10910bf85ef053af28</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>5ff77d92979c3a10910bf85ef053afb7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>version_count</element>
+        <help/>
+        <hint/>
+        <label>Version count</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_f2f77d92979c3a10910bf85ef053af28</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>5ff77d92979c3a10910bf85ef053afbb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_f2f77d92979c3a10910bf85ef053af28</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>87f77d92979c3a10910bf85ef053af9d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_f2f77d92979c3a10910bf85ef053af28</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>97f77d92979c3a10910bf85ef053afa7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>versions</element>
+        <help/>
+        <hint/>
+        <label>Versions</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_f2f77d92979c3a10910bf85ef053af28</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>9bf77d92979c3a10910bf85ef053afc1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>message</element>
+        <help/>
+        <hint/>
+        <label>Message</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_f2f77d92979c3a10910bf85ef053af28</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>asteroid</sys_created_by>
+        <sys_created_on>2025-10-02 11:47:24</sys_created_on>
+        <sys_id>d7f77d92979c3a10910bf85ef053afa1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>asteroid</sys_updated_by>
+        <sys_updated_on>2025-10-02 11:47:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_f2f77d92979c3a10910bf85ef053af28"/>
+    <sys_hub_action_type_definition action="UPDATE">
+        <sys_id>8dd0795a975c3a10910bf85ef053af53</sys_id>
+        <latest_snapshot>f2f77d92979c3a10910bf85ef053af28</latest_snapshot>
+        <compiler_build>glide-yokohama-12-18-2024__patch4b-07-29-2025_08-12-2025_1725.zip</compiler_build>
+    </sys_hub_action_type_definition>
+</record_update>
