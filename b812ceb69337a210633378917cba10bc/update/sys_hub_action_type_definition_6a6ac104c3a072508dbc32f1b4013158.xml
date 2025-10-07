@@ -1,0 +1,807 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <attributes>{labelCacheCleanUpExecuted=true}</attributes>
+        <authored_on_release_version>28000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Run a Scheduled job with an action, letting me provide the Scheduled Job table name and Sys ID as input.</description>
+        <flow_priority/>
+        <ih_action>false</ih_action>
+        <internal_name>run_scheduled_job</internal_name>
+        <label_cache>[{"name":"{{action.table}}","label":"action➛table","type":"action","ref":"","reference_display":"","base_type":"table_name","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.sys_id}}","label":"action➛Sys ID","type":"action","ref":"","reference_display":"","base_type":"document_id","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.sysid}}","label":"action➛SysID","type":"action","ref":"","reference_display":"","base_type":"document_id","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiUniqueId":"c13d4799-6316-4cd3-9635-563067969fcc"}},{"name":"{{action.scheduled_job_sys_id}}","label":"action➛Scheduled Job Sys ID","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Document ID","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"document_id","uiUniqueId":"c13d4799-6316-4cd3-9635-563067969fcc"}},{"name":"{{action.table1}}","label":"action➛Table","type":"action","ref":"","reference_display":"","base_type":"table_name","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.scheduled_job_table}}","label":"action➛Scheduled Job Table","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <master_snapshot_digest/>
+        <name>Run Scheduled Job</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <state>draft</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 18:57:39</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6a6ac104c3a072508dbc32f1b4013158</sys_id>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_name>Run Scheduled Job</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_6a6ac104c3a072508dbc32f1b4013158</sys_update_name>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:57:14</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=6a6ac104c3a072508dbc32f1b4013158"/>
+    <sys_variable_value action="delete_multiple" query="document_key=6a6ac104c3a072508dbc32f1b4013158"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>6a6ac104c3a072508dbc32f1b4013158</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 19:02:51</sys_created_on>
+        <sys_id>6a9b0d44c3a072508dbc32f1b40131ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:02:51</sys_updated_on>
+        <value>{"version":"1.0","serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
+        <variable display_value="Action Status">a69b0d44c3a072508dbc32f1b40131aa</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>6a6ac104c3a072508dbc32f1b4013158</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 19:02:51</sys_created_on>
+        <sys_id>a69b0d44c3a072508dbc32f1b40131ba</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:02:51</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">aa9b0d44c3a072508dbc32f1b40131af</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_6a6ac104c3a072508dbc32f1b4013158^id=6a6ac104c3a072508dbc32f1b4013158"/>
+    <sys_hub_step_instance action="delete_multiple" query="action=6a6ac104c3a072508dbc32f1b4013158^sys_idNOT INd69b0d44c3a072508dbc32f1b4013170"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Run Scheduled Job">6a6ac104c3a072508dbc32f1b4013158</action>
+        <cid>1798703b-b7a9-434c-870e-d8f76f4da432</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 19:02:50</sys_created_on>
+        <sys_id>d69b0d44c3a072508dbc32f1b4013170</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:57:14</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d69b0d44c3a072508dbc32f1b4013170"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>d69b0d44c3a072508dbc32f1b4013170</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 19:02:50</sys_created_on>
+        <sys_id>6e9b0d44c3a072508dbc32f1b40131a6</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:57:14</sys_updated_on>
+        <value>(function execute(inputs, outputs) {&#13;
+    var grScheduledJob = new GlideRecord(inputs.table);&#13;
+	if(grScheduledJob.get(inputs.scheduled_job_sys_id)){ &#13;
+	    gs.executeNow(grScheduledJob);	&#13;
+	}&#13;
+})(inputs, outputs);&#13;
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>d69b0d44c3a072508dbc32f1b4013170</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 19:02:50</sys_created_on>
+        <sys_id>a69b0d44c3a072508dbc32f1b401318d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:02:50</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=d69b0d44c3a072508dbc32f1b4013170"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>d69b0d44c3a072508dbc32f1b4013170</id>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 19:02:50</sys_created_on>
+        <sys_id>6e9b0d44c3a072508dbc32f1b401318c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:02:50</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>scheduled_job_sys_id</field>
+        <id>d69b0d44c3a072508dbc32f1b4013170</id>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 19:02:50</sys_created_on>
+        <sys_id>2a9b0d44c3a072508dbc32f1b40131a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:02:50</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_d69b0d44c3a072508dbc32f1b4013170</table>
+        <value>{{action.scheduled_job_sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>d69b0d44c3a072508dbc32f1b4013170</id>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 19:02:50</sys_created_on>
+        <sys_id>269b0d44c3a072508dbc32f1b401318d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:02:50</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>d69b0d44c3a072508dbc32f1b4013170</id>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 19:32:45</sys_created_on>
+        <sys_id>647215ccc3a072508dbc32f1b40131b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:32:45</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_d69b0d44c3a072508dbc32f1b4013170</table>
+        <value>{{action.scheduled_job_table}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=d69b0d44c3a072508dbc32f1b4013170"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=d69b0d44c3a072508dbc32f1b4013170"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=d69b0d44c3a072508dbc32f1b4013170^sys_idNOT IN5a9b0d44c3a072508dbc32f1b4013182,d4b299ccc3a072508dbc32f1b401313a"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>scheduled_job_sys_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">d69b0d44c3a072508dbc32f1b4013170</model>
+        <model_id>d69b0d44c3a072508dbc32f1b4013170</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_d69b0d44c3a072508dbc32f1b4013170</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 19:02:50</sys_created_on>
+        <sys_id>5a9b0d44c3a072508dbc32f1b4013182</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:20:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">d69b0d44c3a072508dbc32f1b4013170</model>
+        <model_id>d69b0d44c3a072508dbc32f1b4013170</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_d69b0d44c3a072508dbc32f1b4013170</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 19:33:49</sys_created_on>
+        <sys_id>d4b299ccc3a072508dbc32f1b401313a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:33:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=d69b0d44c3a072508dbc32f1b4013170"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=d69b0d44c3a072508dbc32f1b4013170"/>
+    <sys_hub_action_input action="delete_multiple" query="model=6a6ac104c3a072508dbc32f1b4013158^sys_idNOT IN08b299ccc3a072508dbc32f1b4013125,92afc1c8c3a072508dbc32f1b40131da"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=dfd0e9cd-e1c6-4c5f-ac7a-25d50ed7c342</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>scheduled_job_table</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Scheduled Job Table</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Run Scheduled Job">6a6ac104c3a072508dbc32f1b4013158</model>
+        <model_id>6a6ac104c3a072508dbc32f1b4013158</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_6a6ac104c3a072508dbc32f1b4013158</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 19:33:49</sys_created_on>
+        <sys_id>08b299ccc3a072508dbc32f1b4013125</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:33:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=08b299ccc3a072508dbc32f1b4013125"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=c13d4799-6316-4cd3-9635-563067969fcc</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>scheduled_job_sys_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Scheduled Job Sys ID</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Run Scheduled Job">6a6ac104c3a072508dbc32f1b4013158</model>
+        <model_id>6a6ac104c3a072508dbc32f1b4013158</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_6a6ac104c3a072508dbc32f1b4013158</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 19:20:35</sys_created_on>
+        <sys_id>92afc1c8c3a072508dbc32f1b40131da</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:20:35</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=92afc1c8c3a072508dbc32f1b40131da"/>
+    <sys_hub_action_output action="delete_multiple" query="model=6a6ac104c3a072508dbc32f1b4013158^sys_idNOT INa69b0d44c3a072508dbc32f1b40131aa,aa9b0d44c3a072508dbc32f1b40131af"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDACTIONSTATUS,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=3b9288e7-d745-42c0-98b0-0bd255cf315f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Run Scheduled Job">6a6ac104c3a072508dbc32f1b4013158</model>
+        <model_id>6a6ac104c3a072508dbc32f1b4013158</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_6a6ac104c3a072508dbc32f1b4013158</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 19:02:50</sys_created_on>
+        <sys_id>a69b0d44c3a072508dbc32f1b40131aa</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:02:50</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a69b0d44c3a072508dbc32f1b40131aa"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=a69b0d44c3a072508dbc32f1b40131aa"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=93059aa8-b341-4e03-a468-a0c55273c1eb,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Run Scheduled Job">6a6ac104c3a072508dbc32f1b4013158</model>
+        <model_id>6a6ac104c3a072508dbc32f1b4013158</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_6a6ac104c3a072508dbc32f1b4013158</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 19:02:51</sys_created_on>
+        <sys_id>aa9b0d44c3a072508dbc32f1b40131af</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:57:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=aa9b0d44c3a072508dbc32f1b40131af"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=aa9b0d44c3a072508dbc32f1b40131af"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=6a6ac104c3a072508dbc32f1b4013158"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=6a6ac104c3a072508dbc32f1b4013158^sys_idNOT INae9b0d44c3a072508dbc32f1b40131bb"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="Run Scheduled Job">6a6ac104c3a072508dbc32f1b4013158</action_type_id>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 19:02:51</sys_created_on>
+        <sys_id>ae9b0d44c3a072508dbc32f1b40131bb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:02:51</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=ae9b0d44c3a072508dbc32f1b40131bb"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>scheduled_job_table</element>
+        <help/>
+        <hint/>
+        <label>Scheduled Job Table</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_6a6ac104c3a072508dbc32f1b4013158</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 19:33:49</sys_created_on>
+        <sys_id>1cb299ccc3a072508dbc32f1b4013128</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:33:49</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>scheduled_job_sys_id</element>
+        <help/>
+        <hint/>
+        <label>Scheduled Job Sys ID</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_6a6ac104c3a072508dbc32f1b4013158</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 19:20:35</sys_created_on>
+        <sys_id>1eafc1c8c3a072508dbc32f1b40131dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:20:35</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_6a6ac104c3a072508dbc32f1b4013158"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_6a6ac104c3a072508dbc32f1b4013158</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 19:02:51</sys_created_on>
+        <sys_id>e69b0d44c3a072508dbc32f1b40131b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:02:51</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_6a6ac104c3a072508dbc32f1b4013158</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>nia.mccash</sys_created_by>
+        <sys_created_on>2025-10-07 19:02:51</sys_created_on>
+        <sys_id>ea9b0d44c3a072508dbc32f1b40131ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>nia.mccash</sys_updated_by>
+        <sys_updated_on>2025-10-07 19:02:51</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_6a6ac104c3a072508dbc32f1b4013158"/>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=6a6ac104c3a072508dbc32f1b4013158"/>
+</record_update>
