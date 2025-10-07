@@ -8,7 +8,7 @@ Welcome to ServiceNow's ActionPack community repository, managed by the Develope
 
 ### Have you ever looked for an action in Workflow Studio, only to find that an appropriate utility or action is missing? 
 
-ActionPack is designed to address this problem by croudsourcing action definitions across the ServiceNow community that can be used by developers! It is built on the principle of "Many hands make light work", and is available for download and use in any ServiceNow instance.
+ActionPack is designed to address this problem by crowdsourcing action definitions across the ServiceNow community that can be used by developers! It is built on the principle of "Many hands make light work", and is available for download and use in any ServiceNow instance.
 
 > [!NOTE]
 > In order to make all step types available, we recommend installing the ServiceNow IntegrationHub Enterprise Pack Installer plugin. The different installers are documented [here](https://www.servicenow.com/docs/bundle/zurich-integrate-applications/page/administer/integrationhub/reference/ih-plugins.html).
