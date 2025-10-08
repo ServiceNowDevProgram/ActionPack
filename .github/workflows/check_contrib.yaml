@@ -48,6 +48,7 @@ jobs:
         with:
           base_sha: ${{ steps.shas.outputs.main_sha }}
           ref: ${{ steps.shas.outputs.pr_sha }}
+          fetch-depth: 0
 
           files: |
             b812ceb69337a210633378917cba10bc/checksum.txt
