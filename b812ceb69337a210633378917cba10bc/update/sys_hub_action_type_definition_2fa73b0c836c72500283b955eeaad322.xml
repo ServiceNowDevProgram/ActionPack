@@ -16,7 +16,7 @@
         <flow_priority/>
         <ih_action>false</ih_action>
         <internal_name>get_encoded_attachment_file</internal_name>
-        <label_cache>[{"name":"{{action.source_table}}","label":"action➛Source Table","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.source_record_sys_id_}}","label":"action➛Source Record (sys_id)","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[1cc2202f-4167-43c0-9cae-58dae30e2eba].file_encoded}}","label":"step➛ base64 encode➛file_encoded","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
+        <label_cache>[{"name":"{{action.source_table}}","label":"action➛Source Table","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.source_record_sys_id_}}","label":"action➛Source Record (sys_id)","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[1cc2202f-4167-43c0-9cae-58dae30e2eba].file_encoded}}","label":"step➛ base64 encode➛file_encoded","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[1cc2202f-4167-43c0-9cae-58dae30e2eba].__step_status__.message}}","label":"step➛ base64 encode➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[1cc2202f-4167-43c0-9cae-58dae30e2eba].__step_status__}}","label":"step➛ base64 encode➛Step Status","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[1cc2202f-4167-43c0-9cae-58dae30e2eba].__step_status__.code}}","label":"step➛ base64 encode➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
         <master_snapshot>22d8f38c836c72500283b955eeaad327</master_snapshot>
         <master_snapshot_digest/>
         <name>Get Encoded Attachment File</name>
@@ -31,7 +31,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>2fa73b0c836c72500283b955eeaad322</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Get Encoded Attachment File</sys_name>
         <sys_overrides/>
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
@@ -39,7 +39,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_2fa73b0c836c72500283b955eeaad322</sys_update_name>
         <sys_updated_by>a.pandey</sys_updated_by>
-        <sys_updated_on>2025-10-08 07:39:48</sys_updated_on>
+        <sys_updated_on>2025-10-08 10:22:31</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -114,7 +114,7 @@
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="Get Encoded Attachment File">2fa73b0c836c72500283b955eeaad322</action>
         <cid>1cc2202f-4167-43c0-9cae-58dae30e2eba</cid>
-        <error_handling_type>1</error_handling_type>
+        <error_handling_type>2</error_handling_type>
         <extended_inputs/>
         <extended_inputs/>
         <extended_outputs/>
@@ -128,10 +128,10 @@
         <sys_created_by>a.pandey</sys_created_by>
         <sys_created_on>2025-10-08 07:39:01</sys_created_on>
         <sys_id>97a8bf4c836c72500283b955eeaad350</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_updated_by>a.pandey</sys_updated_by>
-        <sys_updated_on>2025-10-08 07:39:40</sys_updated_on>
+        <sys_updated_on>2025-10-08 10:22:21</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=97a8bf4c836c72500283b955eeaad350"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -178,30 +178,6 @@ outputs.file_encoded = base64Str;&#13;
         <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=97a8bf4c836c72500283b955eeaad350"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>97a8bf4c836c72500283b955eeaad350</id>
-        <sys_created_by>a.pandey</sys_created_by>
-        <sys_created_on>2025-10-08 07:39:02</sys_created_on>
-        <sys_id>dba8bf4c836c72500283b955eeaad367</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>a.pandey</sys_updated_by>
-        <sys_updated_on>2025-10-08 07:39:02</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>97a8bf4c836c72500283b955eeaad350</id>
-        <sys_created_by>a.pandey</sys_created_by>
-        <sys_created_on>2025-10-08 07:39:02</sys_created_on>
-        <sys_id>93a8bf4c836c72500283b955eeaad368</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>a.pandey</sys_updated_by>
-        <sys_updated_on>2025-10-08 07:39:02</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>sSysID</field>
         <id>97a8bf4c836c72500283b955eeaad350</id>
@@ -913,14 +889,14 @@ outputs.file_encoded = base64Str;&#13;
         <sys_created_by>a.pandey</sys_created_by>
         <sys_created_on>2025-10-08 07:39:02</sys_created_on>
         <sys_id>aba8bf4c836c72500283b955eeaad376</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>a.pandey</sys_updated_by>
-        <sys_updated_on>2025-10-08 07:39:46</sys_updated_on>
+        <sys_updated_on>2025-10-08 10:22:30</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -946,7 +922,21 @@ outputs.file_encoded = base64Str;&#13;
         <sys_updated_by>a.pandey</sys_updated_by>
         <sys_updated_on>2025-10-08 07:39:02</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=eba8bf4c836c72500283b955eeaad383"/>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=eba8bf4c836c72500283b955eeaad383^sys_idNOT IN881e90508360b2500283b955eeaad316"/>
+    <sys_hub_status_condition action="INSERT_OR_UPDATE">
+        <action_status_metadata_id display_value="Created 08/10/2025 00:39:02">eba8bf4c836c72500283b955eeaad383</action_status_metadata_id>
+        <condition>{{step[1cc2202f-4167-43c0-9cae-58dae30e2eba].__step_status__.code}}=1</condition>
+        <dont_treat_as_error>false</dont_treat_as_error>
+        <label/>
+        <order>1</order>
+        <status>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":"101"}},"message":{"$cv":{"$c":"java.lang.String","$v":"FIle not found, Check the Source table and Record"}}}}</status>
+        <sys_created_by>a.pandey</sys_created_by>
+        <sys_created_on>2025-10-08 10:22:22</sys_created_on>
+        <sys_id>881e90508360b2500283b955eeaad316</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>a.pandey</sys_updated_by>
+        <sys_updated_on>2025-10-08 10:22:22</sys_updated_on>
+    </sys_hub_status_condition>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>source_table</element>
         <help/>
@@ -1068,17 +1058,17 @@ outputs.file_encoded = base64Str;&#13;
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Get Encoded Attachment File">2fa73b0c836c72500283b955eeaad322</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"fed8f38c836c72500283b955eeaad3e2","name":"plan","plan_signature":null}}</plan>
-        <snapshot>6ed8f38c836c72500283b955eeaad37f</snapshot>
+        <snapshot>521ed0508360b2500283b955eeaad35f</snapshot>
         <sys_created_by>a.pandey</sys_created_by>
         <sys_created_on>2025-10-08 07:39:48</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>fed8f38c836c72500283b955eeaad3e2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>a.pandey</sys_updated_by>
-        <sys_updated_on>2025-10-08 07:39:48</sys_updated_on>
+        <sys_updated_on>2025-10-08 10:22:32</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1095,7 +1085,7 @@ outputs.file_encoded = base64Str;&#13;
         <description/>
         <flow_priority/>
         <internal_name>get_encoded_attachment_file</internal_name>
-        <label_cache>[{"name":"{{action.source_table}}","label":"action➛Source Table","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.source_record_sys_id_}}","label":"action➛Source Record (sys_id)","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[1cc2202f-4167-43c0-9cae-58dae30e2eba].file_encoded}}","label":"step➛ base64 encode➛file_encoded","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
+        <label_cache>[{"name":"{{action.source_table}}","label":"action➛Source Table","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.source_record_sys_id_}}","label":"action➛Source Record (sys_id)","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[1cc2202f-4167-43c0-9cae-58dae30e2eba].file_encoded}}","label":"step➛ base64 encode➛file_encoded","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[1cc2202f-4167-43c0-9cae-58dae30e2eba].__step_status__.message}}","label":"step➛ base64 encode➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[1cc2202f-4167-43c0-9cae-58dae30e2eba].__step_status__}}","label":"step➛ base64 encode➛Step Status","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[1cc2202f-4167-43c0-9cae-58dae30e2eba].__step_status__.code}}","label":"step➛ base64 encode➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
         <master>true</master>
         <name>Get Encoded Attachment File</name>
         <natlang/>
@@ -1108,7 +1098,7 @@ outputs.file_encoded = base64Str;&#13;
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>22d8f38c836c72500283b955eeaad327</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1116,7 +1106,7 @@ outputs.file_encoded = base64Str;&#13;
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>a.pandey</sys_updated_by>
-        <sys_updated_on>2025-10-08 07:39:47</sys_updated_on>
+        <sys_updated_on>2025-10-08 10:22:30</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1191,7 +1181,7 @@ outputs.file_encoded = base64Str;&#13;
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="Get Encoded Attachment File">22d8f38c836c72500283b955eeaad327</action>
         <cid>1cc2202f-4167-43c0-9cae-58dae30e2eba</cid>
-        <error_handling_type>1</error_handling_type>
+        <error_handling_type>2</error_handling_type>
         <extended_inputs/>
         <extended_inputs/>
         <extended_outputs/>
@@ -1205,10 +1195,10 @@ outputs.file_encoded = base64Str;&#13;
         <sys_created_by>a.pandey</sys_created_by>
         <sys_created_on>2025-10-08 07:39:47</sys_created_on>
         <sys_id>a2d8f38c836c72500283b955eeaad337</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_updated_by>a.pandey</sys_updated_by>
-        <sys_updated_on>2025-10-08 07:39:47</sys_updated_on>
+        <sys_updated_on>2025-10-08 10:22:31</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=a2d8f38c836c72500283b955eeaad337"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1255,30 +1245,6 @@ outputs.file_encoded = base64Str;&#13;
         <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=a2d8f38c836c72500283b955eeaad337"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>a2d8f38c836c72500283b955eeaad337</id>
-        <sys_created_by>a.pandey</sys_created_by>
-        <sys_created_on>2025-10-08 07:39:47</sys_created_on>
-        <sys_id>e6d8f38c836c72500283b955eeaad359</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>a.pandey</sys_updated_by>
-        <sys_updated_on>2025-10-08 07:39:47</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>a2d8f38c836c72500283b955eeaad337</id>
-        <sys_created_by>a.pandey</sys_created_by>
-        <sys_created_on>2025-10-08 07:39:47</sys_created_on>
-        <sys_id>aad8f38c836c72500283b955eeaad359</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>a.pandey</sys_updated_by>
-        <sys_updated_on>2025-10-08 07:39:47</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>sSysID</field>
         <id>a2d8f38c836c72500283b955eeaad337</id>
@@ -1903,14 +1869,14 @@ outputs.file_encoded = base64Str;&#13;
         <sys_created_by>a.pandey</sys_created_by>
         <sys_created_on>2025-10-08 07:39:48</sys_created_on>
         <sys_id>aed8f38c836c72500283b955eeaad366</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>a.pandey</sys_updated_by>
-        <sys_updated_on>2025-10-08 07:39:48</sys_updated_on>
+        <sys_updated_on>2025-10-08 10:22:31</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2023,7 +1989,21 @@ outputs.file_encoded = base64Str;&#13;
         <sys_updated_by>a.pandey</sys_updated_by>
         <sys_updated_on>2025-10-08 07:39:48</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=aad8f38c836c72500283b955eeaad37f"/>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=aad8f38c836c72500283b955eeaad37f^sys_idNOT INde1ed0508360b2500283b955eeaad35e"/>
+    <sys_hub_status_condition action="INSERT_OR_UPDATE">
+        <action_status_metadata_id display_value="Created 08/10/2025 00:39:48">aad8f38c836c72500283b955eeaad37f</action_status_metadata_id>
+        <condition>{{step[1cc2202f-4167-43c0-9cae-58dae30e2eba].__step_status__.code}}=1</condition>
+        <dont_treat_as_error>false</dont_treat_as_error>
+        <label/>
+        <order>1</order>
+        <status>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":"101"}},"message":{"$cv":{"$c":"java.lang.String","$v":"FIle not found, Check the Source table and Record"}}}}</status>
+        <sys_created_by>a.pandey</sys_created_by>
+        <sys_created_on>2025-10-08 10:22:31</sys_created_on>
+        <sys_id>de1ed0508360b2500283b955eeaad35e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>a.pandey</sys_updated_by>
+        <sys_updated_on>2025-10-08 10:22:31</sys_updated_on>
+    </sys_hub_status_condition>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>source_record_sys_id_</element>
         <help/>
