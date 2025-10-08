@@ -12,11 +12,11 @@
         <category/>
         <copied_from>dc12e72e935cb2107b1bf24cdd03d61a</copied_from>
         <copied_from_name>String Utilities</copied_from_name>
-        <description>String Utilities</description>
+        <description>This action is built to pass regex to validate the email or phone number</description>
         <flow_priority/>
         <ih_action>false</ih_action>
         <internal_name>email_and_phone_number_validator</internal_name>
-        <label_cache>[{"name":"{{action.input_string}}","label":"action➛Input string","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.operation}}","label":"action➛Operation","type":"action","ref":"","reference_display":"","base_type":"choice","parent_table_name":"","column_name":"","choices":[{"label":"UPPERCASE","value":"UPPERCASE","order":1.0},{"label":"lowercase","value":"lowercase","order":2.0},{"label":"Title Case","value":"Title Case","order":3.0},{"label":"Sentence case","value":"Sentence case","order":4.0}],"attributes":{}},{"name":"{{action.string_operation}}","label":"action➛String operation","type":"action","ref":"","reference_display":"","base_type":"choice","parent_table_name":"","column_name":"","choices":[{"label":"Email","value":"email","order":0.0},{"label":"Mobile Number","value":"mobile_number","order":1.0}],"attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"20dbc435-2a6c-4952-9b83-d9fb36f31bb6"}},{"name":"{{step[ef5d66cd-43a9-47c9-87d0-17a0d9f5d82a].result}}","label":"step➛Script step➛Result","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"41ad117e-8855-4b33-97e0-df224071b051"}},{"name":"{{step[ef5d66cd-43a9-47c9-87d0-17a0d9f5d82a].message}}","label":"step➛Script step➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[ef5d66cd-43a9-47c9-87d0-17a0d9f5d82a].success}}","label":"step➛Script step➛Success","type":"step","ref":"","reference_display":"","base_type":"array.boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceUiUniqueId":"","sourceType":"","uiType":"string","uiUniqueId":"2faa6b6c-51bd-4148-bf68-d8b83d7c5d40"}}]</label_cache>
+        <label_cache>[{"name":"{{action.input_string}}","label":"action➛Input string","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.operation}}","label":"action➛Operation","type":"action","ref":"","reference_display":"","base_type":"choice","parent_table_name":"","column_name":"","choices":[{"label":"UPPERCASE","value":"UPPERCASE","order":1.0},{"label":"lowercase","value":"lowercase","order":2.0},{"label":"Title Case","value":"Title Case","order":3.0},{"label":"Sentence case","value":"Sentence case","order":4.0}],"attributes":{}},{"name":"{{action.string_operation}}","label":"action➛Select Either Email or Phone Number","type":"action","ref":"","reference_display":"","base_type":"choice","parent_table_name":"","column_name":"","choices":[{"label":"Email","value":"email","order":0.0},{"label":"Phone Number","value":"phone_number","order":1.0}],"attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"20dbc435-2a6c-4952-9b83-d9fb36f31bb6"}},{"name":"{{action.enter_the_regex_to_validate_for_email_phone_number}}","label":"action➛Enter the Regex to validate for Email/Phone Number","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.regex}}","label":"action➛Enter the Regex to validate for Email/Phone Number","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.enter_the_regex_to_validate_email_phone_number}}","label":"action➛Enter the Regex to validate Email/Phone Number","type":"action","ref":"","reference_display":"","base_type":"string_full_utf8","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Expression","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"expression","uiUniqueId":"02c995ad-b1b7-438e-9bcf-4091c48ffbaa"}},{"name":"{{action.enter_the_regex_to_validate_email_phone_number.enter_the_regex_to_validate_email_phone_number_child1}}","label":"action➛Enter the Regex to validate Email/Phone Number➛Enter the Regex to validate Email/Phone Number_child1","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[ef5d66cd-43a9-47c9-87d0-17a0d9f5d82a].result}}","label":"step➛Script step➛Result","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"41ad117e-8855-4b33-97e0-df224071b051"}},{"name":"{{step[ef5d66cd-43a9-47c9-87d0-17a0d9f5d82a].message}}","label":"step➛Script step➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[ef5d66cd-43a9-47c9-87d0-17a0d9f5d82a].success}}","label":"step➛Script step➛Success","type":"step","ref":"","reference_display":"","base_type":"array.boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceUiUniqueId":"","sourceType":"","uiType":"string","uiUniqueId":"2faa6b6c-51bd-4148-bf68-d8b83d7c5d40"}}]</label_cache>
         <master_snapshot>3dcb28108320ba10743e9470ceaad347</master_snapshot>
         <master_snapshot_digest/>
         <name>Regex Email and Phone Number</name>
@@ -39,7 +39,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_8ff8241c83ec7a10743e9470ceaad3ef</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 11:33:10</sys_updated_on>
+        <sys_updated_on>2025-10-08 13:36:23</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -152,10 +152,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-08 11:10:06</sys_created_on>
         <sys_id>cff8641c83ec7a10743e9470ceaad312</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 11:30:57</sys_updated_on>
+        <sys_updated_on>2025-10-08 13:34:27</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=cff8641c83ec7a10743e9470ceaad312"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -180,25 +180,25 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-08 11:10:06</sys_created_on>
         <sys_id>d3f8641c83ec7a10743e9470ceaad330</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 11:30:57</sys_updated_on>
+        <sys_updated_on>2025-10-08 13:34:27</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
     try {&#13;
-        var str = inputs.inputString || "";&#13;
-        var op = (inputs.stringOperation || "").toLowerCase();&#13;
+        var str = inputs.inputString; // Input as email or Phone Number&#13;
+        var op = inputs.stringOperation;  &#13;
+        var regexPatternString = inputs.regex;  // Example input regex for phone number ^(\+91[\-\s]?)?[0]?(91)?[6789]\d{9}$ // Example regex for email as ^([a-zA-Z0-9_.-]+)@([a-zA-Z0-9.-]+)\.([a-zA-Z]{2,})$&#13;
+        const regexPattern = new RegExp(regexPatternString);&#13;
 &#13;
         switch (op) {&#13;
             case "email":&#13;
-                outputs.result = validateEmail(str);&#13;
+                outputs.result = validateEmail(str,regexPattern);&#13;
                 break;&#13;
-&#13;
-            case "mobile_number":&#13;
-                outputs.result = validatePhone(str);&#13;
+            case "phone_number":&#13;
+                outputs.result = validatePhone(str, regexPattern);&#13;
                 break;&#13;
-&#13;
             default:&#13;
-                outputs.result = str;&#13;
+                outputs.result = 'Invalid option passed';&#13;
         }&#13;
         outputs.success = true;&#13;
         outputs.message = "Operation executed successfully.";&#13;
@@ -208,18 +208,16 @@
         outputs.message = "Error: " + e.message;&#13;
     }&#13;
 &#13;
-    function validateEmail(email) { //Validates the email address&#13;
-        var emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; // Change this regex based on requirement&#13;
-        //The regular expression /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/ is used for a basic validation of an email address format. It breaks the email into three main parts: the username, the "@" symbol, and the domain, with some key restrictions&#13;
-        return emailRegex.test(email);&#13;
+    function validateEmail(email, regexpattern1) {&#13;
+        return regexpattern1.test(email);     &#13;
     }&#13;
 &#13;
-    function validatePhone(phone) { //The regular expression /^(\+91-|\+91|0)?\d{10}$/ is used to validate a 10-digit Indian phone number that may include an optional country code&#13;
-        var phoneRegex = /^(\+91-|\+91|0)?\d{10}$/; // Change this regex based on requirement&#13;
-        return phoneRegex.test(phone);&#13;
+    function validatePhone(phone, regexpattern2) {&#13;
+        return regexpattern2.test(phone);      &#13;
     }&#13;
 &#13;
-})(inputs, outputs);</value>
+})(inputs, outputs);&#13;
+</value>
         <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=cff8641c83ec7a10743e9470ceaad312"/>
@@ -236,6 +234,18 @@
         <value>{{action.input_string}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>regex</field>
+        <id>cff8641c83ec7a10743e9470ceaad312</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 12:09:31</sys_created_on>
+        <sys_id>fd96f8dc8320ba10743e9470ceaad3ab</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 12:24:26</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_cff8641c83ec7a10743e9470ceaad312</table>
+        <value>{{action.enter_the_regex_to_validate_email_phone_number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>stringOperation</field>
         <id>cff8641c83ec7a10743e9470ceaad312</id>
         <sys_created_by>admin</sys_created_by>
@@ -250,7 +260,7 @@
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_cff8641c83ec7a10743e9470ceaad312^id=cff8641c83ec7a10743e9470ceaad312"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=cff8641c83ec7a10743e9470ceaad312"/>
     <sys_translated_text action="delete_multiple" query="documentkey=cff8641c83ec7a10743e9470ceaad312"/>
-    <sys_hub_step_ext_input action="delete_multiple" query="model=cff8641c83ec7a10743e9470ceaad312^sys_idNOT IN5ff8641c83ec7a10743e9470ceaad316,5ff8641c83ec7a10743e9470ceaad31a"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=cff8641c83ec7a10743e9470ceaad312^sys_idNOT IN5ff8641c83ec7a10743e9470ceaad316,5ff8641c83ec7a10743e9470ceaad31a,e196f8dc8320ba10743e9470ceaad384"/>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -417,6 +427,89 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>regex</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">cff8641c83ec7a10743e9470ceaad312</model>
+        <model_id>cff8641c83ec7a10743e9470ceaad312</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_cff8641c83ec7a10743e9470ceaad312</name>
+        <next_element/>
+        <order>200</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 12:09:31</sys_created_on>
+        <sys_id>e196f8dc8320ba10743e9470ceaad384</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 12:09:31</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
     <sys_hub_step_ext_output action="delete_multiple" query="model=cff8641c83ec7a10743e9470ceaad312^sys_idNOT IN57f8641c83ec7a10743e9470ceaad31f,d3f8641c83ec7a10743e9470ceaad323,dff8641c83ec7a10743e9470ceaad326"/>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
         <active>true</active>
@@ -513,7 +606,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>5bf8641c83ec7a10743e9470ceaad31e</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -521,7 +614,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 11:31:01</sys_updated_on>
+        <sys_updated_on>2025-10-08 13:34:32</sys_updated_on>
         <type>complex_object_collection</type>
     </sys_complex_object>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
@@ -708,7 +801,7 @@
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_cff8641c83ec7a10743e9470ceaad312_success_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-08 11:10:06</sys_updated_on>
         <url/>
@@ -731,7 +824,7 @@
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_cff8641c83ec7a10743e9470ceaad312_result_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-08 11:10:06</sys_updated_on>
         <url/>
@@ -754,13 +847,97 @@
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_cff8641c83ec7a10743e9470ceaad312_message_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-08 11:10:06</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
-    <sys_hub_action_input action="delete_multiple" query="model=8ff8241c83ec7a10743e9470ceaad3ef^sys_idNOT IN0bf8641c83ec7a10743e9470ceaad305,c7f8241c83ec7a10743e9470ceaad3f4"/>
+    <sys_hub_action_input action="delete_multiple" query="model=8ff8241c83ec7a10743e9470ceaad3ef^sys_idNOT IN0b818d9c8360ba10743e9470ceaad3db,0bf8641c83ec7a10743e9470ceaad305,c7f8241c83ec7a10743e9470ceaad3f4"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string_full_utf8,uiTypeLabel=String (Full UTF-8),uiUniqueId=02c995ad-b1b7-438e-9bcf-4091c48ffbaa</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>enter_the_regex_to_validate_email_phone_number</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Enter the Regex to validate Email/Phone Number</label>
+        <mandatory>true</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Regex Email and Phone Number">8ff8241c83ec7a10743e9470ceaad3ef</model>
+        <model_id>8ff8241c83ec7a10743e9470ceaad3ef</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_8ff8241c83ec7a10743e9470ceaad3ef</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 12:57:24</sys_created_on>
+        <sys_id>0b818d9c8360ba10743e9470ceaad3db</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 12:57:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0b818d9c8360ba10743e9470ceaad3db"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -798,7 +975,7 @@
         <help/>
         <hint/>
         <internal_type display_value="Choice">choice</internal_type>
-        <label>String operation</label>
+        <label>Select Either Email or Phone Number</label>
         <mandatory>true</mandatory>
         <max_length>32</max_length>
         <model display_value="Regex Email and Phone Number">8ff8241c83ec7a10743e9470ceaad3ef</model>
@@ -824,14 +1001,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-08 11:10:05</sys_created_on>
         <sys_id>0bf8641c83ec7a10743e9470ceaad305</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>75</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 11:31:01</sys_updated_on>
+        <sys_updated_on>2025-10-08 13:34:31</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1082,14 +1259,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-08 11:10:06</sys_created_on>
         <sys_id>9ff8641c83ec7a10743e9470ceaad345</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>75</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 11:31:01</sys_updated_on>
+        <sys_updated_on>2025-10-08 13:34:32</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1203,7 +1380,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>13f8641c83ec7a10743e9470ceaad334</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1211,7 +1388,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 11:31:01</sys_updated_on>
+        <sys_updated_on>2025-10-08 13:34:32</sys_updated_on>
         <type>complex_object_schema</type>
     </sys_complex_object>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
@@ -1401,6 +1578,29 @@
     </sys_hub_action_status_metadata>
     <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=d3f8641c83ec7a10743e9470ceaad379"/>
     <sys_documentation action="INSERT_OR_UPDATE">
+        <element>enter_the_regex_to_validate_email_phone_number</element>
+        <help/>
+        <hint/>
+        <label>Enter the Regex to validate Email/Phone Number</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_8ff8241c83ec7a10743e9470ceaad3ef</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 12:57:24</sys_created_on>
+        <sys_id>0b818d9c8360ba10743e9470ceaad3de</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Enter the Regex to validate Email/Phone Number</sys_name>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 12:57:24</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
         <element>input_string</element>
         <help/>
         <hint/>
@@ -1417,7 +1617,7 @@
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_8ff8241c83ec7a10743e9470ceaad3ef_input_string_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-08 11:10:05</sys_updated_on>
         <url/>
@@ -1427,7 +1627,7 @@
         <element>string_operation</element>
         <help/>
         <hint/>
-        <label>String operation</label>
+        <label>Select Either Email or Phone Number</label>
         <language>en</language>
         <name>var__m_sys_hub_action_input_8ff8241c83ec7a10743e9470ceaad3ef</name>
         <plural/>
@@ -1435,18 +1635,18 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-08 11:10:05</sys_created_on>
         <sys_id>8bf8641c83ec7a10743e9470ceaad30c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>String operation</sys_name>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Select Either Email or Phone Number</sys_name>
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_8ff8241c83ec7a10743e9470ceaad3ef_string_operation_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 11:10:05</sys_updated_on>
+        <sys_updated_on>2025-10-08 12:09:31</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
-    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_8ff8241c83ec7a10743e9470ceaad3ef^sys_idNOT IN12a9e05c83ec7a10743e9470ceaad3f6,96a9e05c83ec7a10743e9470ceaad3f7"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_8ff8241c83ec7a10743e9470ceaad3ef^sys_idNOT IN12a9e05c83ec7a10743e9470ceaad3f6,3f78415883a0ba10743e9470ceaad350"/>
     <sys_choice field="string_operation" table="var__m_sys_hub_action_input_8ff8241c83ec7a10743e9470ceaad3ef">
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -1473,20 +1673,20 @@
             <element>string_operation</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Mobile Number</label>
+            <label>Phone Number</label>
             <language>en</language>
             <name>var__m_sys_hub_action_input_8ff8241c83ec7a10743e9470ceaad3ef</name>
             <sequence>1</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-08 11:13:02</sys_created_on>
+            <sys_created_on>2025-10-08 13:27:46</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>96a9e05c83ec7a10743e9470ceaad3f7</sys_id>
+            <sys_id>3f78415883a0ba10743e9470ceaad350</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-08 11:13:02</sys_updated_on>
-            <value>mobile_number</value>
+            <sys_updated_on>2025-10-08 13:27:46</sys_updated_on>
+            <value>phone_number</value>
         </sys_choice>
     </sys_choice>
     <sys_documentation action="INSERT_OR_UPDATE">
@@ -1506,7 +1706,7 @@
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_8ff8241c83ec7a10743e9470ceaad3ef_success_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-08 11:10:06</sys_updated_on>
         <url/>
@@ -1529,7 +1729,7 @@
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_8ff8241c83ec7a10743e9470ceaad3ef_result_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-08 11:10:06</sys_updated_on>
         <url/>
@@ -1552,7 +1752,7 @@
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_8ff8241c83ec7a10743e9470ceaad3ef_message_en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-08 11:10:06</sys_updated_on>
         <url/>
@@ -1575,7 +1775,7 @@
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_8ff8241c83ec7a10743e9470ceaad3ef___action_status___en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-08 11:10:06</sys_updated_on>
         <url/>
@@ -1598,7 +1798,7 @@
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_8ff8241c83ec7a10743e9470ceaad3ef___dont_treat_as_error___en</sys_update_name>
+        <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-08 11:10:06</sys_updated_on>
         <url/>
@@ -1609,17 +1809,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Regex Email and Phone Number">8ff8241c83ec7a10743e9470ceaad3ef</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"52cb28108320ba10743e9470ceaad3dd","name":"plan","plan_signature":null}}</plan>
-        <snapshot>d6cb28108320ba10743e9470ceaad3b2</snapshot>
+        <snapshot>9f99cd9883a0ba10743e9470ceaad392</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-08 11:22:20</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>52cb28108320ba10743e9470ceaad3dd</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 11:22:20</sys_updated_on>
+        <sys_updated_on>2025-10-08 13:32:40</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1633,10 +1833,10 @@
         <category/>
         <copied_from>dc12e72e935cb2107b1bf24cdd03d61a</copied_from>
         <copied_from_name/>
-        <description>String Utilities</description>
+        <description>This action is built to pass regex to validate the email or phone number</description>
         <flow_priority/>
         <internal_name>regex_email_and_phone_number</internal_name>
-        <label_cache>[{"name":"{{action.input_string}}","label":"action➛Input string","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.operation}}","label":"action➛Operation","type":"action","ref":"","reference_display":"","base_type":"choice","parent_table_name":"","column_name":"","choices":[{"label":"UPPERCASE","value":"UPPERCASE","order":1.0},{"label":"lowercase","value":"lowercase","order":2.0},{"label":"Title Case","value":"Title Case","order":3.0},{"label":"Sentence case","value":"Sentence case","order":4.0}],"attributes":{}},{"name":"{{action.string_operation}}","label":"action➛String operation","type":"action","ref":"","reference_display":"","base_type":"choice","parent_table_name":"","column_name":"","choices":[{"label":"Email","value":"email","order":0.0},{"label":"Mobile Number","value":"mobile_number","order":1.0}],"attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"20dbc435-2a6c-4952-9b83-d9fb36f31bb6"}},{"name":"{{step[ef5d66cd-43a9-47c9-87d0-17a0d9f5d82a].result}}","label":"step➛Script step➛Result","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"41ad117e-8855-4b33-97e0-df224071b051"}},{"name":"{{step[ef5d66cd-43a9-47c9-87d0-17a0d9f5d82a].message}}","label":"step➛Script step➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[ef5d66cd-43a9-47c9-87d0-17a0d9f5d82a].success}}","label":"step➛Script step➛Success","type":"step","ref":"","reference_display":"","base_type":"array.boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceUiUniqueId":"","sourceType":"","uiType":"string","uiUniqueId":"2faa6b6c-51bd-4148-bf68-d8b83d7c5d40"}}]</label_cache>
+        <label_cache>[{"name":"{{action.input_string}}","label":"action➛Input string","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.operation}}","label":"action➛Operation","type":"action","ref":"","reference_display":"","base_type":"choice","parent_table_name":"","column_name":"","choices":[{"label":"UPPERCASE","value":"UPPERCASE","order":1.0},{"label":"lowercase","value":"lowercase","order":2.0},{"label":"Title Case","value":"Title Case","order":3.0},{"label":"Sentence case","value":"Sentence case","order":4.0}],"attributes":{}},{"name":"{{action.string_operation}}","label":"action➛Select Either Email or Phone Number","type":"action","ref":"","reference_display":"","base_type":"choice","parent_table_name":"","column_name":"","choices":[{"label":"Email","value":"email","order":0.0},{"label":"Phone Number","value":"phone_number","order":1.0}],"attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"20dbc435-2a6c-4952-9b83-d9fb36f31bb6"}},{"name":"{{action.enter_the_regex_to_validate_for_email_phone_number}}","label":"action➛Enter the Regex to validate for Email/Phone Number","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.regex}}","label":"action➛Enter the Regex to validate for Email/Phone Number","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.enter_the_regex_to_validate_email_phone_number}}","label":"action➛Enter the Regex to validate Email/Phone Number","type":"action","ref":"","reference_display":"","base_type":"string_full_utf8","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Expression","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"expression","uiUniqueId":"02c995ad-b1b7-438e-9bcf-4091c48ffbaa"}},{"name":"{{action.enter_the_regex_to_validate_email_phone_number.enter_the_regex_to_validate_email_phone_number_child1}}","label":"action➛Enter the Regex to validate Email/Phone Number➛Enter the Regex to validate Email/Phone Number_child1","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[ef5d66cd-43a9-47c9-87d0-17a0d9f5d82a].result}}","label":"step➛Script step➛Result","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"41ad117e-8855-4b33-97e0-df224071b051"}},{"name":"{{step[ef5d66cd-43a9-47c9-87d0-17a0d9f5d82a].message}}","label":"step➛Script step➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[ef5d66cd-43a9-47c9-87d0-17a0d9f5d82a].success}}","label":"step➛Script step➛Success","type":"step","ref":"","reference_display":"","base_type":"array.boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceUiUniqueId":"","sourceType":"","uiType":"string","uiUniqueId":"2faa6b6c-51bd-4148-bf68-d8b83d7c5d40"}}]</label_cache>
         <master>true</master>
         <name>Regex Email and Phone Number</name>
         <natlang/>
@@ -1649,7 +1849,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3dcb28108320ba10743e9470ceaad347</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1657,7 +1857,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 11:22:18</sys_updated_on>
+        <sys_updated_on>2025-10-08 13:29:55</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1770,10 +1970,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-08 11:22:18</sys_created_on>
         <sys_id>c6cb28108320ba10743e9470ceaad366</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 11:31:02</sys_updated_on>
+        <sys_updated_on>2025-10-08 13:34:33</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=c6cb28108320ba10743e9470ceaad366"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1784,25 +1984,25 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-08 11:22:18</sys_created_on>
         <sys_id>8acb28108320ba10743e9470ceaad383</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 11:31:02</sys_updated_on>
+        <sys_updated_on>2025-10-08 13:34:33</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
     try {&#13;
-        var str = inputs.inputString || "";&#13;
-        var op = (inputs.stringOperation || "").toLowerCase();&#13;
+        var str = inputs.inputString; // Input as email or Phone Number&#13;
+        var op = inputs.stringOperation;  &#13;
+        var regexPatternString = inputs.regex;  // Example input regex for phone number ^(\+91[\-\s]?)?[0]?(91)?[6789]\d{9}$ // Example regex for email as ^([a-zA-Z0-9_.-]+)@([a-zA-Z0-9.-]+)\.([a-zA-Z]{2,})$&#13;
+        const regexPattern = new RegExp(regexPatternString);&#13;
 &#13;
         switch (op) {&#13;
             case "email":&#13;
-                outputs.result = validateEmail(str);&#13;
+                outputs.result = validateEmail(str,regexPattern);&#13;
                 break;&#13;
-&#13;
-            case "mobile_number":&#13;
-                outputs.result = validatePhone(str);&#13;
+            case "phone_number":&#13;
+                outputs.result = validatePhone(str, regexPattern);&#13;
                 break;&#13;
-&#13;
             default:&#13;
-                outputs.result = str;&#13;
+                outputs.result = 'Invalid option passed';&#13;
         }&#13;
         outputs.success = true;&#13;
         outputs.message = "Operation executed successfully.";&#13;
@@ -1812,18 +2012,16 @@
         outputs.message = "Error: " + e.message;&#13;
     }&#13;
 &#13;
-    function validateEmail(email) { //Validates the email address&#13;
-        var emailRegex = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/; // Change this regex based on requirement&#13;
-        //The regular expression /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/ is used for a basic validation of an email address format. It breaks the email into three main parts: the username, the "@" symbol, and the domain, with some key restrictions&#13;
-        return emailRegex.test(email);&#13;
+    function validateEmail(email, regexpattern1) {&#13;
+        return regexpattern1.test(email);     &#13;
     }&#13;
 &#13;
-    function validatePhone(phone) { //The regular expression /^(\+91-|\+91|0)?\d{10}$/ is used to validate a 10-digit Indian phone number that may include an optional country code&#13;
-        var phoneRegex = /^(\+91-|\+91|0)?\d{10}$/; // Change this regex based on requirement&#13;
-        return phoneRegex.test(phone);&#13;
+    function validatePhone(phone, regexpattern2) {&#13;
+        return regexpattern2.test(phone);      &#13;
     }&#13;
 &#13;
-})(inputs, outputs);</value>
+})(inputs, outputs);&#13;
+</value>
         <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1854,6 +2052,18 @@
         <value>{{action.input_string}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>regex</field>
+        <id>c6cb28108320ba10743e9470ceaad366</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 13:28:41</sys_created_on>
+        <sys_id>15b8c55883a0ba10743e9470ceaad3eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 13:28:41</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_c6cb28108320ba10743e9470ceaad366</table>
+        <value>{{action.enter_the_regex_to_validate_email_phone_number}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>stringOperation</field>
         <id>c6cb28108320ba10743e9470ceaad366</id>
         <sys_created_by>admin</sys_created_by>
@@ -1868,7 +2078,7 @@
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_c6cb28108320ba10743e9470ceaad366^id=c6cb28108320ba10743e9470ceaad366"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=c6cb28108320ba10743e9470ceaad366"/>
     <sys_translated_text action="delete_multiple" query="documentkey=c6cb28108320ba10743e9470ceaad366"/>
-    <sys_hub_step_ext_input action="delete_multiple" query="model=c6cb28108320ba10743e9470ceaad366^sys_idNOT IN06cb28108320ba10743e9470ceaad36a,06cb28108320ba10743e9470ceaad36e"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=c6cb28108320ba10743e9470ceaad366^sys_idNOT IN06cb28108320ba10743e9470ceaad36a,06cb28108320ba10743e9470ceaad36e,5db8c55883a0ba10743e9470ceaad3dd"/>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -2023,6 +2233,89 @@
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-08 11:22:18</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>regex</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>regex</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">c6cb28108320ba10743e9470ceaad366</model>
+        <model_id>c6cb28108320ba10743e9470ceaad366</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_c6cb28108320ba10743e9470ceaad366</name>
+        <next_element/>
+        <order>200</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 13:28:41</sys_created_on>
+        <sys_id>5db8c55883a0ba10743e9470ceaad3dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 13:28:41</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2214,7 +2507,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>02cb28108320ba10743e9470ceaad372</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -2222,7 +2515,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 11:31:02</sys_updated_on>
+        <sys_updated_on>2025-10-08 13:34:33</sys_updated_on>
         <type>complex_object_collection</type>
     </sys_complex_object>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
@@ -2378,7 +2671,7 @@
         <url/>
         <url_target/>
     </sys_documentation>
-    <sys_hub_action_input action="delete_multiple" query="model=3dcb28108320ba10743e9470ceaad347^sys_idNOT IN82cb28108320ba10743e9470ceaad34f,f5cb28108320ba10743e9470ceaad34a"/>
+    <sys_hub_action_input action="delete_multiple" query="model=3dcb28108320ba10743e9470ceaad347^sys_idNOT IN82cb28108320ba10743e9470ceaad34f,c9b8c55883a0ba10743e9470ceaad3ce,f5cb28108320ba10743e9470ceaad34a"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -2416,7 +2709,7 @@
         <help/>
         <hint/>
         <internal_type display_value="Choice">choice</internal_type>
-        <label>String operation</label>
+        <label>Select Either Email or Phone Number</label>
         <mandatory>true</mandatory>
         <max_length>32</max_length>
         <model display_value="Regex Email and Phone Number">3dcb28108320ba10743e9470ceaad347</model>
@@ -2442,14 +2735,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-08 11:22:18</sys_created_on>
         <sys_id>82cb28108320ba10743e9470ceaad34f</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 11:31:02</sys_updated_on>
+        <sys_updated_on>2025-10-08 13:34:33</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2463,6 +2756,90 @@
         <xml_view>false</xml_view>
     </sys_hub_action_input>
     <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=82cb28108320ba10743e9470ceaad34f"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string_full_utf8,uiTypeLabel=String (Full UTF-8),uiUniqueId=02c995ad-b1b7-438e-9bcf-4091c48ffbaa</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>enter_the_regex_to_validate_email_phone_number</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">string_full_utf8</internal_type>
+        <label>Enter the Regex to validate Email/Phone Number</label>
+        <mandatory>true</mandatory>
+        <max_length>255</max_length>
+        <model display_value="Regex Email and Phone Number">3dcb28108320ba10743e9470ceaad347</model>
+        <model_id>3dcb28108320ba10743e9470ceaad347</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_3dcb28108320ba10743e9470ceaad347</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 13:28:40</sys_created_on>
+        <sys_id>c9b8c55883a0ba10743e9470ceaad3ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 13:28:40</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c9b8c55883a0ba10743e9470ceaad3ce"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -2874,14 +3251,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-08 11:22:19</sys_created_on>
         <sys_id>c2cb28108320ba10743e9470ceaad38c</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 11:31:03</sys_updated_on>
+        <sys_updated_on>2025-10-08 13:34:33</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2996,10 +3373,33 @@
     </sys_hub_action_status_metadata>
     <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=16cb28108320ba10743e9470ceaad3b2"/>
     <sys_documentation action="INSERT_OR_UPDATE">
+        <element>enter_the_regex_to_validate_email_phone_number</element>
+        <help/>
+        <hint/>
+        <label>Enter the Regex to validate Email/Phone Number</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_3dcb28108320ba10743e9470ceaad347</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-08 13:28:40</sys_created_on>
+        <sys_id>49b8c55883a0ba10743e9470ceaad3d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Enter the Regex to validate Email/Phone Number</sys_name>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-08 13:28:40</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
         <element>string_operation</element>
         <help/>
         <hint/>
-        <label>String operation</label>
+        <label>Select Either Email or Phone Number</label>
         <language>en</language>
         <name>var__m_sys_hub_action_input_3dcb28108320ba10743e9470ceaad347</name>
         <plural/>
@@ -3007,14 +3407,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-08 11:22:18</sys_created_on>
         <sys_id>8ecb28108320ba10743e9470ceaad354</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name>String operation</sys_name>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Select Either Email or Phone Number</sys_name>
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 11:22:18</sys_updated_on>
+        <sys_updated_on>2025-10-08 13:28:40</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -3041,27 +3441,27 @@
         <url/>
         <url_target/>
     </sys_documentation>
-    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_3dcb28108320ba10743e9470ceaad347^sys_idNOT IN02cb28108320ba10743e9470ceaad352,4acb28108320ba10743e9470ceaad351"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_3dcb28108320ba10743e9470ceaad347^sys_idNOT IN49b8c55883a0ba10743e9470ceaad3bd,4acb28108320ba10743e9470ceaad351"/>
     <sys_choice field="string_operation" table="var__m_sys_hub_action_input_3dcb28108320ba10743e9470ceaad347">
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
             <element>string_operation</element>
             <hint/>
             <inactive>false</inactive>
-            <label>Mobile Number</label>
+            <label>Phone Number</label>
             <language>en</language>
             <name>var__m_sys_hub_action_input_3dcb28108320ba10743e9470ceaad347</name>
             <sequence>1</sequence>
             <synonyms/>
             <sys_created_by>admin</sys_created_by>
-            <sys_created_on>2025-10-08 11:22:18</sys_created_on>
+            <sys_created_on>2025-10-08 13:28:40</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>02cb28108320ba10743e9470ceaad352</sys_id>
+            <sys_id>49b8c55883a0ba10743e9470ceaad3bd</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>admin</sys_updated_by>
-            <sys_updated_on>2025-10-08 11:22:18</sys_updated_on>
-            <value>mobile_number</value>
+            <sys_updated_on>2025-10-08 13:28:40</sys_updated_on>
+            <value>phone_number</value>
         </sys_choice>
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
