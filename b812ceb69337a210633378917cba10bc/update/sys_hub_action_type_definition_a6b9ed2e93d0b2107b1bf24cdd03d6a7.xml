@@ -16,10 +16,10 @@
         <flow_priority/>
         <ih_action>false</ih_action>
         <internal_name>add_comment_to_a_work_notes_of_a_record</internal_name>
-        <label_cache>[{"name":"{{action.table_name}}","label":"action➛Table Name","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.sysid}}","label":"action➛SysId","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.comment_text}}","label":"action➛Work notes Text","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"0b52e40a-0156-431f-8019-16cbb2fa31d9"}},{"name":"{{step[47d8b4d6-aeb4-47c8-aa9e-2a372a597047].code}}","label":"step➛Script step➛code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[47d8b4d6-aeb4-47c8-aa9e-2a372a597047].message}}","label":"step➛Script step➛message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[47d8b4d6-aeb4-47c8-aa9e-2a372a597047].success}}","label":"step➛Script step➛success","type":"step","ref":"","reference_display":"","base_type":"array.boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
+        <label_cache>[{"name":"{{action.table_name}}","label":"action➛Table Name","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"2c27c226-f3d8-407d-9fc4-ef0b14cbe7d6"}},{"name":"{{action.sysid}}","label":"action➛SysID","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"36b58bb0-9d15-472d-9a62-9517ecefb327"}},{"name":"{{action.comment_text}}","label":"action➛Worknote","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"0b52e40a-0156-431f-8019-16cbb2fa31d9"}},{"name":"{{step[47d8b4d6-aeb4-47c8-aa9e-2a372a597047].message}}","label":"step➛Script step➛message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[47d8b4d6-aeb4-47c8-aa9e-2a372a597047].success}}","label":"step➛Script step➛success","type":"step","ref":"","reference_display":"","base_type":"array.boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
         <master_snapshot>cc9ba9ee93d0b2107b1bf24cdd03d640</master_snapshot>
         <master_snapshot_digest/>
-        <name>Append work notes to records directly from a Flow.</name>
+        <name>Insert Worknote</name>
         <natlang/>
         <outputs/>
         <outputs/>
@@ -31,15 +31,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a6b9ed2e93d0b2107b1bf24cdd03d6a7</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_name>Append work notes to records directly from a Flow.</sys_name>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Insert Worknote</sys_name>
         <sys_overrides/>
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_a6b9ed2e93d0b2107b1bf24cdd03d6a7</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-04 02:15:37</sys_updated_on>
+        <sys_updated_on>2025-10-09 09:37:33</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -53,10 +53,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-03 05:29:07</sys_created_on>
         <sys_id>33faa9ae93d0b2107b1bf24cdd03d662</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-03 05:29:07</sys_updated_on>
-        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
+        <sys_updated_on>2025-10-09 09:33:04</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</value>
         <variable display_value="Action Status">3ffaa9ae93d0b2107b1bf24cdd03d62c</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -73,6 +73,20 @@
         <value>0</value>
         <variable display_value="Don't Treat as Error">7bfaa9ae93d0b2107b1bf24cdd03d635</variable>
     </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>a6b9ed2e93d0b2107b1bf24cdd03d6a7</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-09 09:37:33</sys_created_on>
+        <sys_id>d96dd1a8c328721095fc1533e401318b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-09 09:37:33</sys_updated_on>
+        <value>0</value>
+        <variable display_value="success">c56dd1a8c328721095fc1533e401316a</variable>
+    </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=a6b9ed2e93d0b2107b1bf24cdd03d6a7"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>code</field>
@@ -80,11 +94,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-03 05:29:07</sys_created_on>
         <sys_id>fffaa9ae93d0b2107b1bf24cdd03d660</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-03 05:29:07</sys_updated_on>
+        <sys_updated_on>2025-10-09 09:31:38</sys_updated_on>
         <table>var__m_sys_hub_action_output_a6b9ed2e93d0b2107b1bf24cdd03d6a7</table>
-        <value>{{step[47d8b4d6-aeb4-47c8-aa9e-2a372a597047].code}}</value>
+        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>message</field>
@@ -104,11 +118,11 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-03 05:29:07</sys_created_on>
         <sys_id>3bfaa9ae93d0b2107b1bf24cdd03d661</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-03 05:29:07</sys_updated_on>
+        <sys_updated_on>2025-10-09 09:37:33</sys_updated_on>
         <table>var__m_sys_hub_action_output_a6b9ed2e93d0b2107b1bf24cdd03d6a7</table>
-        <value>{{step[47d8b4d6-aeb4-47c8-aa9e-2a372a597047].success}}</value>
+        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>__action_status__</field>
@@ -136,7 +150,7 @@
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=a6b9ed2e93d0b2107b1bf24cdd03d6a7^sys_idNOT IN23fa69ae93d0b2107b1bf24cdd03d6fd"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="Append work notes to records directly from a Flow.">a6b9ed2e93d0b2107b1bf24cdd03d6a7</action>
+        <action display_value="Insert Worknote">a6b9ed2e93d0b2107b1bf24cdd03d6a7</action>
         <cid>47d8b4d6-aeb4-47c8-aa9e-2a372a597047</cid>
         <error_handling_type>1</error_handling_type>
         <extended_inputs/>
@@ -152,10 +166,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-03 05:29:06</sys_created_on>
         <sys_id>23fa69ae93d0b2107b1bf24cdd03d6fd</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-04 02:15:37</sys_updated_on>
+        <sys_updated_on>2025-10-09 09:33:04</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=23fa69ae93d0b2107b1bf24cdd03d6fd"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -180,32 +194,41 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-03 05:29:07</sys_created_on>
         <sys_id>7bfaa9ae93d0b2107b1bf24cdd03d628</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-04 02:15:37</sys_updated_on>
+        <sys_updated_on>2025-10-09 09:33:04</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
     try {&#13;
-        var record = new GlideRecord(inputs.tableName);&#13;
+        const TABLE = inputs.tableName;&#13;
+        const SYS_ID = inputs.sysID;&#13;
+        const WORK_NOTE = inputs.worknote;&#13;
+        &#13;
+        var gr = new GlideRecord(TABLE);&#13;
 &#13;
-        if (record.get(inputs.sysId)) {&#13;
-            record.work_notes = inputs.workNotesText;&#13;
-            record.update();&#13;
-&#13;
-            outputs.success = true;&#13;
-            outputs.code = "200"; // Success&#13;
-            outputs.message = "Work notes added successfully.";&#13;
-        } else {&#13;
-            outputs.success = false;&#13;
-            outputs.code = "404"; // Not Found&#13;
-            outputs.message = "Record not found.";&#13;
+        // Validate inputs (table name &amp; sys_id)&#13;
+        if (!gr.isValid()) {&#13;
+            throw new Error('Table "'+TABLE+'" does not exist.');&#13;
         }&#13;
+&#13;
+        if (!gr.get(SYS_ID)) {&#13;
+            throw new Error('Record with sys_id "'+SYS_ID+'" was not found.');&#13;
+        }&#13;
+&#13;
+        // Insert worknote and check for errors&#13;
+        gr.work_notes = WORK_NOTE;&#13;
+        var success = gr.update();&#13;
+        if (success) {&#13;
+            output.success = true;&#13;
+        } else {&#13;
+            throw new Error('Failed to update record during call to update()');&#13;
+        }&#13;
+&#13;
     } catch (e) {&#13;
         outputs.success = false;&#13;
-        outputs.code = "500"; // Internal Server Error&#13;
-        outputs.message = "Error: " + e.message;&#13;
+        outputs.message = 'Error adding Worknote: ' + e.message;&#13;
     }&#13;
-})(inputs, outputs);&#13;
-</value>
+&#13;
+})(inputs, outputs);</value>
         <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=23fa69ae93d0b2107b1bf24cdd03d6fd"/>
@@ -225,11 +248,11 @@
         <field>script</field>
         <id>23fa69ae93d0b2107b1bf24cdd03d6fd</id>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-04 02:15:37</sys_created_on>
-        <sys_id>4748c67693d8f2107b1bf24cdd03d6b6</sys_id>
+        <sys_created_on>2025-10-09 09:31:37</sys_created_on>
+        <sys_id>260c1128c328721095fc1533e40131c1</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-04 02:15:37</sys_updated_on>
+        <sys_updated_on>2025-10-09 09:31:37</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
         <value/>
     </sys_element_mapping>
@@ -258,6 +281,18 @@
         <value>{{action.table_name}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>worknote</field>
+        <id>23fa69ae93d0b2107b1bf24cdd03d6fd</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-09 09:33:04</sys_created_on>
+        <sys_id>a35c1928c328721095fc1533e4013115</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-09 09:33:04</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_23fa69ae93d0b2107b1bf24cdd03d6fd</table>
+        <value>{{action.comment_text}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>workNotesText</field>
         <id>23fa69ae93d0b2107b1bf24cdd03d6fd</id>
         <sys_created_by>admin</sys_created_by>
@@ -272,7 +307,7 @@
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_23fa69ae93d0b2107b1bf24cdd03d6fd^id=23fa69ae93d0b2107b1bf24cdd03d6fd"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=23fa69ae93d0b2107b1bf24cdd03d6fd"/>
     <sys_translated_text action="delete_multiple" query="documentkey=23fa69ae93d0b2107b1bf24cdd03d6fd"/>
-    <sys_hub_step_ext_input action="delete_multiple" query="model=23fa69ae93d0b2107b1bf24cdd03d6fd^sys_idNOT IN7248c67693d8f2107b1bf24cdd03d697,e3faa9ae93d0b2107b1bf24cdd03d602,effaa9ae93d0b2107b1bf24cdd03d604"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=23fa69ae93d0b2107b1bf24cdd03d6fd^sys_idNOT INa35c1928c328721095fc1533e4013104,d75cd528c328721095fc1533e40131e7,e3faa9ae93d0b2107b1bf24cdd03d602"/>
     <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -301,7 +336,7 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>workNotesText</element>
+        <element>worknote</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <formula/>
@@ -334,8 +369,8 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_step_ext_input</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-04 02:15:36</sys_created_on>
-        <sys_id>7248c67693d8f2107b1bf24cdd03d697</sys_id>
+        <sys_created_on>2025-10-09 09:33:04</sys_created_on>
+        <sys_id>a35c1928c328721095fc1533e4013104</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
@@ -343,7 +378,90 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-04 02:15:36</sys_updated_on>
+        <sys_updated_on>2025-10-09 09:33:04</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sysID</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">23fa69ae93d0b2107b1bf24cdd03d6fd</model>
+        <model_id>23fa69ae93d0b2107b1bf24cdd03d6fd</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_23fa69ae93d0b2107b1bf24cdd03d6fd</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-09 09:33:03</sys_created_on>
+        <sys_id>d75cd528c328721095fc1533e40131e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-09 09:33:03</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -439,90 +557,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_input>
-    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <array>false</array>
-        <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
-        <audit>false</audit>
-        <calculation><![CDATA[(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);]]></calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table/>
-        <column_label/>
-        <comments/>
-        <create_roles/>
-        <default_value/>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>sysId</element>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <formula/>
-        <function_definition/>
-        <function_field>false</function_field>
-        <help/>
-        <hint/>
-        <internal_type display_value="String">string</internal_type>
-        <label/>
-        <mandatory>true</mandatory>
-        <max_length>8000</max_length>
-        <model display_value="Script step">23fa69ae93d0b2107b1bf24cdd03d6fd</model>
-        <model_id>23fa69ae93d0b2107b1bf24cdd03d6fd</model_id>
-        <model_table>sys_hub_step_instance</model_table>
-        <name>var__m_sys_hub_step_ext_input_23fa69ae93d0b2107b1bf24cdd03d6fd</name>
-        <next_element/>
-        <order>100</order>
-        <primary>false</primary>
-        <read_only>false</read_only>
-        <read_roles/>
-        <reference/>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <sizeclass/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-03 05:29:06</sys_created_on>
-        <sys_id>effaa9ae93d0b2107b1bf24cdd03d604</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-03 05:29:06</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <virtual_type>script</virtual_type>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_hub_step_ext_input>
-    <sys_hub_step_ext_output action="delete_multiple" query="model=23fa69ae93d0b2107b1bf24cdd03d6fd^sys_idNOT IN2bfaa9ae93d0b2107b1bf24cdd03d60a,2ffaa9ae93d0b2107b1bf24cdd03d60e,a3faa9ae93d0b2107b1bf24cdd03d612"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=23fa69ae93d0b2107b1bf24cdd03d6fd^sys_idNOT IN2bfaa9ae93d0b2107b1bf24cdd03d60a,2ffaa9ae93d0b2107b1bf24cdd03d60e"/>
     <sys_complex_object action="INSERT_OR_UPDATE">
         <label/>
         <name>FDebfaa9aeded0b21032c3c5dd6afda209</name>
@@ -535,7 +570,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>affaa9ae93d0b2107b1bf24cdd03d609</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -543,7 +578,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-04 02:15:36</sys_updated_on>
+        <sys_updated_on>2025-10-09 09:37:32</sys_updated_on>
         <type>complex_object_collection</type>
     </sys_complex_object>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
@@ -712,89 +747,6 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
-    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <array>false</array>
-        <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=integer,uiTypeLabel=Integer,uiUniqueId=8e1d40b7-a2d7-4527-9095-27617883a60a</attributes>
-        <audit>false</audit>
-        <calculation><![CDATA[(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);]]></calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table/>
-        <column_label/>
-        <comments/>
-        <create_roles/>
-        <default_value/>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>code</element>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <formula/>
-        <function_definition/>
-        <function_field>false</function_field>
-        <help/>
-        <hint/>
-        <internal_type display_value="Integer">integer</internal_type>
-        <label>code</label>
-        <mandatory>false</mandatory>
-        <max_length>40</max_length>
-        <model display_value="Script step">23fa69ae93d0b2107b1bf24cdd03d6fd</model>
-        <model_id>23fa69ae93d0b2107b1bf24cdd03d6fd</model_id>
-        <model_table>sys_hub_step_instance</model_table>
-        <name>var__m_sys_hub_step_ext_output_23fa69ae93d0b2107b1bf24cdd03d6fd</name>
-        <next_element/>
-        <order>3</order>
-        <primary>false</primary>
-        <read_only>false</read_only>
-        <read_roles/>
-        <reference/>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <sizeclass/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-03 05:29:06</sys_created_on>
-        <sys_id>a3faa9ae93d0b2107b1bf24cdd03d612</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-03 05:29:06</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <virtual_type>script</virtual_type>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_hub_step_ext_output>
     <sys_hub_input_scripts action="delete_multiple" query="instance=23fa69ae93d0b2107b1bf24cdd03d6fd"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>success</element>
@@ -816,29 +768,6 @@
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-03 05:29:06</sys_updated_on>
-        <url/>
-        <url_target/>
-    </sys_documentation>
-    <sys_documentation action="INSERT_OR_UPDATE">
-        <element>code</element>
-        <help/>
-        <hint/>
-        <label>code</label>
-        <language>en</language>
-        <name>var__m_sys_hub_step_ext_output_23fa69ae93d0b2107b1bf24cdd03d6fd</name>
-        <plural/>
-        <sys_class_name>sys_documentation</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-03 05:29:07</sys_created_on>
-        <sys_id>7bfaa9ae93d0b2107b1bf24cdd03d614</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
-        <sys_policy/>
-        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-03 05:29:07</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -903,10 +832,10 @@
         <help/>
         <hint/>
         <internal_type display_value="String">string</internal_type>
-        <label>Work notes Text</label>
+        <label>Worknote</label>
         <mandatory>true</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Append work notes to records directly from a Flow.">a6b9ed2e93d0b2107b1bf24cdd03d6a7</model>
+        <model display_value="Insert Worknote">a6b9ed2e93d0b2107b1bf24cdd03d6a7</model>
         <model_id>a6b9ed2e93d0b2107b1bf24cdd03d6a7</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_a6b9ed2e93d0b2107b1bf24cdd03d6a7</name>
@@ -929,14 +858,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-03 05:29:06</sys_created_on>
         <sys_id>2ffa69ae93d0b2107b1bf24cdd03d6e3</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-04 02:15:36</sys_updated_on>
+        <sys_updated_on>2025-10-09 09:33:03</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -987,10 +916,10 @@
         <help/>
         <hint/>
         <internal_type display_value="String">string</internal_type>
-        <label>SysId</label>
+        <label>SysID</label>
         <mandatory>true</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Append work notes to records directly from a Flow.">a6b9ed2e93d0b2107b1bf24cdd03d6a7</model>
+        <model display_value="Insert Worknote">a6b9ed2e93d0b2107b1bf24cdd03d6a7</model>
         <model_id>a6b9ed2e93d0b2107b1bf24cdd03d6a7</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_a6b9ed2e93d0b2107b1bf24cdd03d6a7</name>
@@ -1013,14 +942,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-03 05:29:06</sys_created_on>
         <sys_id>a7fa65ae93d0b2107b1bf24cdd03d610</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-03 05:29:06</sys_updated_on>
+        <sys_updated_on>2025-10-09 09:33:03</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1074,7 +1003,7 @@
         <label>Table Name</label>
         <mandatory>true</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Append work notes to records directly from a Flow.">a6b9ed2e93d0b2107b1bf24cdd03d6a7</model>
+        <model display_value="Insert Worknote">a6b9ed2e93d0b2107b1bf24cdd03d6a7</model>
         <model_id>a6b9ed2e93d0b2107b1bf24cdd03d6a7</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_a6b9ed2e93d0b2107b1bf24cdd03d6a7</name>
@@ -1118,7 +1047,7 @@
         <xml_view>false</xml_view>
     </sys_hub_action_input>
     <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=ebfa65ae93d0b2107b1bf24cdd03d60b"/>
-    <sys_hub_action_output action="delete_multiple" query="model=a6b9ed2e93d0b2107b1bf24cdd03d6a7^sys_idNOT IN3ffaa9ae93d0b2107b1bf24cdd03d62c,7bfaa9ae93d0b2107b1bf24cdd03d635,7bfaa9ae93d0b2107b1bf24cdd03d63b,f7faa9ae93d0b2107b1bf24cdd03d631,fbfaa9ae93d0b2107b1bf24cdd03d63f"/>
+    <sys_hub_action_output action="delete_multiple" query="model=a6b9ed2e93d0b2107b1bf24cdd03d6a7^sys_idNOT IN3ffaa9ae93d0b2107b1bf24cdd03d62c,7bfaa9ae93d0b2107b1bf24cdd03d635,7bfaa9ae93d0b2107b1bf24cdd03d63b,c56dd1a8c328721095fc1533e401316a"/>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -1161,7 +1090,7 @@
         <label>Action Status</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="Append work notes to records directly from a Flow.">a6b9ed2e93d0b2107b1bf24cdd03d6a7</model>
+        <model display_value="Insert Worknote">a6b9ed2e93d0b2107b1bf24cdd03d6a7</model>
         <model_id>a6b9ed2e93d0b2107b1bf24cdd03d6a7</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_a6b9ed2e93d0b2107b1bf24cdd03d6a7</name>
@@ -1248,7 +1177,7 @@
         <label>Don't Treat as Error</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="Append work notes to records directly from a Flow.">a6b9ed2e93d0b2107b1bf24cdd03d6a7</model>
+        <model display_value="Insert Worknote">a6b9ed2e93d0b2107b1bf24cdd03d6a7</model>
         <model_id>a6b9ed2e93d0b2107b1bf24cdd03d6a7</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_a6b9ed2e93d0b2107b1bf24cdd03d6a7</name>
@@ -1271,14 +1200,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-03 05:29:07</sys_created_on>
         <sys_id>7bfaa9ae93d0b2107b1bf24cdd03d635</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-04 02:15:37</sys_updated_on>
+        <sys_updated_on>2025-10-09 09:37:33</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1335,7 +1264,7 @@
         <label>message</label>
         <mandatory>true</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Append work notes to records directly from a Flow.">a6b9ed2e93d0b2107b1bf24cdd03d6a7</model>
+        <model display_value="Insert Worknote">a6b9ed2e93d0b2107b1bf24cdd03d6a7</model>
         <model_id>a6b9ed2e93d0b2107b1bf24cdd03d6a7</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_a6b9ed2e93d0b2107b1bf24cdd03d6a7</name>
@@ -1384,7 +1313,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=9c9d4915-8246-49a1-9e3b-c0073cc2b20c</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=9c9d4915-8246-49a1-9e3b-c0073cc2b20c</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -1418,11 +1347,11 @@
         <help/>
         <hint/>
         <internal_link/>
-        <internal_type display_value="String">string</internal_type>
+        <internal_type display_value="">boolean</internal_type>
         <label>success</label>
         <mandatory>true</mandatory>
-        <max_length>8000</max_length>
-        <model display_value="Append work notes to records directly from a Flow.">a6b9ed2e93d0b2107b1bf24cdd03d6a7</model>
+        <max_length>40</max_length>
+        <model display_value="Insert Worknote">a6b9ed2e93d0b2107b1bf24cdd03d6a7</model>
         <model_id>a6b9ed2e93d0b2107b1bf24cdd03d6a7</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_a6b9ed2e93d0b2107b1bf24cdd03d6a7</name>
@@ -1443,8 +1372,8 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_action_output</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-03 05:29:07</sys_created_on>
-        <sys_id>f7faa9ae93d0b2107b1bf24cdd03d631</sys_id>
+        <sys_created_on>2025-10-09 09:37:32</sys_created_on>
+        <sys_id>c56dd1a8c328721095fc1533e401316a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
@@ -1452,7 +1381,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-03 05:29:07</sys_updated_on>
+        <sys_updated_on>2025-10-09 09:37:32</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1465,99 +1394,12 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_action_output>
-    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f7faa9ae93d0b2107b1bf24cdd03d631"/>
-    <sys_hub_input_scripts action="delete_multiple" query="instance=f7faa9ae93d0b2107b1bf24cdd03d631"/>
-    <sys_hub_action_output action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <array>false</array>
-        <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=4a0024aa-33f5-4b3d-9880-46f1d2806185</attributes>
-        <audit>false</audit>
-        <calculation><![CDATA[(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);]]></calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table/>
-        <column_label/>
-        <comments/>
-        <create_roles/>
-        <default_value/>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>code</element>
-        <element_prototype/>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <formula/>
-        <function_definition/>
-        <function_field>false</function_field>
-        <help/>
-        <hint/>
-        <internal_link/>
-        <internal_type display_value="String">string</internal_type>
-        <label>code</label>
-        <mandatory>true</mandatory>
-        <max_length>8000</max_length>
-        <model display_value="Append work notes to records directly from a Flow.">a6b9ed2e93d0b2107b1bf24cdd03d6a7</model>
-        <model_id>a6b9ed2e93d0b2107b1bf24cdd03d6a7</model_id>
-        <model_table>sys_hub_action_type_definition</model_table>
-        <name>var__m_sys_hub_action_output_a6b9ed2e93d0b2107b1bf24cdd03d6a7</name>
-        <next_element/>
-        <order>5</order>
-        <primary>false</primary>
-        <read_only>false</read_only>
-        <read_roles/>
-        <reference/>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <sizeclass/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_hub_action_output</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-03 05:29:07</sys_created_on>
-        <sys_id>fbfaa9ae93d0b2107b1bf24cdd03d63f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-03 05:29:07</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <virtual_type>script</virtual_type>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_hub_action_output>
-    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=fbfaa9ae93d0b2107b1bf24cdd03d63f"/>
-    <sys_hub_input_scripts action="delete_multiple" query="instance=fbfaa9ae93d0b2107b1bf24cdd03d63f"/>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c56dd1a8c328721095fc1533e401316a"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c56dd1a8c328721095fc1533e401316a"/>
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=a6b9ed2e93d0b2107b1bf24cdd03d6a7"/>
     <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=a6b9ed2e93d0b2107b1bf24cdd03d6a7^sys_idNOT INbffaa9ae93d0b2107b1bf24cdd03d663"/>
     <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
-        <action_type_id display_value="Append work notes to records directly from a Flow.">a6b9ed2e93d0b2107b1bf24cdd03d6a7</action_type_id>
+        <action_type_id display_value="Insert Worknote">a6b9ed2e93d0b2107b1bf24cdd03d6a7</action_type_id>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-03 05:29:07</sys_created_on>
         <sys_id>bffaa9ae93d0b2107b1bf24cdd03d663</sys_id>
@@ -1572,19 +1414,19 @@
         <dont_treat_as_error>false</dont_treat_as_error>
         <label>Server error</label>
         <order>1</order>
-        <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"mapped\":\"{\\\"code\\\":\\\"{{step[47d8b4d6-aeb4-47c8-aa9e-2a372a597047].code}}\\\"}\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[47d8b4d6-aeb4-47c8-aa9e-2a372a597047].message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</status>
+        <status>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[47d8b4d6-aeb4-47c8-aa9e-2a372a597047].message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</status>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-03 05:29:07</sys_created_on>
         <sys_id>b3faa9ae93d0b2107b1bf24cdd03d664</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-03 05:29:07</sys_updated_on>
+        <sys_updated_on>2025-10-09 09:31:38</sys_updated_on>
     </sys_hub_status_condition>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>sysid</element>
         <help/>
         <hint/>
-        <label>SysId</label>
+        <label>SysID</label>
         <language>en</language>
         <name>var__m_sys_hub_action_input_a6b9ed2e93d0b2107b1bf24cdd03d6a7</name>
         <plural/>
@@ -1592,29 +1434,6 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-03 05:29:06</sys_created_on>
         <sys_id>2bfa65ae93d0b2107b1bf24cdd03d613</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
-        <sys_policy/>
-        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-03 05:29:06</sys_updated_on>
-        <url/>
-        <url_target/>
-    </sys_documentation>
-    <sys_documentation action="INSERT_OR_UPDATE">
-        <element>comment_text</element>
-        <help/>
-        <hint/>
-        <label>Work notes Text</label>
-        <language>en</language>
-        <name>var__m_sys_hub_action_input_a6b9ed2e93d0b2107b1bf24cdd03d6a7</name>
-        <plural/>
-        <sys_class_name>sys_documentation</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-03 05:29:06</sys_created_on>
-        <sys_id>affa69ae93d0b2107b1bf24cdd03d6e6</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
@@ -1622,7 +1441,30 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-04 02:15:36</sys_updated_on>
+        <sys_updated_on>2025-10-09 09:33:03</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>comment_text</element>
+        <help/>
+        <hint/>
+        <label>Worknote</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_a6b9ed2e93d0b2107b1bf24cdd03d6a7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-03 05:29:06</sys_created_on>
+        <sys_id>affa69ae93d0b2107b1bf24cdd03d6e6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-09 09:33:03</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -1706,8 +1548,8 @@
         <plural/>
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-03 05:29:07</sys_created_on>
-        <sys_id>bbfaa9ae93d0b2107b1bf24cdd03d634</sys_id>
+        <sys_created_on>2025-10-09 09:37:33</sys_created_on>
+        <sys_id>496dd1a8c328721095fc1533e401316d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
@@ -1715,7 +1557,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-03 05:29:07</sys_updated_on>
+        <sys_updated_on>2025-10-09 09:37:33</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -1742,33 +1584,10 @@
         <url/>
         <url_target/>
     </sys_documentation>
-    <sys_documentation action="INSERT_OR_UPDATE">
-        <element>code</element>
-        <help/>
-        <hint/>
-        <label>code</label>
-        <language>en</language>
-        <name>var__m_sys_hub_action_output_a6b9ed2e93d0b2107b1bf24cdd03d6a7</name>
-        <plural/>
-        <sys_class_name>sys_documentation</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-03 05:29:07</sys_created_on>
-        <sys_id>bffaa9ae93d0b2107b1bf24cdd03d642</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
-        <sys_policy/>
-        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-03 05:29:07</sys_updated_on>
-        <url/>
-        <url_target/>
-    </sys_documentation>
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_a6b9ed2e93d0b2107b1bf24cdd03d6a7"/>
     <sys_hub_action_plan action="delete_multiple" query="action_id=a6b9ed2e93d0b2107b1bf24cdd03d6a7^sys_idNOT IN309ba9ee93d0b2107b1bf24cdd03d6f5"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
-        <action_id display_value="Append work notes to records directly from a Flow.">a6b9ed2e93d0b2107b1bf24cdd03d6a7</action_id>
+        <action_id display_value="Insert Worknote">a6b9ed2e93d0b2107b1bf24cdd03d6a7</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"309ba9ee93d0b2107b1bf24cdd03d6f5","name":"plan","plan_signature":null}}</plan>
         <snapshot>09bb71669354b2107b1bf24cdd03d6df</snapshot>
         <sys_created_by>admin</sys_created_by>
@@ -1803,7 +1622,7 @@
         <natlang/>
         <outputs/>
         <outputs/>
-        <parent_action display_value="Append work notes to records directly from a Flow.">a6b9ed2e93d0b2107b1bf24cdd03d6a7</parent_action>
+        <parent_action display_value="Insert Worknote">a6b9ed2e93d0b2107b1bf24cdd03d6a7</parent_action>
         <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-03 05:31:36</sys_created_on>
@@ -2568,7 +2387,7 @@
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_989ba9ee93d0b2107b1bf24cdd03d679_message_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-03 05:31:37</sys_updated_on>
         <url/>
@@ -2591,7 +2410,7 @@
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_989ba9ee93d0b2107b1bf24cdd03d679_code_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-03 05:31:37</sys_updated_on>
         <url/>
@@ -2614,7 +2433,7 @@
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_989ba9ee93d0b2107b1bf24cdd03d679_success_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-03 05:31:37</sys_updated_on>
         <url/>
@@ -3352,7 +3171,7 @@
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_cc9ba9ee93d0b2107b1bf24cdd03d640_comment_text_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-03 05:31:36</sys_updated_on>
         <url/>
@@ -3375,7 +3194,7 @@
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_cc9ba9ee93d0b2107b1bf24cdd03d640_table_name_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-03 05:31:36</sys_updated_on>
         <url/>
@@ -3398,7 +3217,7 @@
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_cc9ba9ee93d0b2107b1bf24cdd03d640_sysid_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-03 05:31:36</sys_updated_on>
         <url/>
@@ -3422,7 +3241,7 @@
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_cc9ba9ee93d0b2107b1bf24cdd03d640___action_status___en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-03 05:31:37</sys_updated_on>
         <url/>
@@ -3445,7 +3264,7 @@
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_cc9ba9ee93d0b2107b1bf24cdd03d640___dont_treat_as_error___en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-03 05:31:37</sys_updated_on>
         <url/>
@@ -3468,7 +3287,7 @@
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_cc9ba9ee93d0b2107b1bf24cdd03d640_success_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-03 05:31:37</sys_updated_on>
         <url/>
@@ -3491,7 +3310,7 @@
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_cc9ba9ee93d0b2107b1bf24cdd03d640_message_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-03 05:31:37</sys_updated_on>
         <url/>
@@ -3514,7 +3333,7 @@
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_cc9ba9ee93d0b2107b1bf24cdd03d640_code_en</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-03 05:31:37</sys_updated_on>
         <url/>
