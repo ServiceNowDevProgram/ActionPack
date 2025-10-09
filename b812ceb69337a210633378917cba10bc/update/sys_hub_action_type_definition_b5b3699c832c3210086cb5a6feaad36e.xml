@@ -16,7 +16,7 @@
         <flow_priority/>
         <ih_action>false</ih_action>
         <internal_name>calculate_business_days_duration</internal_name>
-        <label_cache>[{"name":"{{action.start_date_time}}","label":"action➛Start Date/Time","type":"action","ref":"","reference_display":"","base_type":"glide_date_time","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.end_date_time}}","label":"action➛End Date/Time","type":"action","ref":"","reference_display":"","base_type":"glide_date_time","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.schedule}}","label":"action➛Schedule","type":"action","ref":"","reference_display":"Schedule","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.schedule.sys_id}}","label":"action➛Schedule➛Sys ID","type":"action","ref":"","reference_display":"Sys ID","base_type":"GUID","parent_table_name":"cmn_schedule","column_name":"sys_id","choices":null,"attributes":{}},{"name":"{{step[2dd6a002-f411-4084-bf55-f05d541169ad].business_duration_display}}","label":"step➛Script step➛Business Duration (Display)","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"6ec05bb9-6cbc-4d81-96c9-759bd77c00ec"}}]</label_cache>
+        <label_cache>[{"name":"{{action.start_date_time}}","label":"action➛Start Date/Time","type":"action","ref":"","reference_display":"","base_type":"glide_date_time","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.end_date_time}}","label":"action➛End Date/Time","type":"action","ref":"","reference_display":"","base_type":"glide_date_time","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.schedule}}","label":"action➛Schedule","type":"action","ref":"","reference_display":"Schedule","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.schedule.sys_id}}","label":"action➛Schedule➛Sys ID","type":"action","ref":"","reference_display":"Sys ID","base_type":"GUID","parent_table_name":"cmn_schedule","column_name":"sys_id","choices":null,"attributes":{}},{"name":"{{step[2dd6a002-f411-4084-bf55-f05d541169ad].business_duration_display}}","label":"step➛Script step➛Business Duration (Display)","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"6ec05bb9-6cbc-4d81-96c9-759bd77c00ec"}},{"name":"{{step[2dd6a002-f411-4084-bf55-f05d541169ad].__step_status__.code}}","label":"step➛Script step➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[2dd6a002-f411-4084-bf55-f05d541169ad].__step_status__.message}}","label":"step➛Script step➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
         <master_snapshot>ea41fd1083ac3210086cb5a6feaad3cd</master_snapshot>
         <master_snapshot_digest/>
         <name>Calculate Business Days Duration</name>
@@ -31,7 +31,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b5b3699c832c3210086cb5a6feaad36e</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_name>Calculate Business Days Duration</sys_name>
         <sys_overrides/>
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
@@ -39,7 +39,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_b5b3699c832c3210086cb5a6feaad36e</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 16:26:00</sys_updated_on>
+        <sys_updated_on>2025-10-09 03:35:22</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -74,6 +74,18 @@
         <variable display_value="Don't Treat as Error">df48ad14836c3210086cb5a6feaad323</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=b5b3699c832c3210086cb5a6feaad36e"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>action_message</field>
+        <id>b5b3699c832c3210086cb5a6feaad36e</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-09 03:27:34</sys_created_on>
+        <sys_id>e1b8c42483a87210086cb5a6feaad34b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-09 03:27:34</sys_updated_on>
+        <table>var__m_sys_hub_action_output_b5b3699c832c3210086cb5a6feaad36e</table>
+        <value>{{step[2dd6a002-f411-4084-bf55-f05d541169ad].action_message}}</value>
+    </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>business_duration_display</field>
         <id>b5b3699c832c3210086cb5a6feaad36e</id>
@@ -152,10 +164,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-08 15:46:42</sys_created_on>
         <sys_id>4b486d14836c3210086cb5a6feaad3e9</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 16:21:07</sys_updated_on>
+        <sys_updated_on>2025-10-09 03:33:29</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=4b486d14836c3210086cb5a6feaad3e9"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -166,21 +178,31 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-08 15:46:43</sys_created_on>
         <sys_id>1748ad14836c3210086cb5a6feaad316</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 16:21:07</sys_updated_on>
+        <sys_updated_on>2025-10-09 03:33:29</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
 &#13;
     var startDate = new GlideDateTime(inputs.start_date);&#13;
     var endDate = new GlideDateTime(inputs.end_date);&#13;
     var schedule = new GlideSchedule(inputs.schedule_sysid);&#13;
+    &#13;
+    if (startDate.getNumericValue() &gt; endDate.getNumericValue()) {&#13;
+        outputs.business_duration_display = "Error: End date can't be before start date";&#13;
+        throw new Error("Date_Validation_failed");&#13;
+    }&#13;
 &#13;
-    var durationMs = schedule.duration(startDate, endDate); //business duration in milliseconds&#13;
+    try {&#13;
+        var durationMs = schedule.duration(startDate, endDate); //business duration in milliseconds&#13;
 &#13;
-    var glideDuration = new GlideDuration(durationMs);   //creating glideduration object&#13;
+        var glideDuration = new GlideDuration(durationMs);   //creating glideduration object&#13;
 &#13;
-    //setting output of the script step&#13;
-    outputs.business_duration_display = glideDuration.getDisplayValue();&#13;
+        //setting output of the script step&#13;
+        outputs.business_duration_display = glideDuration.getDisplayValue();&#13;
+    }&#13;
+    catch (e) {&#13;
+        outputs.business_duration_display = "Error: Calculation failed due to invalid schedule or system error. Details: " + e.getMessage();&#13;
+    }&#13;
 &#13;
 })(inputs, outputs);&#13;
 </value>
@@ -1143,14 +1165,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-08 15:46:43</sys_created_on>
         <sys_id>df48ad14836c3210086cb5a6feaad323</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>33</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 16:25:58</sys_updated_on>
+        <sys_updated_on>2025-10-09 03:35:20</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1176,7 +1198,21 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-08 15:46:44</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=a348ad14836c3210086cb5a6feaad339"/>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=a348ad14836c3210086cb5a6feaad339^sys_idNOT INcd74c8ac83687210086cb5a6feaad3fc"/>
+    <sys_hub_status_condition action="INSERT_OR_UPDATE">
+        <action_status_metadata_id display_value="Created 2025-10-08 08:46:44">a348ad14836c3210086cb5a6feaad339</action_status_metadata_id>
+        <condition>{{step[2dd6a002-f411-4084-bf55-f05d541169ad].__step_status__.message}}LIKEDate_Validation_failed</condition>
+        <dont_treat_as_error>false</dont_treat_as_error>
+        <label/>
+        <order>1</order>
+        <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":"10"}},"message":{"$cv":{"$c":"java.lang.String","$v":"Validation Error: Start date cannot be after End date !"}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-09 03:08:58</sys_created_on>
+        <sys_id>cd74c8ac83687210086cb5a6feaad3fc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-09 03:15:23</sys_updated_on>
+    </sys_hub_status_condition>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>start_date_time</element>
         <help/>
@@ -1321,17 +1357,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Calculate Business Days Duration">b5b3699c832c3210086cb5a6feaad36e</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"ba41315083ac3210086cb5a6feaad35e","name":"plan","plan_signature":null}}</plan>
-        <snapshot>b241315083ac3210086cb5a6feaad32a</snapshot>
+        <snapshot>7b7a00e483a87210086cb5a6feaad3a7</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-08 16:26:01</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ba41315083ac3210086cb5a6feaad35e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 16:26:01</sys_updated_on>
+        <sys_updated_on>2025-10-09 03:35:23</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1348,7 +1384,7 @@
         <description/>
         <flow_priority/>
         <internal_name>calculate_business_days_duration</internal_name>
-        <label_cache>[{"name":"{{action.start_date_time}}","label":"action➛Start Date/Time","type":"action","ref":"","reference_display":"","base_type":"glide_date_time","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.end_date_time}}","label":"action➛End Date/Time","type":"action","ref":"","reference_display":"","base_type":"glide_date_time","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.schedule}}","label":"action➛Schedule","type":"action","ref":"","reference_display":"Schedule","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.schedule.sys_id}}","label":"action➛Schedule➛Sys ID","type":"action","ref":"","reference_display":"Sys ID","base_type":"GUID","parent_table_name":"cmn_schedule","column_name":"sys_id","choices":null,"attributes":{}},{"name":"{{step[2dd6a002-f411-4084-bf55-f05d541169ad].business_duration_display}}","label":"step➛Script step➛Business Duration (Display)","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"6ec05bb9-6cbc-4d81-96c9-759bd77c00ec"}}]</label_cache>
+        <label_cache>[{"name":"{{action.start_date_time}}","label":"action➛Start Date/Time","type":"action","ref":"","reference_display":"","base_type":"glide_date_time","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.end_date_time}}","label":"action➛End Date/Time","type":"action","ref":"","reference_display":"","base_type":"glide_date_time","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.schedule}}","label":"action➛Schedule","type":"action","ref":"","reference_display":"Schedule","base_type":"reference","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.schedule.sys_id}}","label":"action➛Schedule➛Sys ID","type":"action","ref":"","reference_display":"Sys ID","base_type":"GUID","parent_table_name":"cmn_schedule","column_name":"sys_id","choices":null,"attributes":{}},{"name":"{{step[2dd6a002-f411-4084-bf55-f05d541169ad].business_duration_display}}","label":"step➛Script step➛Business Duration (Display)","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"6ec05bb9-6cbc-4d81-96c9-759bd77c00ec"}},{"name":"{{step[2dd6a002-f411-4084-bf55-f05d541169ad].__step_status__.code}}","label":"step➛Script step➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[2dd6a002-f411-4084-bf55-f05d541169ad].__step_status__.message}}","label":"step➛Script step➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
         <master>true</master>
         <name>Calculate Business Days Duration</name>
         <natlang/>
@@ -1361,7 +1397,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>ea41fd1083ac3210086cb5a6feaad3cd</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1369,7 +1405,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 16:25:59</sys_updated_on>
+        <sys_updated_on>2025-10-09 03:35:21</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1458,10 +1494,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-08 16:25:59</sys_created_on>
         <sys_id>2641fd1083ac3210086cb5a6feaad3e1</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 16:25:59</sys_updated_on>
+        <sys_updated_on>2025-10-09 03:35:22</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=2641fd1083ac3210086cb5a6feaad3e1"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1472,21 +1508,31 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-08 16:25:59</sys_created_on>
         <sys_id>6241315083ac3210086cb5a6feaad312</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 16:25:59</sys_updated_on>
+        <sys_updated_on>2025-10-09 03:35:22</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
 &#13;
     var startDate = new GlideDateTime(inputs.start_date);&#13;
     var endDate = new GlideDateTime(inputs.end_date);&#13;
     var schedule = new GlideSchedule(inputs.schedule_sysid);&#13;
+    &#13;
+    if (startDate.getNumericValue() &gt; endDate.getNumericValue()) {&#13;
+        outputs.business_duration_display = "Error: End date can't be before start date";&#13;
+        throw new Error("Date_Validation_failed");&#13;
+    }&#13;
 &#13;
-    var durationMs = schedule.duration(startDate, endDate); //business duration in milliseconds&#13;
+    try {&#13;
+        var durationMs = schedule.duration(startDate, endDate); //business duration in milliseconds&#13;
 &#13;
-    var glideDuration = new GlideDuration(durationMs);   //creating glideduration object&#13;
+        var glideDuration = new GlideDuration(durationMs);   //creating glideduration object&#13;
 &#13;
-    //setting output of the script step&#13;
-    outputs.business_duration_display = glideDuration.getDisplayValue();&#13;
+        //setting output of the script step&#13;
+        outputs.business_duration_display = glideDuration.getDisplayValue();&#13;
+    }&#13;
+    catch (e) {&#13;
+        outputs.business_duration_display = "Error: Calculation failed due to invalid schedule or system error. Details: " + e.getMessage();&#13;
+    }&#13;
 &#13;
 })(inputs, outputs);&#13;
 </value>
@@ -2275,14 +2321,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-08 16:26:00</sys_created_on>
         <sys_id>6a41315083ac3210086cb5a6feaad31a</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-08 16:26:00</sys_updated_on>
+        <sys_updated_on>2025-10-09 03:35:22</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2482,7 +2528,21 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-08 16:26:00</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=fe41315083ac3210086cb5a6feaad329"/>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=fe41315083ac3210086cb5a6feaad329^sys_idNOT INf77a00e483a87210086cb5a6feaad3a7"/>
+    <sys_hub_status_condition action="INSERT_OR_UPDATE">
+        <action_status_metadata_id display_value="Created 2025-10-08 09:26:00">fe41315083ac3210086cb5a6feaad329</action_status_metadata_id>
+        <condition>{{step[2dd6a002-f411-4084-bf55-f05d541169ad].__step_status__.message}}LIKEDate_Validation_failed</condition>
+        <dont_treat_as_error>false</dont_treat_as_error>
+        <label/>
+        <order>1</order>
+        <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":"10"}},"message":{"$cv":{"$c":"java.lang.String","$v":"Validation Error: Start date cannot be after End date !"}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-09 03:35:22</sys_created_on>
+        <sys_id>f77a00e483a87210086cb5a6feaad3a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-09 03:35:22</sys_updated_on>
+    </sys_hub_status_condition>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>start_date_time</element>
         <help/>
