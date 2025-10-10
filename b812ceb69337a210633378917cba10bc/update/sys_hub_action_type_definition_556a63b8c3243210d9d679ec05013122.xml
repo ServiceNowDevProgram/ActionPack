@@ -1,0 +1,2431 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <attributes>{labelCacheCleanUpExecuted=true}</attributes>
+        <authored_on_release_version>28000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Accepts an attachment sys_id, validates the file (.xlsx/.csv), and returns the parsed data from all sheets as a structured JSON string and a status message.</description>
+        <flow_priority/>
+        <ih_action>false</ih_action>
+        <internal_name>parseexcelattachmenttojsonmultisheet</internal_name>
+        <label_cache>[{"name":"{{action.attachment_id}}","label":"action➛Attachment ID","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.attachment_sysid}}","label":"action➛Attachment ID","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[020f3186-bd7e-4dc8-b92c-23d71a94d013].jsondatastring}}","label":"step➛Parse Attachment Content➛jsondatastring","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[020f3186-bd7e-4dc8-b92c-23d71a94d013].resultmessage}}","label":"step➛Parse Attachment Content➛resultmessage","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
+        <master_snapshot>19acab7cc3243210d9d679ec05013104</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Parse Excel Attachment to JSON (Multi-Sheet)</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:32:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>556a63b8c3243210d9d679ec05013122</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Parse Excel Attachment to JSON (Multi-Sheet)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_556a63b8c3243210d9d679ec05013122</sys_update_name>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:55</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=556a63b8c3243210d9d679ec05013122"/>
+    <sys_variable_value action="delete_multiple" query="document_key=556a63b8c3243210d9d679ec05013122"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>556a63b8c3243210d9d679ec05013122</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:40</sys_created_on>
+        <sys_id>06eb2b3cc3243210d9d679ec050131b7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:40</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">0eeb2b3cc3243210d9d679ec050131a8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>556a63b8c3243210d9d679ec05013122</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:40</sys_created_on>
+        <sys_id>c6eb2b3cc3243210d9d679ec050131b7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:40</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"794bc342-9c9d-444b-a3f2-dd4b6a5a0173\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}}}</value>
+        <variable display_value="Action Status">06eb2b3cc3243210d9d679ec050131a0</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=556a63b8c3243210d9d679ec05013122"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>json_data</field>
+        <id>556a63b8c3243210d9d679ec05013122</id>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:40</sys_created_on>
+        <sys_id>82eb2b3cc3243210d9d679ec050131b7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:40</sys_updated_on>
+        <table>var__m_sys_hub_action_output_556a63b8c3243210d9d679ec05013122</table>
+        <value>{{step[020f3186-bd7e-4dc8-b92c-23d71a94d013].jsondatastring}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>resultmessage</field>
+        <id>556a63b8c3243210d9d679ec05013122</id>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:40</sys_created_on>
+        <sys_id>4aeb2b3cc3243210d9d679ec050131b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:40</sys_updated_on>
+        <table>var__m_sys_hub_action_output_556a63b8c3243210d9d679ec05013122</table>
+        <value>{{step[020f3186-bd7e-4dc8-b92c-23d71a94d013].resultmessage}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>556a63b8c3243210d9d679ec05013122</id>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:40</sys_created_on>
+        <sys_id>ceeb2b3cc3243210d9d679ec050131b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:40</sys_updated_on>
+        <table>var__m_sys_hub_action_output_556a63b8c3243210d9d679ec05013122</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>556a63b8c3243210d9d679ec05013122</id>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:40</sys_created_on>
+        <sys_id>0eeb2b3cc3243210d9d679ec050131b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:40</sys_updated_on>
+        <table>var__m_sys_hub_action_output_556a63b8c3243210d9d679ec05013122</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=556a63b8c3243210d9d679ec05013122^sys_idNOT IN71eb2b3cc3243210d9d679ec05013187"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Parse Excel Attachment to JSON (Multi-Sheet)">556a63b8c3243210d9d679ec05013122</action>
+        <cid>020f3186-bd7e-4dc8-b92c-23d71a94d013</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Parse Attachment Content</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:39</sys_created_on>
+        <sys_id>71eb2b3cc3243210d9d679ec05013187</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:39</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=71eb2b3cc3243210d9d679ec05013187"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>71eb2b3cc3243210d9d679ec05013187</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:39</sys_created_on>
+        <sys_id>4aeb2b3cc3243210d9d679ec0501319c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:39</sys_updated_on>
+        <value>(function execute(inputs, outputs) {&#13;
+    outputs.jsondatastring = '';&#13;
+    outputs.resultmessage = 'Processing started...';&#13;
+&#13;
+    var attachmentSysId = inputs.attachmentSysId;&#13;
+    // This array will hold the results, potentially one object per sheet.&#13;
+    var allSheetData = []; &#13;
+    var totalRecords = 0;&#13;
+&#13;
+    // 1. Retrieve Attachment Record and Metadata&#13;
+    var attGR = new GlideRecord('sys_attachment');&#13;
+    if (!attGR.get(attachmentSysId)) {&#13;
+        outputs.resultmessage = 'Error: Attachment not found for sys_id: ' + attachmentSysId;&#13;
+        return;&#13;
+    }&#13;
+&#13;
+    var fileName = attGR.file_name.toLowerCase();&#13;
+    var mimeType = attGR.content_type.toLowerCase();&#13;
+    &#13;
+    var isExcel = fileName.endsWith('.xlsx') &amp;&amp; mimeType.indexOf('sheet') &gt; -1;&#13;
+    var isCSV = fileName.endsWith('.csv') || mimeType.indexOf('csv') &gt; -1 || mimeType.indexOf('text') &gt; -1;&#13;
+    &#13;
+    try {&#13;
+        // === OPTION 1: Dedicated GlideExcelParser for true .xlsx files (Multi-Sheet Logic) ===&#13;
+        if (isExcel) {&#13;
+            &#13;
+            var attachment = new GlideSysAttachment();&#13;
+            var attachmentStream = attachment.getContentStream(attachmentSysId);&#13;
+            &#13;
+            if (!attachmentStream) {&#13;
+                outputs.resultmessage = 'Error: Could not retrieve content stream for the Excel attachment.';&#13;
+                return;&#13;
+            }&#13;
+&#13;
+            var parser = new sn_impex.GlideExcelParser();&#13;
+            parser.setSource(attachmentStream);&#13;
+            &#13;
+            var sheetNames = parser.getSheetNames();&#13;
+            &#13;
+            // Loop through ALL sheet names found in the Excel file&#13;
+            for (var s = 0; s &lt; sheetNames.length; s++) {&#13;
+                var currentSheetName = sheetNames[s];&#13;
+                var sheetRecords = [];&#13;
+&#13;
+                parser.setSheetName(currentSheetName); &#13;
+&#13;
+                if (parser.parse()) {&#13;
+                    var headers = parser.getColumnHeaders();&#13;
+                    &#13;
+                    while (parser.next()) {&#13;
+                        var rowData = parser.getRow();&#13;
+                        var jsonRow = {};&#13;
+                        &#13;
+                        for (var i = 0; i &lt; headers.length; i++) {&#13;
+                            var header = headers[i];&#13;
+                            var jsonKey = header.replace(/[^a-zA-Z0-9_]/g, '').trim(); &#13;
+                            jsonRow[jsonKey] = rowData[header];&#13;
+                        }&#13;
+                        sheetRecords.push(jsonRow);&#13;
+                        totalRecords++;&#13;
+                    }&#13;
+                    &#13;
+                    // Add the processed sheet to the final output array&#13;
+                    allSheetData.push({&#13;
+                        "SheetName": currentSheetName,&#13;
+                        "Records": sheetRecords&#13;
+                    });&#13;
+&#13;
+                } else {&#13;
+                    // Log error for a specific sheet but continue parsing others&#13;
+                    gs.warn("Error parsing sheet " + currentSheetName + ": " + parser.getErrorMessage());&#13;
+                }&#13;
+            }&#13;
+&#13;
+        // === OPTION 2: String Parsing for CSV files (Single Sheet Logic) ===&#13;
+        // Note: For the CSV files you attached, they represent only ONE sheet (the file itself)&#13;
+        } else if (isCSV) {&#13;
+            var sheetRecords = [];&#13;
+            var contentBytes = new GlideSysAttachment().getContent(attGR);&#13;
+            var csvString = String(contentBytes);&#13;
+&#13;
+            var lines = csvString.replace(/\r/g, '').split('\n');&#13;
+            &#13;
+            if (lines.length &lt; 2) {&#13;
+                outputs.resultmessage = 'Error: CSV file is empty or contains only a header line.';&#13;
+                return;&#13;
+            }&#13;
+            &#13;
+            var headers = lines[0].split(',');&#13;
+            var sanitizedHeaders = [];&#13;
+            for (var h = 0; h &lt; headers.length; h++) {&#13;
+                sanitizedHeaders.push(headers[h].trim().replace(/[^a-zA-Z0-9_]/g, ''));&#13;
+            }&#13;
+&#13;
+            for (var i = 1; i &lt; lines.length; i++) {&#13;
+                var currentLine = lines[i].trim();&#13;
+                if (currentLine === '') continue; &#13;
+&#13;
+                var values = currentLine.split(',');&#13;
+                var jsonRow = {};&#13;
+                &#13;
+                for (var j = 0; j &lt; sanitizedHeaders.length; j++) {&#13;
+                    var key = sanitizedHeaders[j];&#13;
+                    jsonRow[key] = (values[j] || '').trim();&#13;
+                }&#13;
+                &#13;
+                sheetRecords.push(jsonRow);&#13;
+                totalRecords++;&#13;
+            }&#13;
+            &#13;
+            // Add the single CSV file result to the final output array&#13;
+            allSheetData.push({&#13;
+                "SheetName": "Single_CSV_Sheet",&#13;
+                "Records": sheetRecords&#13;
+            });&#13;
+&#13;
+        } else {&#13;
+            outputs.resultmessage = 'Error: Unsupported file format. File Name: ' + attGR.file_name;&#13;
+            return;&#13;
+        }&#13;
+&#13;
+        // 3. Set Success Outputs&#13;
+        // The final JSON string is now an array containing sheet objects.&#13;
+        outputs.jsondatastring = JSON.stringify(allSheetData);&#13;
+        outputs.resultmessage = 'Success: ' + totalRecords + ' records parsed across ' + allSheetData.length + ' sheets from file: ' + attGR.file_name;&#13;
+&#13;
+    } catch (ex) {&#13;
+        outputs.resultmessage = 'A critical scripting exception occurred: ' + ex.getMessage();&#13;
+    }&#13;
+&#13;
+})(inputs, outputs);</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>71eb2b3cc3243210d9d679ec05013187</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:39</sys_created_on>
+        <sys_id>86eb2b3cc3243210d9d679ec0501319c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:39</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=71eb2b3cc3243210d9d679ec05013187"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>71eb2b3cc3243210d9d679ec05013187</id>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:39</sys_created_on>
+        <sys_id>42eb2b3cc3243210d9d679ec0501319c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:39</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>attachmentSysId</field>
+        <id>71eb2b3cc3243210d9d679ec05013187</id>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:39</sys_created_on>
+        <sys_id>82eb2b3cc3243210d9d679ec0501319d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:39</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_71eb2b3cc3243210d9d679ec05013187</table>
+        <value>{{action.attachment_sysid}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>71eb2b3cc3243210d9d679ec05013187</id>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:39</sys_created_on>
+        <sys_id>06eb2b3cc3243210d9d679ec0501319c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:39</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_71eb2b3cc3243210d9d679ec05013187^id=71eb2b3cc3243210d9d679ec05013187"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=71eb2b3cc3243210d9d679ec05013187"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=71eb2b3cc3243210d9d679ec05013187"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=71eb2b3cc3243210d9d679ec05013187^sys_idNOT IN75eb2b3cc3243210d9d679ec0501318c"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>attachmentSysId</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Parse Attachment Content">71eb2b3cc3243210d9d679ec05013187</model>
+        <model_id>71eb2b3cc3243210d9d679ec05013187</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_71eb2b3cc3243210d9d679ec05013187</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:39</sys_created_on>
+        <sys_id>75eb2b3cc3243210d9d679ec0501318c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:39</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=71eb2b3cc3243210d9d679ec05013187^sys_idNOT IN39eb2b3cc3243210d9d679ec0501318f,f1eb2b3cc3243210d9d679ec05013193"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=aac94d33-ef73-42f3-a718-9695d163abd6</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>resultmessage</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>resultmessage</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Parse Attachment Content">71eb2b3cc3243210d9d679ec05013187</model>
+        <model_id>71eb2b3cc3243210d9d679ec05013187</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_71eb2b3cc3243210d9d679ec05013187</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:39</sys_created_on>
+        <sys_id>39eb2b3cc3243210d9d679ec0501318f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:39</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=c402e939-bede-49eb-b5bf-99cee908099c</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>jsondatastring</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>jsondatastring</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Parse Attachment Content">71eb2b3cc3243210d9d679ec05013187</model>
+        <model_id>71eb2b3cc3243210d9d679ec05013187</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_71eb2b3cc3243210d9d679ec05013187</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:39</sys_created_on>
+        <sys_id>f1eb2b3cc3243210d9d679ec05013193</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:39</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=71eb2b3cc3243210d9d679ec05013187"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>jsondatastring</element>
+        <help/>
+        <hint/>
+        <label>jsondatastring</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_71eb2b3cc3243210d9d679ec05013187</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:39</sys_created_on>
+        <sys_id>4aeb2b3cc3243210d9d679ec05013195</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:39</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>resultmessage</element>
+        <help/>
+        <hint/>
+        <label>resultmessage</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_71eb2b3cc3243210d9d679ec05013187</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:39</sys_created_on>
+        <sys_id>b5eb2b3cc3243210d9d679ec05013192</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:39</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_input action="delete_multiple" query="model=556a63b8c3243210d9d679ec05013122^sys_idNOT IN71eb233cc3243210d9d679ec0501316c"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=09bc19ab-b8ce-4b6c-841c-b288c3a88d72</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>attachment_sysid</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Attachment ID</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Parse Excel Attachment to JSON (Multi-Sheet)">556a63b8c3243210d9d679ec05013122</model>
+        <model_id>556a63b8c3243210d9d679ec05013122</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_556a63b8c3243210d9d679ec05013122</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:39</sys_created_on>
+        <sys_id>71eb233cc3243210d9d679ec0501316c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:39</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=71eb233cc3243210d9d679ec0501316c"/>
+    <sys_hub_action_output action="delete_multiple" query="model=556a63b8c3243210d9d679ec05013122^sys_idNOT IN06eb2b3cc3243210d9d679ec050131a0,0aeb2b3cc3243210d9d679ec050131ae,0eeb2b3cc3243210d9d679ec050131a8,4eeb2b3cc3243210d9d679ec050131a4"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDACTIONSTATUS,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=7947ce24-f4b3-4cde-ac86-20db6c3ebb86</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Parse Excel Attachment to JSON (Multi-Sheet)">556a63b8c3243210d9d679ec05013122</model>
+        <model_id>556a63b8c3243210d9d679ec05013122</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_556a63b8c3243210d9d679ec05013122</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:39</sys_created_on>
+        <sys_id>06eb2b3cc3243210d9d679ec050131a0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:39</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=06eb2b3cc3243210d9d679ec050131a0"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=06eb2b3cc3243210d9d679ec050131a0"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=af32d0ab-f671-49f2-aa8b-e07d057fccb7</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>resultmessage</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>resultMessage</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Parse Excel Attachment to JSON (Multi-Sheet)">556a63b8c3243210d9d679ec05013122</model>
+        <model_id>556a63b8c3243210d9d679ec05013122</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_556a63b8c3243210d9d679ec05013122</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:40</sys_created_on>
+        <sys_id>0aeb2b3cc3243210d9d679ec050131ae</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:40</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0aeb2b3cc3243210d9d679ec050131ae"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0aeb2b3cc3243210d9d679ec050131ae"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=e618bf6c-f5a6-4a77-8d34-ce2cccaddcf7,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Parse Excel Attachment to JSON (Multi-Sheet)">556a63b8c3243210d9d679ec05013122</model>
+        <model_id>556a63b8c3243210d9d679ec05013122</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_556a63b8c3243210d9d679ec05013122</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:39</sys_created_on>
+        <sys_id>0eeb2b3cc3243210d9d679ec050131a8</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0eeb2b3cc3243210d9d679ec050131a8"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0eeb2b3cc3243210d9d679ec050131a8"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=489e7feb-7b03-41d4-a3d5-df69dec341f4</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>json_data</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>JSON Data</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Parse Excel Attachment to JSON (Multi-Sheet)">556a63b8c3243210d9d679ec05013122</model>
+        <model_id>556a63b8c3243210d9d679ec05013122</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_556a63b8c3243210d9d679ec05013122</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:39</sys_created_on>
+        <sys_id>4eeb2b3cc3243210d9d679ec050131a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:39</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4eeb2b3cc3243210d9d679ec050131a4"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4eeb2b3cc3243210d9d679ec050131a4"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=556a63b8c3243210d9d679ec05013122"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=556a63b8c3243210d9d679ec05013122^sys_idNOT INc2eb2b3cc3243210d9d679ec050131b9"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="Parse Excel Attachment to JSON (Multi-Sheet)">556a63b8c3243210d9d679ec05013122</action_type_id>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:40</sys_created_on>
+        <sys_id>c2eb2b3cc3243210d9d679ec050131b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:40</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=c2eb2b3cc3243210d9d679ec050131b9"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>attachment_sysid</element>
+        <help/>
+        <hint/>
+        <label>Attachment ID</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_556a63b8c3243210d9d679ec05013122</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:39</sys_created_on>
+        <sys_id>3deb233cc3243210d9d679ec0501316f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:39</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_556a63b8c3243210d9d679ec05013122"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_556a63b8c3243210d9d679ec05013122</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:39</sys_created_on>
+        <sys_id>02eb2b3cc3243210d9d679ec050131a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:39</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>resultmessage</element>
+        <help/>
+        <hint/>
+        <label>resultMessage</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_556a63b8c3243210d9d679ec05013122</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:40</sys_created_on>
+        <sys_id>8aeb2b3cc3243210d9d679ec050131b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:40</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_556a63b8c3243210d9d679ec05013122</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:40</sys_created_on>
+        <sys_id>caeb2b3cc3243210d9d679ec050131ad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:40</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>json_data</element>
+        <help/>
+        <hint/>
+        <label>JSON Data</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_556a63b8c3243210d9d679ec05013122</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:38:39</sys_created_on>
+        <sys_id>ceeb2b3cc3243210d9d679ec050131a7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:38:39</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_556a63b8c3243210d9d679ec05013122"/>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=556a63b8c3243210d9d679ec05013122^sys_idNOT IN7dacab7cc3243210d9d679ec05013173"/>
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="Parse Excel Attachment to JSON (Multi-Sheet)">556a63b8c3243210d9d679ec05013122</action_id>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"7dacab7cc3243210d9d679ec05013173","name":"plan","plan_signature":null}}</plan>
+        <snapshot>e1acab7cc3243210d9d679ec05013141</snapshot>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:55</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7dacab7cc3243210d9d679ec05013173</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:55</sys_updated_on>
+    </sys_hub_action_plan>
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <annotation/>
+        <attributes>{labelCacheCleanUpExecuted=true}</attributes>
+        <authored_on_release_version>28000</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Accepts an attachment sys_id, validates the file (.xlsx/.csv), and returns the parsed data from all sheets as a structured JSON string and a status message.</description>
+        <flow_priority/>
+        <internal_name>parseexcelattachmenttojsonmultisheet</internal_name>
+        <label_cache>[{"name":"{{action.attachment_id}}","label":"action➛Attachment ID","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.attachment_sysid}}","label":"action➛Attachment ID","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[020f3186-bd7e-4dc8-b92c-23d71a94d013].jsondatastring}}","label":"step➛Parse Attachment Content➛jsondatastring","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[020f3186-bd7e-4dc8-b92c-23d71a94d013].resultmessage}}","label":"step➛Parse Attachment Content➛resultmessage","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
+        <master>true</master>
+        <name>Parse Excel Attachment to JSON (Multi-Sheet)</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="Parse Excel Attachment to JSON (Multi-Sheet)">556a63b8c3243210d9d679ec05013122</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>19acab7cc3243210d9d679ec05013104</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=19acab7cc3243210d9d679ec05013104"/>
+    <sys_variable_value action="delete_multiple" query="document_key=19acab7cc3243210d9d679ec05013104"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>19acab7cc3243210d9d679ec05013104</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>25acab7cc3243210d9d679ec0501313f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"794bc342-9c9d-444b-a3f2-dd4b6a5a0173\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}}}</value>
+        <variable display_value="Action Status">65acab7cc3243210d9d679ec05013128</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>19acab7cc3243210d9d679ec05013104</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>61acab7cc3243210d9d679ec0501313f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">e9acab7cc3243210d9d679ec05013130</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=19acab7cc3243210d9d679ec05013104"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>json_data</field>
+        <id>19acab7cc3243210d9d679ec05013104</id>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>edacab7cc3243210d9d679ec0501313e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <table>var__m_sys_hub_action_output_19acab7cc3243210d9d679ec05013104</table>
+        <value>{{step[020f3186-bd7e-4dc8-b92c-23d71a94d013].jsondatastring}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>resultmessage</field>
+        <id>19acab7cc3243210d9d679ec05013104</id>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>a5acab7cc3243210d9d679ec0501313e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <table>var__m_sys_hub_action_output_19acab7cc3243210d9d679ec05013104</table>
+        <value>{{step[020f3186-bd7e-4dc8-b92c-23d71a94d013].resultmessage}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>19acab7cc3243210d9d679ec05013104</id>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>2dacab7cc3243210d9d679ec0501313e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <table>var__m_sys_hub_action_output_19acab7cc3243210d9d679ec05013104</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>19acab7cc3243210d9d679ec05013104</id>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>69acab7cc3243210d9d679ec0501313e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <table>var__m_sys_hub_action_output_19acab7cc3243210d9d679ec05013104</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=19acab7cc3243210d9d679ec05013104^sys_idNOT IN2dacab7cc3243210d9d679ec0501310f"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Parse Excel Attachment to JSON (Multi-Sheet)">19acab7cc3243210d9d679ec05013104</action>
+        <cid>020f3186-bd7e-4dc8-b92c-23d71a94d013</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Parse Attachment Content</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>2dacab7cc3243210d9d679ec0501310f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=2dacab7cc3243210d9d679ec0501310f"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>2dacab7cc3243210d9d679ec0501310f</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>a9acab7cc3243210d9d679ec05013124</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <value>(function execute(inputs, outputs) {&#13;
+    outputs.jsondatastring = '';&#13;
+    outputs.resultmessage = 'Processing started...';&#13;
+&#13;
+    var attachmentSysId = inputs.attachmentSysId;&#13;
+    // This array will hold the results, potentially one object per sheet.&#13;
+    var allSheetData = []; &#13;
+    var totalRecords = 0;&#13;
+&#13;
+    // 1. Retrieve Attachment Record and Metadata&#13;
+    var attGR = new GlideRecord('sys_attachment');&#13;
+    if (!attGR.get(attachmentSysId)) {&#13;
+        outputs.resultmessage = 'Error: Attachment not found for sys_id: ' + attachmentSysId;&#13;
+        return;&#13;
+    }&#13;
+&#13;
+    var fileName = attGR.file_name.toLowerCase();&#13;
+    var mimeType = attGR.content_type.toLowerCase();&#13;
+    &#13;
+    var isExcel = fileName.endsWith('.xlsx') &amp;&amp; mimeType.indexOf('sheet') &gt; -1;&#13;
+    var isCSV = fileName.endsWith('.csv') || mimeType.indexOf('csv') &gt; -1 || mimeType.indexOf('text') &gt; -1;&#13;
+    &#13;
+    try {&#13;
+        // === OPTION 1: Dedicated GlideExcelParser for true .xlsx files (Multi-Sheet Logic) ===&#13;
+        if (isExcel) {&#13;
+            &#13;
+            var attachment = new GlideSysAttachment();&#13;
+            var attachmentStream = attachment.getContentStream(attachmentSysId);&#13;
+            &#13;
+            if (!attachmentStream) {&#13;
+                outputs.resultmessage = 'Error: Could not retrieve content stream for the Excel attachment.';&#13;
+                return;&#13;
+            }&#13;
+&#13;
+            var parser = new sn_impex.GlideExcelParser();&#13;
+            parser.setSource(attachmentStream);&#13;
+            &#13;
+            var sheetNames = parser.getSheetNames();&#13;
+            &#13;
+            // Loop through ALL sheet names found in the Excel file&#13;
+            for (var s = 0; s &lt; sheetNames.length; s++) {&#13;
+                var currentSheetName = sheetNames[s];&#13;
+                var sheetRecords = [];&#13;
+&#13;
+                parser.setSheetName(currentSheetName); &#13;
+&#13;
+                if (parser.parse()) {&#13;
+                    var headers = parser.getColumnHeaders();&#13;
+                    &#13;
+                    while (parser.next()) {&#13;
+                        var rowData = parser.getRow();&#13;
+                        var jsonRow = {};&#13;
+                        &#13;
+                        for (var i = 0; i &lt; headers.length; i++) {&#13;
+                            var header = headers[i];&#13;
+                            var jsonKey = header.replace(/[^a-zA-Z0-9_]/g, '').trim(); &#13;
+                            jsonRow[jsonKey] = rowData[header];&#13;
+                        }&#13;
+                        sheetRecords.push(jsonRow);&#13;
+                        totalRecords++;&#13;
+                    }&#13;
+                    &#13;
+                    // Add the processed sheet to the final output array&#13;
+                    allSheetData.push({&#13;
+                        "SheetName": currentSheetName,&#13;
+                        "Records": sheetRecords&#13;
+                    });&#13;
+&#13;
+                } else {&#13;
+                    // Log error for a specific sheet but continue parsing others&#13;
+                    gs.warn("Error parsing sheet " + currentSheetName + ": " + parser.getErrorMessage());&#13;
+                }&#13;
+            }&#13;
+&#13;
+        // === OPTION 2: String Parsing for CSV files (Single Sheet Logic) ===&#13;
+        // Note: For the CSV files you attached, they represent only ONE sheet (the file itself)&#13;
+        } else if (isCSV) {&#13;
+            var sheetRecords = [];&#13;
+            var contentBytes = new GlideSysAttachment().getContent(attGR);&#13;
+            var csvString = String(contentBytes);&#13;
+&#13;
+            var lines = csvString.replace(/\r/g, '').split('\n');&#13;
+            &#13;
+            if (lines.length &lt; 2) {&#13;
+                outputs.resultmessage = 'Error: CSV file is empty or contains only a header line.';&#13;
+                return;&#13;
+            }&#13;
+            &#13;
+            var headers = lines[0].split(',');&#13;
+            var sanitizedHeaders = [];&#13;
+            for (var h = 0; h &lt; headers.length; h++) {&#13;
+                sanitizedHeaders.push(headers[h].trim().replace(/[^a-zA-Z0-9_]/g, ''));&#13;
+            }&#13;
+&#13;
+            for (var i = 1; i &lt; lines.length; i++) {&#13;
+                var currentLine = lines[i].trim();&#13;
+                if (currentLine === '') continue; &#13;
+&#13;
+                var values = currentLine.split(',');&#13;
+                var jsonRow = {};&#13;
+                &#13;
+                for (var j = 0; j &lt; sanitizedHeaders.length; j++) {&#13;
+                    var key = sanitizedHeaders[j];&#13;
+                    jsonRow[key] = (values[j] || '').trim();&#13;
+                }&#13;
+                &#13;
+                sheetRecords.push(jsonRow);&#13;
+                totalRecords++;&#13;
+            }&#13;
+            &#13;
+            // Add the single CSV file result to the final output array&#13;
+            allSheetData.push({&#13;
+                "SheetName": "Single_CSV_Sheet",&#13;
+                "Records": sheetRecords&#13;
+            });&#13;
+&#13;
+        } else {&#13;
+            outputs.resultmessage = 'Error: Unsupported file format. File Name: ' + attGR.file_name;&#13;
+            return;&#13;
+        }&#13;
+&#13;
+        // 3. Set Success Outputs&#13;
+        // The final JSON string is now an array containing sheet objects.&#13;
+        outputs.jsondatastring = JSON.stringify(allSheetData);&#13;
+        outputs.resultmessage = 'Success: ' + totalRecords + ' records parsed across ' + allSheetData.length + ' sheets from file: ' + attGR.file_name;&#13;
+&#13;
+    } catch (ex) {&#13;
+        outputs.resultmessage = 'A critical scripting exception occurred: ' + ex.getMessage();&#13;
+    }&#13;
+&#13;
+})(inputs, outputs);</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>2dacab7cc3243210d9d679ec0501310f</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>e5acab7cc3243210d9d679ec05013124</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=2dacab7cc3243210d9d679ec0501310f"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>2dacab7cc3243210d9d679ec0501310f</id>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>a1acab7cc3243210d9d679ec05013124</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>attachmentSysId</field>
+        <id>2dacab7cc3243210d9d679ec0501310f</id>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>e1acab7cc3243210d9d679ec05013125</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_2dacab7cc3243210d9d679ec0501310f</table>
+        <value>{{action.attachment_sysid}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>2dacab7cc3243210d9d679ec0501310f</id>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>65acab7cc3243210d9d679ec05013124</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_2dacab7cc3243210d9d679ec0501310f^id=2dacab7cc3243210d9d679ec0501310f"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=2dacab7cc3243210d9d679ec0501310f"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=2dacab7cc3243210d9d679ec0501310f"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=2dacab7cc3243210d9d679ec0501310f^sys_idNOT INe9acab7cc3243210d9d679ec05013113"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>attachmentSysId</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>attachmentSysId</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Parse Attachment Content">2dacab7cc3243210d9d679ec0501310f</model>
+        <model_id>2dacab7cc3243210d9d679ec0501310f</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_2dacab7cc3243210d9d679ec0501310f</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>e9acab7cc3243210d9d679ec05013113</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=2dacab7cc3243210d9d679ec0501310f^sys_idNOT IN21acab7cc3243210d9d679ec05013118,e9acab7cc3243210d9d679ec0501311b"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=aac94d33-ef73-42f3-a718-9695d163abd6</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>resultmessage</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>resultmessage</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Parse Attachment Content">2dacab7cc3243210d9d679ec0501310f</model>
+        <model_id>2dacab7cc3243210d9d679ec0501310f</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_2dacab7cc3243210d9d679ec0501310f</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>21acab7cc3243210d9d679ec05013118</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=c402e939-bede-49eb-b5bf-99cee908099c</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>jsondatastring</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>jsondatastring</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Parse Attachment Content">2dacab7cc3243210d9d679ec0501310f</model>
+        <model_id>2dacab7cc3243210d9d679ec0501310f</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_2dacab7cc3243210d9d679ec0501310f</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>e9acab7cc3243210d9d679ec0501311b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=2dacab7cc3243210d9d679ec0501310f"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>jsondatastring</element>
+        <help/>
+        <hint/>
+        <label>jsondatastring</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_2dacab7cc3243210d9d679ec0501310f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>61acab7cc3243210d9d679ec0501311e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>resultmessage</element>
+        <help/>
+        <hint/>
+        <label>resultmessage</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_2dacab7cc3243210d9d679ec0501310f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>adacab7cc3243210d9d679ec0501311a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_input action="delete_multiple" query="model=19acab7cc3243210d9d679ec05013104^sys_idNOT INd1acab7cc3243210d9d679ec05013107"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=09bc19ab-b8ce-4b6c-841c-b288c3a88d72</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>attachment_sysid</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Attachment ID</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Parse Excel Attachment to JSON (Multi-Sheet)">19acab7cc3243210d9d679ec05013104</model>
+        <model_id>19acab7cc3243210d9d679ec05013104</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_19acab7cc3243210d9d679ec05013104</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>d1acab7cc3243210d9d679ec05013107</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d1acab7cc3243210d9d679ec05013107"/>
+    <sys_hub_action_output action="delete_multiple" query="model=19acab7cc3243210d9d679ec05013104^sys_idNOT IN65acab7cc3243210d9d679ec05013128,6dacab7cc3243210d9d679ec0501312c,a5acab7cc3243210d9d679ec05013136,e9acab7cc3243210d9d679ec05013130"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDACTIONSTATUS,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=7947ce24-f4b3-4cde-ac86-20db6c3ebb86</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Parse Excel Attachment to JSON (Multi-Sheet)">19acab7cc3243210d9d679ec05013104</model>
+        <model_id>19acab7cc3243210d9d679ec05013104</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_19acab7cc3243210d9d679ec05013104</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>65acab7cc3243210d9d679ec05013128</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=65acab7cc3243210d9d679ec05013128"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=65acab7cc3243210d9d679ec05013128"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=489e7feb-7b03-41d4-a3d5-df69dec341f4</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>json_data</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>JSON Data</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Parse Excel Attachment to JSON (Multi-Sheet)">19acab7cc3243210d9d679ec05013104</model>
+        <model_id>19acab7cc3243210d9d679ec05013104</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_19acab7cc3243210d9d679ec05013104</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>6dacab7cc3243210d9d679ec0501312c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6dacab7cc3243210d9d679ec0501312c"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6dacab7cc3243210d9d679ec0501312c"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=af32d0ab-f671-49f2-aa8b-e07d057fccb7</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>resultmessage</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>resultMessage</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Parse Excel Attachment to JSON (Multi-Sheet)">19acab7cc3243210d9d679ec05013104</model>
+        <model_id>19acab7cc3243210d9d679ec05013104</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_19acab7cc3243210d9d679ec05013104</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>a5acab7cc3243210d9d679ec05013136</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a5acab7cc3243210d9d679ec05013136"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=a5acab7cc3243210d9d679ec05013136"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=e618bf6c-f5a6-4a77-8d34-ce2cccaddcf7,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Parse Excel Attachment to JSON (Multi-Sheet)">19acab7cc3243210d9d679ec05013104</model>
+        <model_id>19acab7cc3243210d9d679ec05013104</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_19acab7cc3243210d9d679ec05013104</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>e9acab7cc3243210d9d679ec05013130</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e9acab7cc3243210d9d679ec05013130"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e9acab7cc3243210d9d679ec05013130"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=19acab7cc3243210d9d679ec05013104"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=19acab7cc3243210d9d679ec05013104^sys_idNOT IN21acab7cc3243210d9d679ec05013141"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="Parse Excel Attachment to JSON (Multi-Sheet)">19acab7cc3243210d9d679ec05013104</action_type_id>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>21acab7cc3243210d9d679ec05013141</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=21acab7cc3243210d9d679ec05013141"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>attachment_sysid</element>
+        <help/>
+        <hint/>
+        <label>Attachment ID</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_19acab7cc3243210d9d679ec05013104</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>edacab7cc3243210d9d679ec0501310a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_19acab7cc3243210d9d679ec05013104"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_19acab7cc3243210d9d679ec05013104</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>21acab7cc3243210d9d679ec0501312c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_19acab7cc3243210d9d679ec05013104</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>69acab7cc3243210d9d679ec05013135</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>json_data</element>
+        <help/>
+        <hint/>
+        <label>JSON Data</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_19acab7cc3243210d9d679ec05013104</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>adacab7cc3243210d9d679ec0501312f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>resultmessage</element>
+        <help/>
+        <hint/>
+        <label>resultMessage</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_19acab7cc3243210d9d679ec05013104</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>viraj.hudlikar</sys_created_by>
+        <sys_created_on>2025-10-10 14:41:54</sys_created_on>
+        <sys_id>e5acab7cc3243210d9d679ec05013139</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>viraj.hudlikar</sys_updated_by>
+        <sys_updated_on>2025-10-10 14:41:54</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_19acab7cc3243210d9d679ec05013104"/>
+    <sys_hub_action_type_definition action="UPDATE">
+        <sys_id>556a63b8c3243210d9d679ec05013122</sys_id>
+        <latest_snapshot>19acab7cc3243210d9d679ec05013104</latest_snapshot>
+        <compiler_build>glide-zurich-07-01-2025__patch0-07-15-2025_07-23-2025_1759.zip</compiler_build>
+    </sys_hub_action_type_definition>
+</record_update>
