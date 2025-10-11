@@ -31,7 +31,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7ca5d15947a4321077c59df4316d439b</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>GetActiveTickets</sys_name>
         <sys_overrides/>
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
@@ -39,7 +39,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_7ca5d15947a4321077c59df4316d439b</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-11 17:37:12</sys_updated_on>
+        <sys_updated_on>2025-10-11 17:47:31</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -128,10 +128,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-11 17:17:02</sys_created_on>
         <sys_id>afb9d1dd47a4321077c59df4316d43be</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-11 17:26:04</sys_updated_on>
+        <sys_updated_on>2025-10-11 17:47:19</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=afb9d1dd47a4321077c59df4316d43be"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -142,17 +142,17 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-11 17:17:02</sys_created_on>
         <sys_id>23b9d1dd47a4321077c59df4316d43d4</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-11 17:26:04</sys_updated_on>
+        <sys_updated_on>2025-10-11 17:47:19</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
 // ... code ...&#13;
 var k = inputs.usrr;&#13;
 var arr=[];&#13;
 var str;&#13;
-var gr= new GlideRecord("task");&#13;
+var gr= new GlideRecord("task");//parent table for all tables&#13;
 gr.addQuery("assigned_to",k);&#13;
-gr.addActiveQuery();&#13;
+gr.addActiveQuery();//active query&#13;
 gr.query();&#13;
 while(gr.next()){&#13;
 	arr.push(gr.number);&#13;
@@ -739,14 +739,14 @@ outputs.str=str;&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-11 17:17:02</sys_created_on>
         <sys_id>f3b9d1dd47a4321077c59df4316d43e0</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-11 17:37:11</sys_updated_on>
+        <sys_updated_on>2025-10-11 17:47:30</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -871,17 +871,17 @@ outputs.str=str;&#13;
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="GetActiveTickets">7ca5d15947a4321077c59df4316d439b</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"475e195547e4321077c59df4316d4394","name":"plan","plan_signature":null}}</plan>
-        <snapshot>8f5e195547e4321077c59df4316d4370</snapshot>
+        <snapshot>9ab0e91947e4321077c59df4316d43a4</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-11 17:37:13</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>475e195547e4321077c59df4316d4394</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-11 17:37:13</sys_updated_on>
+        <sys_updated_on>2025-10-11 17:47:32</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1008,10 +1008,10 @@ outputs.str=str;&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-11 17:37:11</sys_created_on>
         <sys_id>be5e195547e4321077c59df4316d433b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-11 17:37:12</sys_updated_on>
+        <sys_updated_on>2025-10-11 17:47:31</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=be5e195547e4321077c59df4316d433b"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1022,17 +1022,17 @@ outputs.str=str;&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-11 17:37:12</sys_created_on>
         <sys_id>475e195547e4321077c59df4316d434d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-11 17:37:12</sys_updated_on>
+        <sys_updated_on>2025-10-11 17:47:31</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
 // ... code ...&#13;
 var k = inputs.usrr;&#13;
 var arr=[];&#13;
 var str;&#13;
-var gr= new GlideRecord("task");&#13;
+var gr= new GlideRecord("task");//parent table for all tables&#13;
 gr.addQuery("assigned_to",k);&#13;
-gr.addActiveQuery();&#13;
+gr.addActiveQuery();//active query&#13;
 gr.query();&#13;
 while(gr.next()){&#13;
 	arr.push(gr.number);&#13;
@@ -1532,14 +1532,14 @@ outputs.str=str;&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-11 17:37:12</sys_created_on>
         <sys_id>c35e195547e4321077c59df4316d4365</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-11 17:37:12</sys_updated_on>
+        <sys_updated_on>2025-10-11 17:47:31</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
