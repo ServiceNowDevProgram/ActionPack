@@ -17,7 +17,7 @@
         <flow_priority/>
         <ih_action>false</ih_action>
         <internal_name>duplicate_ci_records_finder</internal_name>
-        <label_cache>[{"name":"{{action.table_name}}","label":"action➛Table Name","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.field_name}}","label":"action➛Field Name","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[6e71d73d-3317-4955-abe2-3cf689918035].duplicate_records}}","label":"step➛Script step➛Duplicate Records","type":"step","ref":"","reference_display":"","base_type":"array.string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Array.String","co_type_name":"FD6fd4717dd32072105a2cbcd1e616c381","child_label":"Duplicate Records_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.string","child_type":"string","child_name":"duplicate_records_child0","child_uiUniqueId":"8ed6b38c-1596-4412-9d9c-261a38e4d010","uiUniqueId":"28e3febf-67e1-4518-8db6-1f5da6de614f"}}]</label_cache>
+        <label_cache>[{"name":"{{action.table_name}}","label":"action➛Table Name","type":"action","ref":"","reference_display":"","base_type":"table_name","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"fb3ef1a6-f099-4dfd-99b5-c8ae1de83cb0"}},{"name":"{{action.field_name}}","label":"action➛Field Name","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[6e71d73d-3317-4955-abe2-3cf689918035].duplicate_records}}","label":"step➛Script step➛Duplicate Records","type":"step","ref":"","reference_display":"","base_type":"array.string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Array.String","co_type_name":"FD6fd4717dd32072105a2cbcd1e616c381","child_label":"Duplicate Records_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.string","child_type":"string","child_name":"duplicate_records_child0","child_uiUniqueId":"8ed6b38c-1596-4412-9d9c-261a38e4d010","uiUniqueId":"28e3febf-67e1-4518-8db6-1f5da6de614f"}},{"name":"{{step[6e71d73d-3317-4955-abe2-3cf689918035].__step_status__.code}}","label":"step➛Script step➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[6e71d73d-3317-4955-abe2-3cf689918035].execution_result}}","label":"step➛Script step➛Execution Result","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"da7c382d-d316-4276-afdc-ef8c5d1ab3fc"}}]</label_cache>
         <master_snapshot>dc05757d8320721044b6f0b6feaad3b9</master_snapshot>
         <master_snapshot_digest/>
         <name>Duplicate CI Records Finder</name>
@@ -32,7 +32,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bb74f53d8320721044b6f0b6feaad37a</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>Duplicate CI Records Finder</sys_name>
         <sys_overrides/>
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
@@ -40,7 +40,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_bb74f53d8320721044b6f0b6feaad37a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 08:33:07</sys_updated_on>
+        <sys_updated_on>2025-10-13 13:26:58</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -102,6 +102,18 @@
         <value>{{step[6e71d73d-3317-4955-abe2-3cf689918035].duplicate_records}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>result_status</field>
+        <id>bb74f53d8320721044b6f0b6feaad37a</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-13 13:24:16</sys_created_on>
+        <sys_id>29a77af183a4721044b6f0b6feaad3bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-13 13:24:16</sys_updated_on>
+        <table>var__m_sys_hub_action_output_bb74f53d8320721044b6f0b6feaad37a</table>
+        <value>{{step[6e71d73d-3317-4955-abe2-3cf689918035].execution_result}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>__action_status__</field>
         <id>bb74f53d8320721044b6f0b6feaad37a</id>
         <sys_created_by>admin</sys_created_by>
@@ -143,10 +155,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 08:31:55</sys_created_on>
         <sys_id>43b4bd3d8320721044b6f0b6feaad37d</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 08:32:30</sys_updated_on>
+        <sys_updated_on>2025-10-13 13:19:31</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=43b4bd3d8320721044b6f0b6feaad37d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -171,29 +183,42 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 08:31:56</sys_created_on>
         <sys_id>5fb4bd3d8320721044b6f0b6feaad3a8</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 08:32:30</sys_updated_on>
+        <sys_updated_on>2025-10-13 13:19:31</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
- &#13;
- var grRecord = new GlideAggregate(inputs.tableName);&#13;
-grRecord.addAggregate('COUNT', inputs.fieldName);&#13;
-grRecord.groupBy('name'); &#13;
-grRecord.query();&#13;
-var duplicateInfo = [];&#13;
-while (grRecord.next()) {&#13;
-	var obj = {};&#13;
-    if (grRecord.getAggregate('COUNT', inputs.fieldName) &gt; 1) {&#13;
-      &#13;
-		obj.name = grRecord.name;&#13;
-		obj.count = grRecord.getAggregate('COUNT', inputs.fieldName);&#13;
-		duplicateInfo.push(obj);&#13;
+    var grRecord = new GlideAggregate(inputs.tableName);&#13;
+    &#13;
+    // Validate field&#13;
+    if (!grRecord.isValidField(inputs.fieldName)) {&#13;
+        outputs.execution_result = "failed";&#13;
+        outputs.error_message = "Invalid field name: " + inputs.fieldName;&#13;
+        return;&#13;
     }&#13;
-}&#13;
-//gs.info("Final information:"+duplicateInfo);&#13;
-outputs.duplicate_records = duplicateInfo;&#13;
- &#13;
- })(inputs, outputs);&#13;
+&#13;
+    // Add aggregate and group by the input field&#13;
+    grRecord.addAggregate('COUNT', inputs.fieldName);&#13;
+    grRecord.groupBy(inputs.fieldName);&#13;
+    grRecord.query();&#13;
+&#13;
+    var duplicateInfo = [];&#13;
+    var hasDuplicates = false;&#13;
+&#13;
+    while (grRecord.next()) {&#13;
+        var count = grRecord.getAggregate('COUNT', inputs.fieldName);&#13;
+        if (count &gt; 1) {&#13;
+            var obj = {};&#13;
+            obj.field_value = grRecord.getValue(inputs.fieldName);&#13;
+            obj.count = count;&#13;
+            duplicateInfo.push(obj);&#13;
+            hasDuplicates = true;&#13;
+        }&#13;
+    }&#13;
+&#13;
+    outputs.duplicate_records = duplicateInfo;&#13;
+    outputs.execution_result = hasDuplicates ? "success" : "no_duplicates_found";&#13;
+&#13;
+})(inputs, outputs);&#13;
 </value>
         <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
     </sys_variable_value>
@@ -416,7 +441,7 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_input>
-    <sys_hub_step_ext_output action="delete_multiple" query="model=43b4bd3d8320721044b6f0b6feaad37d^sys_idNOT IN6fd4717d8320721044b6f0b6feaad382"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=43b4bd3d8320721044b6f0b6feaad37d^sys_idNOT IN6fd4717d8320721044b6f0b6feaad382,81c6b6b183a4721044b6f0b6feaad388"/>
     <sys_complex_object action="INSERT_OR_UPDATE">
         <label/>
         <name>FD6fd4717dd32072105a2cbcd1e616c381</name>
@@ -429,7 +454,7 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>23d4717d8320721044b6f0b6feaad382</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -437,7 +462,7 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 08:33:05</sys_updated_on>
+        <sys_updated_on>2025-10-13 13:26:56</sys_updated_on>
         <type>complex_object_collection</type>
     </sys_complex_object>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
@@ -523,6 +548,89 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=da7c382d-d316-4276-afdc-ef8c5d1ab3fc</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>execution_result</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Execution Result</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">43b4bd3d8320721044b6f0b6feaad37d</model>
+        <model_id>43b4bd3d8320721044b6f0b6feaad37d</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_43b4bd3d8320721044b6f0b6feaad37d</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-13 13:20:25</sys_created_on>
+        <sys_id>81c6b6b183a4721044b6f0b6feaad388</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-13 13:20:25</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
     <sys_hub_input_scripts action="delete_multiple" query="instance=43b4bd3d8320721044b6f0b6feaad37d"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>duplicate_records</element>
@@ -547,91 +655,30 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <url/>
         <url_target/>
     </sys_documentation>
-    <sys_hub_action_input action="delete_multiple" query="model=bb74f53d8320721044b6f0b6feaad37a^sys_idNOT IN07b4f93d8320721044b6f0b6feaad38f,07b4f93d8320721044b6f0b6feaad394"/>
-    <sys_hub_action_input action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <array>false</array>
-        <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=fb3ef1a6-f099-4dfd-99b5-c8ae1de83cb0</attributes>
-        <audit>false</audit>
-        <calculation><![CDATA[(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);]]></calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table/>
-        <column_label/>
-        <comments/>
-        <create_roles/>
-        <default_value/>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>table_name</element>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <formula/>
-        <function_definition/>
-        <function_field>false</function_field>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>execution_result</element>
         <help/>
         <hint/>
-        <internal_type display_value="String">string</internal_type>
-        <label>Table Name</label>
-        <mandatory>true</mandatory>
-        <max_length>8000</max_length>
-        <model display_value="Duplicate CI Records Finder">bb74f53d8320721044b6f0b6feaad37a</model>
-        <model_id>bb74f53d8320721044b6f0b6feaad37a</model_id>
-        <model_table>sys_hub_action_type_definition</model_table>
-        <name>var__m_sys_hub_action_input_bb74f53d8320721044b6f0b6feaad37a</name>
-        <next_element/>
-        <order>1</order>
-        <primary>false</primary>
-        <read_only>false</read_only>
-        <read_roles/>
-        <reference/>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <sizeclass/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <label>Execution Result</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_43b4bd3d8320721044b6f0b6feaad37d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-13 08:31:55</sys_created_on>
-        <sys_id>07b4f93d8320721044b6f0b6feaad38f</sys_id>
+        <sys_created_on>2025-10-13 13:20:25</sys_created_on>
+        <sys_id>c5c6b6b183a4721044b6f0b6feaad38a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
-        <sys_package/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 08:31:55</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <virtual_type>script</virtual_type>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_hub_action_input>
-    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=07b4f93d8320721044b6f0b6feaad38f"/>
+        <sys_updated_on>2025-10-13 13:20:25</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_input action="delete_multiple" query="model=bb74f53d8320721044b6f0b6feaad37a^sys_idNOT IN07b4f93d8320721044b6f0b6feaad394,ed90b6b98364721044b6f0b6feaad3c2"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -716,7 +763,91 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <xml_view>false</xml_view>
     </sys_hub_action_input>
     <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=07b4f93d8320721044b6f0b6feaad394"/>
-    <sys_hub_action_output action="delete_multiple" query="model=bb74f53d8320721044b6f0b6feaad37a^sys_idNOT IN93b4bd3d8320721044b6f0b6feaad3b1,94f4f17d8320721044b6f0b6feaad302,d7b4bd3d8320721044b6f0b6feaad3ac"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=table_name,uiTypeLabel=Table Name,uiUniqueId=fb3ef1a6-f099-4dfd-99b5-c8ae1de83cb0</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>true</mandatory>
+        <max_length>80</max_length>
+        <model display_value="Duplicate CI Records Finder">bb74f53d8320721044b6f0b6feaad37a</model>
+        <model_id>bb74f53d8320721044b6f0b6feaad37a</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_bb74f53d8320721044b6f0b6feaad37a</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-13 12:53:25</sys_created_on>
+        <sys_id>ed90b6b98364721044b6f0b6feaad3c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-13 12:53:25</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=ed90b6b98364721044b6f0b6feaad3c2"/>
+    <sys_hub_action_output action="delete_multiple" query="model=bb74f53d8320721044b6f0b6feaad37a^sys_idNOT IN93b4bd3d8320721044b6f0b6feaad3b1,94f4f17d8320721044b6f0b6feaad302,d7b4bd3d8320721044b6f0b6feaad3ac,e387b6f183a4721044b6f0b6feaad3b6"/>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -764,7 +895,7 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_bb74f53d8320721044b6f0b6feaad37a</name>
         <next_element/>
-        <order>3</order>
+        <order>4</order>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
@@ -782,14 +913,14 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 08:31:56</sys_created_on>
         <sys_id>93b4bd3d8320721044b6f0b6feaad3b1</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 08:33:06</sys_updated_on>
+        <sys_updated_on>2025-10-13 13:26:56</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -816,7 +947,7 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9cf4f17d8320721044b6f0b6feaad301</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -824,7 +955,7 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 08:33:06</sys_updated_on>
+        <sys_updated_on>2025-10-13 13:26:56</sys_updated_on>
         <type>complex_object_collection</type>
     </sys_complex_object>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
@@ -1001,6 +1132,93 @@ outputs.duplicate_records = duplicateInfo;&#13;
     </sys_hub_action_output>
     <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d7b4bd3d8320721044b6f0b6feaad3ac"/>
     <sys_hub_input_scripts action="delete_multiple" query="instance=d7b4bd3d8320721044b6f0b6feaad3ac"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=f6a41756-a2f6-4a99-8e31-aee252a864ee</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>result_status</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Result Status</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Duplicate CI Records Finder">bb74f53d8320721044b6f0b6feaad37a</model>
+        <model_id>bb74f53d8320721044b6f0b6feaad37a</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_bb74f53d8320721044b6f0b6feaad37a</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-13 13:23:51</sys_created_on>
+        <sys_id>e387b6f183a4721044b6f0b6feaad3b6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-13 13:24:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e387b6f183a4721044b6f0b6feaad3b6"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e387b6f183a4721044b6f0b6feaad3b6"/>
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=bb74f53d8320721044b6f0b6feaad37a"/>
     <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=bb74f53d8320721044b6f0b6feaad37a^sys_idNOT IN1bb4bd3d8320721044b6f0b6feaad3bc"/>
     <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
@@ -1012,7 +1230,44 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-13 08:31:56</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=1bb4bd3d8320721044b6f0b6feaad3bc"/>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=1bb4bd3d8320721044b6f0b6feaad3bc^sys_idNOT INde57b2f183a4721044b6f0b6feaad380"/>
+    <sys_hub_status_condition action="INSERT_OR_UPDATE">
+        <action_status_metadata_id display_value="Created 2025-10-13 01:31:56">1bb4bd3d8320721044b6f0b6feaad3bc</action_status_metadata_id>
+        <condition>{{step[6e71d73d-3317-4955-abe2-3cf689918035].execution_result}}=failed</condition>
+        <dont_treat_as_error>false</dont_treat_as_error>
+        <label/>
+        <order>1</order>
+        <status>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":"99"}},"message":{"$cv":{"$c":"java.lang.String","$v":"The provided field does not exist or is not accessible in the selected table."}}},"serializationFormat":"JSON"}</status>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-13 13:22:57</sys_created_on>
+        <sys_id>de57b2f183a4721044b6f0b6feaad380</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-13 13:26:53</sys_updated_on>
+    </sys_hub_status_condition>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_bb74f53d8320721044b6f0b6feaad37a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-13 12:53:25</sys_created_on>
+        <sys_id>2190b6b98364721044b6f0b6feaad3c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-13 12:53:25</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>field_name</element>
         <help/>
@@ -1025,29 +1280,6 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 08:31:55</sys_created_on>
         <sys_id>4bb4bd3d8320721044b6f0b6feaad368</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
-        <sys_policy/>
-        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 08:31:55</sys_updated_on>
-        <url/>
-        <url_target/>
-    </sys_documentation>
-    <sys_documentation action="INSERT_OR_UPDATE">
-        <element>table_name</element>
-        <help/>
-        <hint/>
-        <label>Table Name</label>
-        <language>en</language>
-        <name>var__m_sys_hub_action_input_bb74f53d8320721044b6f0b6feaad37a</name>
-        <plural/>
-        <sys_class_name>sys_documentation</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-13 08:31:55</sys_created_on>
-        <sys_id>4bb4f93d8320721044b6f0b6feaad393</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
@@ -1107,6 +1339,29 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <url_target/>
     </sys_documentation>
     <sys_documentation action="INSERT_OR_UPDATE">
+        <element>result_status</element>
+        <help/>
+        <hint/>
+        <label>Result Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_bb74f53d8320721044b6f0b6feaad37a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-13 13:23:51</sys_created_on>
+        <sys_id>a387b6f183a4721044b6f0b6feaad3b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-13 13:23:51</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
         <element>__action_status__</element>
         <help/>
         <hint/>
@@ -1134,17 +1389,17 @@ outputs.duplicate_records = duplicateInfo;&#13;
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Duplicate CI Records Finder">bb74f53d8320721044b6f0b6feaad37a</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"3405b57d8320721044b6f0b6feaad334","name":"plan","plan_signature":null}}</plan>
-        <snapshot>ec05757d8320721044b6f0b6feaad3f5</snapshot>
+        <snapshot>85483a3583a4721044b6f0b6feaad379</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 08:33:08</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3405b57d8320721044b6f0b6feaad334</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 08:33:08</sys_updated_on>
+        <sys_updated_on>2025-10-13 13:26:58</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1162,7 +1417,7 @@ outputs.duplicate_records = duplicateInfo;&#13;
  It works dynamically based on the provided field (e.g., name, serial_number, asset_tag, etc.).</description>
         <flow_priority/>
         <internal_name>duplicate_ci_records_finder</internal_name>
-        <label_cache>[{"name":"{{action.table_name}}","label":"action➛Table Name","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.field_name}}","label":"action➛Field Name","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[6e71d73d-3317-4955-abe2-3cf689918035].duplicate_records}}","label":"step➛Script step➛Duplicate Records","type":"step","ref":"","reference_display":"","base_type":"array.string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Array.String","co_type_name":"FD6fd4717dd32072105a2cbcd1e616c381","child_label":"Duplicate Records_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.string","child_type":"string","child_name":"duplicate_records_child0","child_uiUniqueId":"8ed6b38c-1596-4412-9d9c-261a38e4d010","uiUniqueId":"28e3febf-67e1-4518-8db6-1f5da6de614f"}}]</label_cache>
+        <label_cache>[{"name":"{{action.table_name}}","label":"action➛Table Name","type":"action","ref":"","reference_display":"","base_type":"table_name","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"fb3ef1a6-f099-4dfd-99b5-c8ae1de83cb0"}},{"name":"{{action.field_name}}","label":"action➛Field Name","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[6e71d73d-3317-4955-abe2-3cf689918035].duplicate_records}}","label":"step➛Script step➛Duplicate Records","type":"step","ref":"","reference_display":"","base_type":"array.string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"Array.String","co_type_name":"FD6fd4717dd32072105a2cbcd1e616c381","child_label":"Duplicate Records_child0","child_type_label":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"array.string","child_type":"string","child_name":"duplicate_records_child0","child_uiUniqueId":"8ed6b38c-1596-4412-9d9c-261a38e4d010","uiUniqueId":"28e3febf-67e1-4518-8db6-1f5da6de614f"}},{"name":"{{step[6e71d73d-3317-4955-abe2-3cf689918035].__step_status__.code}}","label":"step➛Script step➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[6e71d73d-3317-4955-abe2-3cf689918035].execution_result}}","label":"step➛Script step➛Execution Result","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"da7c382d-d316-4276-afdc-ef8c5d1ab3fc"}}]</label_cache>
         <master>true</master>
         <name>Duplicate CI Records Finder</name>
         <natlang/>
@@ -1175,7 +1430,7 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>dc05757d8320721044b6f0b6feaad3b9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1183,7 +1438,7 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 08:33:06</sys_updated_on>
+        <sys_updated_on>2025-10-13 13:26:57</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1231,6 +1486,18 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <value>{{step[6e71d73d-3317-4955-abe2-3cf689918035].duplicate_records}}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>result_status</field>
+        <id>dc05757d8320721044b6f0b6feaad3b9</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-13 13:26:58</sys_created_on>
+        <sys_id>cd483a3583a4721044b6f0b6feaad376</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-13 13:26:58</sys_updated_on>
+        <table>var__m_sys_hub_action_output_dc05757d8320721044b6f0b6feaad3b9</table>
+        <value>{{step[6e71d73d-3317-4955-abe2-3cf689918035].execution_result}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>__action_status__</field>
         <id>dc05757d8320721044b6f0b6feaad3b9</id>
         <sys_created_by>admin</sys_created_by>
@@ -1272,10 +1539,10 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 08:33:06</sys_created_on>
         <sys_id>d805757d8320721044b6f0b6feaad3c8</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 08:33:07</sys_updated_on>
+        <sys_updated_on>2025-10-13 13:26:57</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=d805757d8320721044b6f0b6feaad3c8"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1286,29 +1553,42 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 08:33:07</sys_created_on>
         <sys_id>a805757d8320721044b6f0b6feaad3dd</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 08:33:07</sys_updated_on>
+        <sys_updated_on>2025-10-13 13:26:57</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
- &#13;
- var grRecord = new GlideAggregate(inputs.tableName);&#13;
-grRecord.addAggregate('COUNT', inputs.fieldName);&#13;
-grRecord.groupBy('name'); &#13;
-grRecord.query();&#13;
-var duplicateInfo = [];&#13;
-while (grRecord.next()) {&#13;
-	var obj = {};&#13;
-    if (grRecord.getAggregate('COUNT', inputs.fieldName) &gt; 1) {&#13;
-      &#13;
-		obj.name = grRecord.name;&#13;
-		obj.count = grRecord.getAggregate('COUNT', inputs.fieldName);&#13;
-		duplicateInfo.push(obj);&#13;
+    var grRecord = new GlideAggregate(inputs.tableName);&#13;
+    &#13;
+    // Validate field&#13;
+    if (!grRecord.isValidField(inputs.fieldName)) {&#13;
+        outputs.execution_result = "failed";&#13;
+        outputs.error_message = "Invalid field name: " + inputs.fieldName;&#13;
+        return;&#13;
     }&#13;
-}&#13;
-//gs.info("Final information:"+duplicateInfo);&#13;
-outputs.duplicate_records = duplicateInfo;&#13;
- &#13;
- })(inputs, outputs);&#13;
+&#13;
+    // Add aggregate and group by the input field&#13;
+    grRecord.addAggregate('COUNT', inputs.fieldName);&#13;
+    grRecord.groupBy(inputs.fieldName);&#13;
+    grRecord.query();&#13;
+&#13;
+    var duplicateInfo = [];&#13;
+    var hasDuplicates = false;&#13;
+&#13;
+    while (grRecord.next()) {&#13;
+        var count = grRecord.getAggregate('COUNT', inputs.fieldName);&#13;
+        if (count &gt; 1) {&#13;
+            var obj = {};&#13;
+            obj.field_value = grRecord.getValue(inputs.fieldName);&#13;
+            obj.count = count;&#13;
+            duplicateInfo.push(obj);&#13;
+            hasDuplicates = true;&#13;
+        }&#13;
+    }&#13;
+&#13;
+    outputs.duplicate_records = duplicateInfo;&#13;
+    outputs.execution_result = hasDuplicates ? "success" : "no_duplicates_found";&#13;
+&#13;
+})(inputs, outputs);&#13;
 </value>
         <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
     </sys_variable_value>
@@ -1545,7 +1825,7 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_input>
-    <sys_hub_step_ext_output action="delete_multiple" query="model=d805757d8320721044b6f0b6feaad3c8^sys_idNOT INac05757d8320721044b6f0b6feaad3d3"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=d805757d8320721044b6f0b6feaad3c8^sys_idNOT INac05757d8320721044b6f0b6feaad3d3,b4483a3583a4721044b6f0b6feaad35c"/>
     <sys_complex_object action="INSERT_OR_UPDATE">
         <label/>
         <name>FDe005757d3220721055be907026fbe4d3</name>
@@ -1558,7 +1838,7 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a405757d8320721044b6f0b6feaad3d3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1566,7 +1846,7 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 08:33:06</sys_updated_on>
+        <sys_updated_on>2025-10-13 13:26:57</sys_updated_on>
         <type>complex_object_collection</type>
     </sys_complex_object>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
@@ -1652,6 +1932,89 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=da7c382d-d316-4276-afdc-ef8c5d1ab3fc</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>execution_result</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Execution Result</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">d805757d8320721044b6f0b6feaad3c8</model>
+        <model_id>d805757d8320721044b6f0b6feaad3c8</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_d805757d8320721044b6f0b6feaad3c8</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-13 13:26:57</sys_created_on>
+        <sys_id>b4483a3583a4721044b6f0b6feaad35c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-13 13:26:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
     <sys_hub_input_scripts action="delete_multiple" query="instance=d805757d8320721044b6f0b6feaad3c8"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>duplicate_records</element>
@@ -1676,7 +2039,114 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <url/>
         <url_target/>
     </sys_documentation>
-    <sys_hub_action_input action="delete_multiple" query="model=dc05757d8320721044b6f0b6feaad3b9^sys_idNOT INd005757d8320721044b6f0b6feaad3c1,dc05757d8320721044b6f0b6feaad3bc"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>execution_result</element>
+        <help/>
+        <hint/>
+        <label>Execution Result</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_d805757d8320721044b6f0b6feaad3c8</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-13 13:26:57</sys_created_on>
+        <sys_id>3c483a3583a4721044b6f0b6feaad35e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-13 13:26:57</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_input action="delete_multiple" query="model=dc05757d8320721044b6f0b6feaad3b9^sys_idNOT INb8483a3583a4721044b6f0b6feaad324,d005757d8320721044b6f0b6feaad3c1"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=table_name,uiTypeLabel=Table Name,uiUniqueId=fb3ef1a6-f099-4dfd-99b5-c8ae1de83cb0</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>true</mandatory>
+        <max_length>80</max_length>
+        <model display_value="Duplicate CI Records Finder">dc05757d8320721044b6f0b6feaad3b9</model>
+        <model_id>dc05757d8320721044b6f0b6feaad3b9</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_dc05757d8320721044b6f0b6feaad3b9</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-13 13:26:57</sys_created_on>
+        <sys_id>b8483a3583a4721044b6f0b6feaad324</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-13 13:26:57</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b8483a3583a4721044b6f0b6feaad324"/>
     <sys_hub_action_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -1761,91 +2231,7 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <xml_view>false</xml_view>
     </sys_hub_action_input>
     <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d005757d8320721044b6f0b6feaad3c1"/>
-    <sys_hub_action_input action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <array>false</array>
-        <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=fb3ef1a6-f099-4dfd-99b5-c8ae1de83cb0</attributes>
-        <audit>false</audit>
-        <calculation><![CDATA[(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);]]></calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table/>
-        <column_label/>
-        <comments/>
-        <create_roles/>
-        <default_value/>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>table_name</element>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <formula/>
-        <function_definition/>
-        <function_field>false</function_field>
-        <help/>
-        <hint/>
-        <internal_type display_value="String">string</internal_type>
-        <label>Table Name</label>
-        <mandatory>true</mandatory>
-        <max_length>8000</max_length>
-        <model display_value="Duplicate CI Records Finder">dc05757d8320721044b6f0b6feaad3b9</model>
-        <model_id>dc05757d8320721044b6f0b6feaad3b9</model_id>
-        <model_table>sys_hub_action_type_snapshot</model_table>
-        <name>var__m_sys_hub_action_input_dc05757d8320721044b6f0b6feaad3b9</name>
-        <next_element/>
-        <order>1</order>
-        <primary>false</primary>
-        <read_only>false</read_only>
-        <read_roles/>
-        <reference/>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <sizeclass/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_hub_action_input</sys_class_name>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-13 08:33:06</sys_created_on>
-        <sys_id>dc05757d8320721044b6f0b6feaad3bc</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 08:33:06</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <virtual_type>script</virtual_type>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_hub_action_input>
-    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=dc05757d8320721044b6f0b6feaad3bc"/>
-    <sys_hub_action_output action="delete_multiple" query="model=dc05757d8320721044b6f0b6feaad3b9^sys_idNOT IN2405757d8320721044b6f0b6feaad3e6,6c05757d8320721044b6f0b6feaad3e1,ec05757d8320721044b6f0b6feaad3e9"/>
+    <sys_hub_action_output action="delete_multiple" query="model=dc05757d8320721044b6f0b6feaad3b9^sys_idNOT IN2405757d8320721044b6f0b6feaad3e6,6c05757d8320721044b6f0b6feaad3e1,8d483a3583a4721044b6f0b6feaad36a,ec05757d8320721044b6f0b6feaad3e9"/>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -1945,7 +2331,7 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6405757d8320721044b6f0b6feaad3e1</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1953,7 +2339,7 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 08:33:07</sys_updated_on>
+        <sys_updated_on>2025-10-13 13:26:58</sys_updated_on>
         <type>complex_object_collection</type>
     </sys_complex_object>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
@@ -2047,6 +2433,93 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=f6a41756-a2f6-4a99-8e31-aee252a864ee</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>result_status</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Result Status</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Duplicate CI Records Finder">dc05757d8320721044b6f0b6feaad3b9</model>
+        <model_id>dc05757d8320721044b6f0b6feaad3b9</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_dc05757d8320721044b6f0b6feaad3b9</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-13 13:26:58</sys_created_on>
+        <sys_id>8d483a3583a4721044b6f0b6feaad36a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-13 13:26:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8d483a3583a4721044b6f0b6feaad36a"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=8d483a3583a4721044b6f0b6feaad36a"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
         <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=308487e1-421d-438c-9d45-ce914745cc82,visible_in_ui=false</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
@@ -2090,7 +2563,7 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_dc05757d8320721044b6f0b6feaad3b9</name>
         <next_element/>
-        <order>3</order>
+        <order>4</order>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
@@ -2108,14 +2581,14 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 08:33:07</sys_created_on>
         <sys_id>ec05757d8320721044b6f0b6feaad3e9</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 08:33:07</sys_updated_on>
+        <sys_updated_on>2025-10-13 13:26:58</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2141,7 +2614,21 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-13 08:33:07</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=2c05757d8320721044b6f0b6feaad3f5"/>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=2c05757d8320721044b6f0b6feaad3f5^sys_idNOT IN05483a3583a4721044b6f0b6feaad379"/>
+    <sys_hub_status_condition action="INSERT_OR_UPDATE">
+        <action_status_metadata_id display_value="Created 2025-10-13 01:33:07">2c05757d8320721044b6f0b6feaad3f5</action_status_metadata_id>
+        <condition>{{step[6e71d73d-3317-4955-abe2-3cf689918035].execution_result}}=failed</condition>
+        <dont_treat_as_error>false</dont_treat_as_error>
+        <label/>
+        <order>1</order>
+        <status>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":"99"}},"message":{"$cv":{"$c":"java.lang.String","$v":"The provided field does not exist or is not accessible in the selected table."}}},"serializationFormat":"JSON"}</status>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-13 13:26:58</sys_created_on>
+        <sys_id>05483a3583a4721044b6f0b6feaad379</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-13 13:26:58</sys_updated_on>
+    </sys_hub_status_condition>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>table_name</element>
         <help/>
@@ -2152,8 +2639,8 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <plural/>
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-13 08:33:06</sys_created_on>
-        <sys_id>1805757d8320721044b6f0b6feaad3c0</sys_id>
+        <sys_created_on>2025-10-13 13:26:57</sys_created_on>
+        <sys_id>30483a3583a4721044b6f0b6feaad328</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
@@ -2161,7 +2648,7 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 08:33:06</sys_updated_on>
+        <sys_updated_on>2025-10-13 13:26:57</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -2209,6 +2696,29 @@ outputs.duplicate_records = duplicateInfo;&#13;
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-13 08:33:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>result_status</element>
+        <help/>
+        <hint/>
+        <label>Result Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_dc05757d8320721044b6f0b6feaad3b9</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-13 13:26:58</sys_created_on>
+        <sys_id>4d483a3583a4721044b6f0b6feaad36d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-13 13:26:58</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
