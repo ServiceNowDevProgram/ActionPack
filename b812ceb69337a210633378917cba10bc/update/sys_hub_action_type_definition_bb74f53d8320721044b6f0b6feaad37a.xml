@@ -32,7 +32,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bb74f53d8320721044b6f0b6feaad37a</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name>Duplicate CI Records Finder</sys_name>
         <sys_overrides/>
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
@@ -40,7 +40,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_bb74f53d8320721044b6f0b6feaad37a</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 13:26:58</sys_updated_on>
+        <sys_updated_on>2025-10-13 15:41:15</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -155,10 +155,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 08:31:55</sys_created_on>
         <sys_id>43b4bd3d8320721044b6f0b6feaad37d</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 13:19:31</sys_updated_on>
+        <sys_updated_on>2025-10-13 15:41:13</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=43b4bd3d8320721044b6f0b6feaad37d"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -183,9 +183,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 08:31:56</sys_created_on>
         <sys_id>5fb4bd3d8320721044b6f0b6feaad3a8</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 13:19:31</sys_updated_on>
+        <sys_updated_on>2025-10-13 15:41:13</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
     var grRecord = new GlideAggregate(inputs.tableName);&#13;
     &#13;
@@ -209,6 +209,7 @@
         if (count &gt; 1) {&#13;
             var obj = {};&#13;
             obj.field_value = grRecord.getValue(inputs.fieldName);&#13;
+            obj.display_value = grRecord.getDisplayValue();&#13;
             obj.count = count;&#13;
             duplicateInfo.push(obj);&#13;
             hasDuplicates = true;&#13;
@@ -454,7 +455,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>23d4717d8320721044b6f0b6feaad382</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -462,7 +463,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 13:26:56</sys_updated_on>
+        <sys_updated_on>2025-10-13 15:41:13</sys_updated_on>
         <type>complex_object_collection</type>
     </sys_complex_object>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
@@ -913,14 +914,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 08:31:56</sys_created_on>
         <sys_id>93b4bd3d8320721044b6f0b6feaad3b1</sys_id>
-        <sys_mod_count>29</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 13:26:56</sys_updated_on>
+        <sys_updated_on>2025-10-13 15:41:13</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -947,7 +948,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9cf4f17d8320721044b6f0b6feaad301</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -955,7 +956,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 13:26:56</sys_updated_on>
+        <sys_updated_on>2025-10-13 15:41:13</sys_updated_on>
         <type>complex_object_collection</type>
     </sys_complex_object>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
@@ -1389,17 +1390,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Duplicate CI Records Finder">bb74f53d8320721044b6f0b6feaad37a</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"3405b57d8320721044b6f0b6feaad334","name":"plan","plan_signature":null}}</plan>
-        <snapshot>85483a3583a4721044b6f0b6feaad379</snapshot>
+        <snapshot>00079b3d8328721044b6f0b6feaad342</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 08:33:08</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3405b57d8320721044b6f0b6feaad334</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 13:26:58</sys_updated_on>
+        <sys_updated_on>2025-10-13 15:41:15</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1539,10 +1540,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 08:33:06</sys_created_on>
         <sys_id>d805757d8320721044b6f0b6feaad3c8</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 13:26:57</sys_updated_on>
+        <sys_updated_on>2025-10-13 15:41:14</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=d805757d8320721044b6f0b6feaad3c8"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1553,9 +1554,9 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 08:33:07</sys_created_on>
         <sys_id>a805757d8320721044b6f0b6feaad3dd</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 13:26:57</sys_updated_on>
+        <sys_updated_on>2025-10-13 15:41:14</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
     var grRecord = new GlideAggregate(inputs.tableName);&#13;
     &#13;
@@ -1579,6 +1580,7 @@
         if (count &gt; 1) {&#13;
             var obj = {};&#13;
             obj.field_value = grRecord.getValue(inputs.fieldName);&#13;
+            obj.display_value = grRecord.getDisplayValue();&#13;
             obj.count = count;&#13;
             duplicateInfo.push(obj);&#13;
             hasDuplicates = true;&#13;
@@ -1838,7 +1840,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a405757d8320721044b6f0b6feaad3d3</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1846,7 +1848,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 13:26:57</sys_updated_on>
+        <sys_updated_on>2025-10-13 15:41:14</sys_updated_on>
         <type>complex_object_collection</type>
     </sys_complex_object>
     <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
@@ -2331,7 +2333,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6405757d8320721044b6f0b6feaad3e1</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -2339,7 +2341,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 13:26:58</sys_updated_on>
+        <sys_updated_on>2025-10-13 15:41:14</sys_updated_on>
         <type>complex_object_collection</type>
     </sys_complex_object>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
@@ -2581,14 +2583,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 08:33:07</sys_created_on>
         <sys_id>ec05757d8320721044b6f0b6feaad3e9</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 13:26:58</sys_updated_on>
+        <sys_updated_on>2025-10-13 15:41:14</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2614,7 +2616,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-13 08:33:07</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=2c05757d8320721044b6f0b6feaad3f5^sys_idNOT IN05483a3583a4721044b6f0b6feaad379"/>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=2c05757d8320721044b6f0b6feaad3f5^sys_idNOT IN84079b3d8328721044b6f0b6feaad341"/>
     <sys_hub_status_condition action="INSERT_OR_UPDATE">
         <action_status_metadata_id display_value="Created 2025-10-13 01:33:07">2c05757d8320721044b6f0b6feaad3f5</action_status_metadata_id>
         <condition>{{step[6e71d73d-3317-4955-abe2-3cf689918035].execution_result}}=failed</condition>
@@ -2623,11 +2625,11 @@
         <order>1</order>
         <status>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":"99"}},"message":{"$cv":{"$c":"java.lang.String","$v":"The provided field does not exist or is not accessible in the selected table."}}},"serializationFormat":"JSON"}</status>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-13 13:26:58</sys_created_on>
-        <sys_id>05483a3583a4721044b6f0b6feaad379</sys_id>
+        <sys_created_on>2025-10-13 15:41:15</sys_created_on>
+        <sys_id>84079b3d8328721044b6f0b6feaad341</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 13:26:58</sys_updated_on>
+        <sys_updated_on>2025-10-13 15:41:15</sys_updated_on>
     </sys_hub_status_condition>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>table_name</element>
