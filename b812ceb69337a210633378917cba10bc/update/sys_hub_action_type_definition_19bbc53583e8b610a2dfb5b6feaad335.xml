@@ -18,7 +18,7 @@ pass the Regular Expression as a string to the input RegExp and also flags can b
         <flow_priority/>
         <ih_action>false</ih_action>
         <internal_name>validate_against_regexp</internal_name>
-        <label_cache>[{"name":"{{action.regexp}}","label":"action➛RegExp","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"3a2462df-6867-4016-9a94-5789943deb0f"}},{"name":"{{action.input_string}}","label":"action➛Input String","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.flags}}","label":"action➛Flags","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[dab8f9f4-3b5f-4acc-bea3-be3d0d7b33c3].is_match}}","label":"step➛Script step➛Is Match","type":"step","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
+        <label_cache>[{"name":"{{action.regexp}}","label":"action➛RegExp","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"3a2462df-6867-4016-9a94-5789943deb0f"}},{"name":"{{action.input_string}}","label":"action➛Input String","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"4245c5b6-952f-4869-b94f-ba96e53c2027"}},{"name":"{{action.flags}}","label":"action➛Flags","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[dab8f9f4-3b5f-4acc-bea3-be3d0d7b33c3].is_match}}","label":"step➛Script step➛Is Match","type":"step","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[dab8f9f4-3b5f-4acc-bea3-be3d0d7b33c3].__step_status__.code}}","label":"step➛Script step➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[dab8f9f4-3b5f-4acc-bea3-be3d0d7b33c3].__step_status__.message}}","label":"step➛Script step➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
         <master_snapshot>920f4131832cb610a2dfb5b6feaad3f2</master_snapshot>
         <master_snapshot_digest/>
         <name>Regex Match Validator</name>
@@ -41,7 +41,7 @@ pass the Regular Expression as a string to the input RegExp and also flags can b
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_19bbc53583e8b610a2dfb5b6feaad335</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-17 02:26:47</sys_updated_on>
+        <sys_updated_on>2025-10-17 08:18:16</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -224,18 +224,6 @@ pass the Regular Expression as a string to the input RegExp and also flags can b
         <sys_updated_on>2025-10-13 05:37:53</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_6decc9f983e8b610a2dfb5b6feaad322</table>
         <value>{{action.regexp}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>6decc9f983e8b610a2dfb5b6feaad322</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-17 02:26:46</sys_created_on>
-        <sys_id>81874d4f83607210a2dfb5b6feaad359</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-17 02:26:46</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_6decc9f983e8b610a2dfb5b6feaad322^id=6decc9f983e8b610a2dfb5b6feaad322"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=6decc9f983e8b610a2dfb5b6feaad322"/>
@@ -637,7 +625,7 @@ pass the Regular Expression as a string to the input RegExp and also flags can b
         <hint/>
         <internal_type display_value="String">string</internal_type>
         <label>RegExp</label>
-        <mandatory>false</mandatory>
+        <mandatory>true</mandatory>
         <max_length>8000</max_length>
         <model display_value="Regex Match Validator">19bbc53583e8b610a2dfb5b6feaad335</model>
         <model_id>19bbc53583e8b610a2dfb5b6feaad335</model_id>
@@ -662,14 +650,14 @@ pass the Regular Expression as a string to the input RegExp and also flags can b
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:37:52</sys_created_on>
         <sys_id>25ec41b983e8b610a2dfb5b6feaad3b5</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:37:52</sys_updated_on>
+        <sys_updated_on>2025-10-17 08:18:14</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -721,7 +709,7 @@ pass the Regular Expression as a string to the input RegExp and also flags can b
         <hint/>
         <internal_type display_value="String">string</internal_type>
         <label>Input String</label>
-        <mandatory>false</mandatory>
+        <mandatory>true</mandatory>
         <max_length>8000</max_length>
         <model display_value="Regex Match Validator">19bbc53583e8b610a2dfb5b6feaad335</model>
         <model_id>19bbc53583e8b610a2dfb5b6feaad335</model_id>
@@ -746,14 +734,14 @@ pass the Regular Expression as a string to the input RegExp and also flags can b
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:37:53</sys_created_on>
         <sys_id>2dec41b983e8b610a2dfb5b6feaad3b9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:37:53</sys_updated_on>
+        <sys_updated_on>2025-10-17 08:18:14</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -917,14 +905,14 @@ pass the Regular Expression as a string to the input RegExp and also flags can b
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:37:53</sys_created_on>
         <sys_id>a1ecc9f983e8b610a2dfb5b6feaad347</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-17 02:26:46</sys_updated_on>
+        <sys_updated_on>2025-10-17 08:18:15</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1124,7 +1112,21 @@ pass the Regular Expression as a string to the input RegExp and also flags can b
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-13 05:37:53</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=b5ecc9f983e8b610a2dfb5b6feaad353"/>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=b5ecc9f983e8b610a2dfb5b6feaad353^sys_idNOT IN65f712c783e87210a2dfb5b6feaad33b"/>
+    <sys_hub_status_condition action="INSERT_OR_UPDATE">
+        <action_status_metadata_id display_value="Created 13-10-2025 11:07:53 IST">b5ecc9f983e8b610a2dfb5b6feaad353</action_status_metadata_id>
+        <condition>{{step[dab8f9f4-3b5f-4acc-bea3-be3d0d7b33c3].__step_status__.code}}=1</condition>
+        <dont_treat_as_error>false</dont_treat_as_error>
+        <label>in case of any error</label>
+        <order>1</order>
+        <status>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"Something went wrong: {{step[dab8f9f4-3b5f-4acc-bea3-be3d0d7b33c3].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":"1"}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</status>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-17 08:18:15</sys_created_on>
+        <sys_id>65f712c783e87210a2dfb5b6feaad33b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-17 08:18:15</sys_updated_on>
+    </sys_hub_status_condition>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>input_string</element>
         <help/>
@@ -1269,17 +1271,17 @@ pass the Regular Expression as a string to the input RegExp and also flags can b
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Regex Match Validator">19bbc53583e8b610a2dfb5b6feaad335</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"720f8131832cb610a2dfb5b6feaad36b","name":"plan","plan_signature":null}}</plan>
-        <snapshot>5d878d4f83607210a2dfb5b6feaad323</snapshot>
+        <snapshot>c2f712c783e87210a2dfb5b6feaad3cd</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:47:15</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>720f8131832cb610a2dfb5b6feaad36b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-17 02:26:48</sys_updated_on>
+        <sys_updated_on>2025-10-17 08:18:17</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1298,7 +1300,7 @@ pass the Regular Expression as a string to the input RegExp and also flags can b
 pass the Regular Expression as a string to the input RegExp and also flags can be added optionally</description>
         <flow_priority/>
         <internal_name>validate_against_regexp</internal_name>
-        <label_cache>[{"name":"{{action.regexp}}","label":"action➛RegExp","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"3a2462df-6867-4016-9a94-5789943deb0f"}},{"name":"{{action.input_string}}","label":"action➛Input String","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.flags}}","label":"action➛Flags","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[dab8f9f4-3b5f-4acc-bea3-be3d0d7b33c3].is_match}}","label":"step➛Script step➛Is Match","type":"step","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
+        <label_cache>[{"name":"{{action.regexp}}","label":"action➛RegExp","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"3a2462df-6867-4016-9a94-5789943deb0f"}},{"name":"{{action.input_string}}","label":"action➛Input String","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"4245c5b6-952f-4869-b94f-ba96e53c2027"}},{"name":"{{action.flags}}","label":"action➛Flags","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[dab8f9f4-3b5f-4acc-bea3-be3d0d7b33c3].is_match}}","label":"step➛Script step➛Is Match","type":"step","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[dab8f9f4-3b5f-4acc-bea3-be3d0d7b33c3].__step_status__.code}}","label":"step➛Script step➛Step Status➛Code","type":"step","ref":"","reference_display":"","base_type":"integer","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[dab8f9f4-3b5f-4acc-bea3-be3d0d7b33c3].__step_status__.message}}","label":"step➛Script step➛Step Status➛Message","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}}]</label_cache>
         <master>true</master>
         <name>Regex Match Validator</name>
         <natlang/>
@@ -1311,7 +1313,7 @@ pass the Regular Expression as a string to the input RegExp and also flags can b
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>920f4131832cb610a2dfb5b6feaad3f2</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1319,7 +1321,7 @@ pass the Regular Expression as a string to the input RegExp and also flags can b
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-17 02:26:47</sys_updated_on>
+        <sys_updated_on>2025-10-17 08:18:16</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1502,18 +1504,6 @@ pass the Regular Expression as a string to the input RegExp and also flags can b
         <sys_updated_on>2025-10-13 05:47:14</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_6e0f8131832cb610a2dfb5b6feaad304</table>
         <value>{{action.regexp}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>6e0f8131832cb610a2dfb5b6feaad304</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-17 02:26:47</sys_created_on>
-        <sys_id>51878d4f83607210a2dfb5b6feaad313</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-17 02:26:47</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_6e0f8131832cb610a2dfb5b6feaad304^id=6e0f8131832cb610a2dfb5b6feaad304"/>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=6e0f8131832cb610a2dfb5b6feaad304"/>
@@ -1915,7 +1905,7 @@ pass the Regular Expression as a string to the input RegExp and also flags can b
         <hint/>
         <internal_type display_value="String">string</internal_type>
         <label>RegExp</label>
-        <mandatory>false</mandatory>
+        <mandatory>true</mandatory>
         <max_length>8000</max_length>
         <model display_value="Regex Match Validator">920f4131832cb610a2dfb5b6feaad3f2</model>
         <model_id>920f4131832cb610a2dfb5b6feaad3f2</model_id>
@@ -1940,14 +1930,14 @@ pass the Regular Expression as a string to the input RegExp and also flags can b
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:47:13</sys_created_on>
         <sys_id>5e0f4131832cb610a2dfb5b6feaad3f4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:47:13</sys_updated_on>
+        <sys_updated_on>2025-10-17 08:18:16</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1999,7 +1989,7 @@ pass the Regular Expression as a string to the input RegExp and also flags can b
         <hint/>
         <internal_type display_value="String">string</internal_type>
         <label>Input String</label>
-        <mandatory>false</mandatory>
+        <mandatory>true</mandatory>
         <max_length>8000</max_length>
         <model display_value="Regex Match Validator">920f4131832cb610a2dfb5b6feaad3f2</model>
         <model_id>920f4131832cb610a2dfb5b6feaad3f2</model_id>
@@ -2024,14 +2014,14 @@ pass the Regular Expression as a string to the input RegExp and also flags can b
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:47:13</sys_created_on>
         <sys_id>960f4131832cb610a2dfb5b6feaad3f9</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:47:13</sys_updated_on>
+        <sys_updated_on>2025-10-17 08:18:16</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2369,14 +2359,14 @@ pass the Regular Expression as a string to the input RegExp and also flags can b
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:47:14</sys_created_on>
         <sys_id>aa0f8131832cb610a2dfb5b6feaad329</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-17 02:26:47</sys_updated_on>
+        <sys_updated_on>2025-10-17 08:18:16</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2402,7 +2392,21 @@ pass the Regular Expression as a string to the input RegExp and also flags can b
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-13 05:47:14</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=2e0f8131832cb610a2dfb5b6feaad335"/>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=2e0f8131832cb610a2dfb5b6feaad335^sys_idNOT IN42f712c783e87210a2dfb5b6feaad3cd"/>
+    <sys_hub_status_condition action="INSERT_OR_UPDATE">
+        <action_status_metadata_id display_value="Created 13-10-2025 11:17:14 IST">2e0f8131832cb610a2dfb5b6feaad335</action_status_metadata_id>
+        <condition>{{step[dab8f9f4-3b5f-4acc-bea3-be3d0d7b33c3].__step_status__.code}}=1</condition>
+        <dont_treat_as_error>false</dont_treat_as_error>
+        <label>in case of any error</label>
+        <order>1</order>
+        <status>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"Something went wrong: {{step[dab8f9f4-3b5f-4acc-bea3-be3d0d7b33c3].__step_status__.message}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":"1"}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</status>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-17 08:18:16</sys_created_on>
+        <sys_id>42f712c783e87210a2dfb5b6feaad3cd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-17 08:18:16</sys_updated_on>
+    </sys_hub_status_condition>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>input_string</element>
         <help/>
