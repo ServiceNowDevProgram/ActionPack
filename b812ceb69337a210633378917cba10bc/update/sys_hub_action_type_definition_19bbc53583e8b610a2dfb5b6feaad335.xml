@@ -12,14 +12,16 @@
         <category/>
         <copied_from/>
         <copied_from_name/>
-        <description>Check if a given String meets the provided RegExp</description>
+        <description>Check if a given String meets the provided RegExp
+
+pass the Regular Expression as a string to the input RegExp and also flags can be added optionally</description>
         <flow_priority/>
         <ih_action>false</ih_action>
         <internal_name>validate_against_regexp</internal_name>
-        <label_cache>[{"name":"{{action.regexp}}","label":"action➛RegExp","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceUiUniqueId":"","sourceType":"","uiType":"string","uiUniqueId":"3a2462df-6867-4016-9a94-5789943deb0f"}},{"name":"{{action.input_string}}","label":"action➛Input String","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.flags}}","label":"action➛Flags","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[dab8f9f4-3b5f-4acc-bea3-be3d0d7b33c3].is_match}}","label":"step➛Script step➛Is Match","type":"step","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
+        <label_cache>[{"name":"{{action.regexp}}","label":"action➛RegExp","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"3a2462df-6867-4016-9a94-5789943deb0f"}},{"name":"{{action.input_string}}","label":"action➛Input String","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.flags}}","label":"action➛Flags","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[dab8f9f4-3b5f-4acc-bea3-be3d0d7b33c3].is_match}}","label":"step➛Script step➛Is Match","type":"step","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
         <master_snapshot>920f4131832cb610a2dfb5b6feaad3f2</master_snapshot>
         <master_snapshot_digest/>
-        <name>Validate against RegExp</name>
+        <name>Regex Match Validator</name>
         <natlang/>
         <outputs/>
         <outputs/>
@@ -31,15 +33,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>19bbc53583e8b610a2dfb5b6feaad335</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_name>Validate against RegExp</sys_name>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Regex Match Validator</sys_name>
         <sys_overrides/>
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_19bbc53583e8b610a2dfb5b6feaad335</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:47:14</sys_updated_on>
+        <sys_updated_on>2025-10-17 02:26:47</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -81,10 +83,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:37:53</sys_created_on>
         <sys_id>f9ecc9f983e8b610a2dfb5b6feaad351</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:37:53</sys_updated_on>
-        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}}}</value>
+        <sys_updated_on>2025-10-17 02:26:46</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</value>
         <variable display_value="Action Status">adecc9f983e8b610a2dfb5b6feaad33e</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=19bbc53583e8b610a2dfb5b6feaad335"/>
@@ -126,7 +128,7 @@
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=19bbc53583e8b610a2dfb5b6feaad335^sys_idNOT IN6decc9f983e8b610a2dfb5b6feaad322"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="Validate against RegExp">19bbc53583e8b610a2dfb5b6feaad335</action>
+        <action display_value="Regex Match Validator">19bbc53583e8b610a2dfb5b6feaad335</action>
         <cid>dab8f9f4-3b5f-4acc-bea3-be3d0d7b33c3</cid>
         <error_handling_type>1</error_handling_type>
         <extended_inputs/>
@@ -142,10 +144,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:37:53</sys_created_on>
         <sys_id>6decc9f983e8b610a2dfb5b6feaad322</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:37:53</sys_updated_on>
+        <sys_updated_on>2025-10-17 02:26:46</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=6decc9f983e8b610a2dfb5b6feaad322"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -156,12 +158,12 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:37:53</sys_created_on>
         <sys_id>29ecc9f983e8b610a2dfb5b6feaad33a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:37:53</sys_updated_on>
+        <sys_updated_on>2025-10-17 02:26:46</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
     try{&#13;
-        var re = inputs.flags?new RegExp(inputs.regex,inputs.flags):new RegExp(inputs.regex);&#13;
+        var re = inputs.flags?new RegExp(inputs.regex,inputs.flags):new RegExp(inputs.regex);//example new RegExp("ab+c", "i")&#13;
         outputs.is_match = re.test(inputs.inputstring)&#13;
     }&#13;
     catch(e){&#13;
@@ -187,18 +189,6 @@
         <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=6decc9f983e8b610a2dfb5b6feaad322"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>6decc9f983e8b610a2dfb5b6feaad322</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-13 05:37:53</sys_created_on>
-        <sys_id>21ecc9f983e8b610a2dfb5b6feaad33a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:37:53</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>flags</field>
         <id>6decc9f983e8b610a2dfb5b6feaad322</id>
@@ -239,11 +229,11 @@
         <field>script</field>
         <id>6decc9f983e8b610a2dfb5b6feaad322</id>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-13 05:37:53</sys_created_on>
-        <sys_id>e1ecc9f983e8b610a2dfb5b6feaad33a</sys_id>
+        <sys_created_on>2025-10-17 02:26:46</sys_created_on>
+        <sys_id>81874d4f83607210a2dfb5b6feaad359</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:37:53</sys_updated_on>
+        <sys_updated_on>2025-10-17 02:26:46</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
         <value/>
     </sys_element_mapping>
@@ -649,7 +639,7 @@
         <label>RegExp</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Validate against RegExp">19bbc53583e8b610a2dfb5b6feaad335</model>
+        <model display_value="Regex Match Validator">19bbc53583e8b610a2dfb5b6feaad335</model>
         <model_id>19bbc53583e8b610a2dfb5b6feaad335</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_19bbc53583e8b610a2dfb5b6feaad335</name>
@@ -733,7 +723,7 @@
         <label>Input String</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Validate against RegExp">19bbc53583e8b610a2dfb5b6feaad335</model>
+        <model display_value="Regex Match Validator">19bbc53583e8b610a2dfb5b6feaad335</model>
         <model_id>19bbc53583e8b610a2dfb5b6feaad335</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_19bbc53583e8b610a2dfb5b6feaad335</name>
@@ -817,7 +807,7 @@
         <label>Flags</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Validate against RegExp">19bbc53583e8b610a2dfb5b6feaad335</model>
+        <model display_value="Regex Match Validator">19bbc53583e8b610a2dfb5b6feaad335</model>
         <model_id>19bbc53583e8b610a2dfb5b6feaad335</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_input_19bbc53583e8b610a2dfb5b6feaad335</name>
@@ -904,7 +894,7 @@
         <label>Don't Treat as Error</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="Validate against RegExp">19bbc53583e8b610a2dfb5b6feaad335</model>
+        <model display_value="Regex Match Validator">19bbc53583e8b610a2dfb5b6feaad335</model>
         <model_id>19bbc53583e8b610a2dfb5b6feaad335</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_19bbc53583e8b610a2dfb5b6feaad335</name>
@@ -927,14 +917,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:37:53</sys_created_on>
         <sys_id>a1ecc9f983e8b610a2dfb5b6feaad347</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:47:13</sys_updated_on>
+        <sys_updated_on>2025-10-17 02:26:46</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -991,7 +981,7 @@
         <label>Action Status</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="Validate against RegExp">19bbc53583e8b610a2dfb5b6feaad335</model>
+        <model display_value="Regex Match Validator">19bbc53583e8b610a2dfb5b6feaad335</model>
         <model_id>19bbc53583e8b610a2dfb5b6feaad335</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_19bbc53583e8b610a2dfb5b6feaad335</name>
@@ -1078,7 +1068,7 @@
         <label>Is Match</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="Validate against RegExp">19bbc53583e8b610a2dfb5b6feaad335</model>
+        <model display_value="Regex Match Validator">19bbc53583e8b610a2dfb5b6feaad335</model>
         <model_id>19bbc53583e8b610a2dfb5b6feaad335</model_id>
         <model_table>sys_hub_action_type_definition</model_table>
         <name>var__m_sys_hub_action_output_19bbc53583e8b610a2dfb5b6feaad335</name>
@@ -1126,7 +1116,7 @@
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=19bbc53583e8b610a2dfb5b6feaad335"/>
     <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=19bbc53583e8b610a2dfb5b6feaad335^sys_idNOT INb5ecc9f983e8b610a2dfb5b6feaad353"/>
     <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
-        <action_type_id display_value="Validate against RegExp">19bbc53583e8b610a2dfb5b6feaad335</action_type_id>
+        <action_type_id display_value="Regex Match Validator">19bbc53583e8b610a2dfb5b6feaad335</action_type_id>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:37:53</sys_created_on>
         <sys_id>b5ecc9f983e8b610a2dfb5b6feaad353</sys_id>
@@ -1161,7 +1151,7 @@
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>regexp</element>
         <help/>
-        <hint>do not add / / just pass the pattern as the string</hint>
+        <hint>do not add / / just pass the pattern as the string example: ab+c</hint>
         <label>RegExp</label>
         <language>en</language>
         <name>var__m_sys_hub_action_input_19bbc53583e8b610a2dfb5b6feaad335</name>
@@ -1170,14 +1160,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:37:53</sys_created_on>
         <sys_id>61ec41b983e8b610a2dfb5b6feaad3b9</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:41:18</sys_updated_on>
+        <sys_updated_on>2025-10-17 02:26:46</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -1277,19 +1267,19 @@
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_19bbc53583e8b610a2dfb5b6feaad335"/>
     <sys_hub_action_plan action="delete_multiple" query="action_id=19bbc53583e8b610a2dfb5b6feaad335^sys_idNOT IN720f8131832cb610a2dfb5b6feaad36b"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
-        <action_id display_value="Validate against RegExp">19bbc53583e8b610a2dfb5b6feaad335</action_id>
+        <action_id display_value="Regex Match Validator">19bbc53583e8b610a2dfb5b6feaad335</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"720f8131832cb610a2dfb5b6feaad36b","name":"plan","plan_signature":null}}</plan>
-        <snapshot>ee0f8131832cb610a2dfb5b6feaad335</snapshot>
+        <snapshot>5d878d4f83607210a2dfb5b6feaad323</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:47:15</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>720f8131832cb610a2dfb5b6feaad36b</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:47:15</sys_updated_on>
+        <sys_updated_on>2025-10-17 02:26:48</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1303,23 +1293,25 @@
         <category/>
         <copied_from/>
         <copied_from_name/>
-        <description>Check if a given String meets the provided RegExp</description>
+        <description>Check if a given String meets the provided RegExp
+
+pass the Regular Expression as a string to the input RegExp and also flags can be added optionally</description>
         <flow_priority/>
         <internal_name>validate_against_regexp</internal_name>
-        <label_cache>[{"name":"{{action.regexp}}","label":"action➛RegExp","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceUiUniqueId":"","sourceType":"","uiType":"string","uiUniqueId":"3a2462df-6867-4016-9a94-5789943deb0f"}},{"name":"{{action.input_string}}","label":"action➛Input String","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.flags}}","label":"action➛Flags","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[dab8f9f4-3b5f-4acc-bea3-be3d0d7b33c3].is_match}}","label":"step➛Script step➛Is Match","type":"step","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
+        <label_cache>[{"name":"{{action.regexp}}","label":"action➛RegExp","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"string","uiUniqueId":"3a2462df-6867-4016-9a94-5789943deb0f"}},{"name":"{{action.input_string}}","label":"action➛Input String","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.flags}}","label":"action➛Flags","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[dab8f9f4-3b5f-4acc-bea3-be3d0d7b33c3].is_match}}","label":"step➛Script step➛Is Match","type":"step","ref":"","reference_display":"","base_type":"boolean","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
         <master>true</master>
-        <name>Validate against RegExp</name>
+        <name>Regex Match Validator</name>
         <natlang/>
         <outputs/>
         <outputs/>
-        <parent_action display_value="Validate against RegExp">19bbc53583e8b610a2dfb5b6feaad335</parent_action>
+        <parent_action display_value="Regex Match Validator">19bbc53583e8b610a2dfb5b6feaad335</parent_action>
         <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:47:13</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>920f4131832cb610a2dfb5b6feaad3f2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1327,7 +1319,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:47:13</sys_updated_on>
+        <sys_updated_on>2025-10-17 02:26:47</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_snapshot>
@@ -1341,10 +1333,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:47:14</sys_created_on>
         <sys_id>620f8131832cb610a2dfb5b6feaad334</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:47:14</sys_updated_on>
-        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}}}</value>
+        <sys_updated_on>2025-10-17 02:26:47</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"1cf572eb-c590-4a34-a138-40c1e56409e2\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</value>
         <variable display_value="Action Status">6a0f8131832cb610a2dfb5b6feaad321</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1414,7 +1406,7 @@
     </sys_element_mapping>
     <sys_hub_step_instance action="delete_multiple" query="action=920f4131832cb610a2dfb5b6feaad3f2^sys_idNOT IN6e0f8131832cb610a2dfb5b6feaad304"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
-        <action display_value="Validate against RegExp">920f4131832cb610a2dfb5b6feaad3f2</action>
+        <action display_value="Regex Match Validator">920f4131832cb610a2dfb5b6feaad3f2</action>
         <cid>dab8f9f4-3b5f-4acc-bea3-be3d0d7b33c3</cid>
         <error_handling_type>1</error_handling_type>
         <extended_inputs/>
@@ -1430,10 +1422,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:47:13</sys_created_on>
         <sys_id>6e0f8131832cb610a2dfb5b6feaad304</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:47:14</sys_updated_on>
+        <sys_updated_on>2025-10-17 02:26:47</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=6e0f8131832cb610a2dfb5b6feaad304"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1458,12 +1450,12 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:47:14</sys_created_on>
         <sys_id>e20f8131832cb610a2dfb5b6feaad31d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:47:14</sys_updated_on>
+        <sys_updated_on>2025-10-17 02:26:47</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
     try{&#13;
-        var re = inputs.flags?new RegExp(inputs.regex,inputs.flags):new RegExp(inputs.regex);&#13;
+        var re = inputs.flags?new RegExp(inputs.regex,inputs.flags):new RegExp(inputs.regex);//example new RegExp("ab+c", "i")&#13;
         outputs.is_match = re.test(inputs.inputstring)&#13;
     }&#13;
     catch(e){&#13;
@@ -1475,18 +1467,6 @@
         <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=6e0f8131832cb610a2dfb5b6feaad304"/>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>6e0f8131832cb610a2dfb5b6feaad304</id>
-        <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-13 05:47:14</sys_created_on>
-        <sys_id>ea0f8131832cb610a2dfb5b6feaad31c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:47:14</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>flags</field>
         <id>6e0f8131832cb610a2dfb5b6feaad304</id>
@@ -1527,11 +1507,11 @@
         <field>script</field>
         <id>6e0f8131832cb610a2dfb5b6feaad304</id>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-13 05:47:14</sys_created_on>
-        <sys_id>ae0f8131832cb610a2dfb5b6feaad31c</sys_id>
+        <sys_created_on>2025-10-17 02:26:47</sys_created_on>
+        <sys_id>51878d4f83607210a2dfb5b6feaad313</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:47:14</sys_updated_on>
+        <sys_updated_on>2025-10-17 02:26:47</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
         <value/>
     </sys_element_mapping>
@@ -1937,7 +1917,7 @@
         <label>RegExp</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Validate against RegExp">920f4131832cb610a2dfb5b6feaad3f2</model>
+        <model display_value="Regex Match Validator">920f4131832cb610a2dfb5b6feaad3f2</model>
         <model_id>920f4131832cb610a2dfb5b6feaad3f2</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_920f4131832cb610a2dfb5b6feaad3f2</name>
@@ -2021,7 +2001,7 @@
         <label>Input String</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Validate against RegExp">920f4131832cb610a2dfb5b6feaad3f2</model>
+        <model display_value="Regex Match Validator">920f4131832cb610a2dfb5b6feaad3f2</model>
         <model_id>920f4131832cb610a2dfb5b6feaad3f2</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_920f4131832cb610a2dfb5b6feaad3f2</name>
@@ -2105,7 +2085,7 @@
         <label>Flags</label>
         <mandatory>false</mandatory>
         <max_length>8000</max_length>
-        <model display_value="Validate against RegExp">920f4131832cb610a2dfb5b6feaad3f2</model>
+        <model display_value="Regex Match Validator">920f4131832cb610a2dfb5b6feaad3f2</model>
         <model_id>920f4131832cb610a2dfb5b6feaad3f2</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_input_920f4131832cb610a2dfb5b6feaad3f2</name>
@@ -2192,7 +2172,7 @@
         <label>Is Match</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="Validate against RegExp">920f4131832cb610a2dfb5b6feaad3f2</model>
+        <model display_value="Regex Match Validator">920f4131832cb610a2dfb5b6feaad3f2</model>
         <model_id>920f4131832cb610a2dfb5b6feaad3f2</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_920f4131832cb610a2dfb5b6feaad3f2</name>
@@ -2279,7 +2259,7 @@
         <label>Action Status</label>
         <mandatory>false</mandatory>
         <max_length>65000</max_length>
-        <model display_value="Validate against RegExp">920f4131832cb610a2dfb5b6feaad3f2</model>
+        <model display_value="Regex Match Validator">920f4131832cb610a2dfb5b6feaad3f2</model>
         <model_id>920f4131832cb610a2dfb5b6feaad3f2</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_920f4131832cb610a2dfb5b6feaad3f2</name>
@@ -2366,7 +2346,7 @@
         <label>Don't Treat as Error</label>
         <mandatory>false</mandatory>
         <max_length>40</max_length>
-        <model display_value="Validate against RegExp">920f4131832cb610a2dfb5b6feaad3f2</model>
+        <model display_value="Regex Match Validator">920f4131832cb610a2dfb5b6feaad3f2</model>
         <model_id>920f4131832cb610a2dfb5b6feaad3f2</model_id>
         <model_table>sys_hub_action_type_snapshot</model_table>
         <name>var__m_sys_hub_action_output_920f4131832cb610a2dfb5b6feaad3f2</name>
@@ -2389,14 +2369,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:47:14</sys_created_on>
         <sys_id>aa0f8131832cb610a2dfb5b6feaad329</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:47:14</sys_updated_on>
+        <sys_updated_on>2025-10-17 02:26:47</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2414,7 +2394,7 @@
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=920f4131832cb610a2dfb5b6feaad3f2"/>
     <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=920f4131832cb610a2dfb5b6feaad3f2^sys_idNOT IN2e0f8131832cb610a2dfb5b6feaad335"/>
     <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
-        <action_type_id display_value="Validate against RegExp">920f4131832cb610a2dfb5b6feaad3f2</action_type_id>
+        <action_type_id display_value="Regex Match Validator">920f4131832cb610a2dfb5b6feaad3f2</action_type_id>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:47:14</sys_created_on>
         <sys_id>2e0f8131832cb610a2dfb5b6feaad335</sys_id>
@@ -2472,7 +2452,7 @@
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>regexp</element>
         <help/>
-        <hint>do not add / / just pass the pattern as the string</hint>
+        <hint>do not add / / just pass the pattern as the string example: ab+c</hint>
         <label>RegExp</label>
         <language>en</language>
         <name>var__m_sys_hub_action_input_920f4131832cb610a2dfb5b6feaad3f2</name>
@@ -2481,14 +2461,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-13 05:47:13</sys_created_on>
         <sys_id>da0f4131832cb610a2dfb5b6feaad3f8</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-13 05:47:13</sys_updated_on>
+        <sys_updated_on>2025-10-17 02:26:47</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
