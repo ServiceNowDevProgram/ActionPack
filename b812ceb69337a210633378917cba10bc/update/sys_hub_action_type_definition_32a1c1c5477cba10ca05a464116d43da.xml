@@ -31,7 +31,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>32a1c1c5477cba10ca05a464116d43da</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name>Get GlideAggregate(Multiple)</sys_name>
         <sys_overrides/>
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
@@ -39,7 +39,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_32a1c1c5477cba10ca05a464116d43da</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-23 09:06:25</sys_updated_on>
+        <sys_updated_on>2025-10-23 10:46:07</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -192,10 +192,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-23 07:12:24</sys_created_on>
         <sys_id>676249c9477cba10ca05a464116d4340</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-23 09:00:51</sys_updated_on>
+        <sys_updated_on>2025-10-23 10:45:06</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=676249c9477cba10ca05a464116d4340"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -206,18 +206,16 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-23 07:12:24</sys_created_on>
         <sys_id>376249c9477cba10ca05a464116d4356</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-23 09:00:51</sys_updated_on>
+        <sys_updated_on>2025-10-23 10:45:06</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
   try {&#13;
-    // Normalize and validate required inputs&#13;
     var tableName = String(inputs.table_name || '').trim();&#13;
     var conditions = String(inputs.conditions || '').trim();&#13;
     var fieldName = String(inputs.field || '').trim();&#13;
     var aggregateType = String(inputs.aggregate_type || '').trim().toUpperCase();&#13;
 &#13;
-    // Input validation&#13;
     if (!tableName) {&#13;
       outputs.success = false;&#13;
       outputs.error = 'Missing required input: table_name';&#13;
@@ -234,48 +232,61 @@
       return;&#13;
     }&#13;
 &#13;
-    // Validate table exists&#13;
     var tableValidator = new GlideRecord(tableName);&#13;
     if (!tableValidator.isValid()) {&#13;
       outputs.success = false;&#13;
       outputs.error = 'Invalid table: ' + tableName;&#13;
       return;&#13;
     }&#13;
-&#13;
-    // Validate field exists on the table&#13;
     if (!tableValidator.isValidField(fieldName)) {&#13;
       outputs.success = false;&#13;
       outputs.error = 'Invalid field: ' + fieldName + ' on table: ' + tableName;&#13;
       return;&#13;
     }&#13;
 &#13;
-    // Get field type from sys_dictionary&#13;
-    var fieldType = null;&#13;
-    var fieldInfo = new GlideRecord('sys_dictionary');&#13;
-    fieldInfo.addQuery('name', tableName);&#13;
-    fieldInfo.addQuery('element', fieldName);&#13;
-    fieldInfo.setLimit(1);&#13;
-    fieldInfo.query();&#13;
-    if (fieldInfo.next()) {&#13;
-      fieldType = fieldInfo.getValue('internal_type');&#13;
+    function getParentTables(tableName) {&#13;
+      var parents = [];&#13;
+      var sysTable = new GlideRecord('sys_db_object');&#13;
+      sysTable.addQuery('name', tableName);&#13;
+      sysTable.setLimit(1);&#13;
+      sysTable.query();&#13;
+      if (sysTable.next()) {&#13;
+        var superClass = sysTable.getValue('super_class');&#13;
+        if (superClass &amp;&amp; superClass != tableName) {&#13;
+          parents.push(superClass);&#13;
+          parents = parents.concat(getParentTables(superClass));&#13;
+        }&#13;
+      }&#13;
+      return parents;&#13;
     }&#13;
 &#13;
+    function getFieldType(tableName, fieldName) {&#13;
+      var fieldType = null;&#13;
+      var dict = new GlideRecord('sys_dictionary');&#13;
+      dict.addQuery('name', tableName);&#13;
+      dict.addQuery('element', fieldName);&#13;
+      dict.setLimit(1);&#13;
+      dict.query();&#13;
+      if (dict.next()) {&#13;
+        fieldType = dict.getValue('internal_type');&#13;
+        if (fieldType) return fieldType;&#13;
+      }&#13;
+      var parents = getParentTables(tableName);&#13;
+      for (var i = 0; i &lt; parents.length; i++) {&#13;
+        var dictParent = new GlideRecord('sys_dictionary');&#13;
+        dictParent.addQuery('name', parents[i]);&#13;
+        dictParent.addQuery('element', fieldName);&#13;
+        dictParent.setLimit(1);&#13;
+        dictParent.query();&#13;
+        if (dictParent.next()) {&#13;
+          fieldType = dictParent.getValue('internal_type');&#13;
+          if (fieldType) return fieldType;&#13;
+        }&#13;
+      }&#13;
+      return 'string';&#13;
+    }&#13;
+    var fieldType = getFieldType(tableName, fieldName);&#13;
 &#13;
-&#13;
-    // Initialize result object with all possible aggregates&#13;
-    var aggregateResult = {&#13;
-      count: null,&#13;
-      sum: null,&#13;
-      avg: null,&#13;
-      max: null,&#13;
-      min: null,&#13;
-      stddev: null,&#13;
-      group_concat: null,&#13;
-      group_concat_distinct: null,&#13;
-      aggregate_type_requested: aggregateType&#13;
-    };&#13;
-&#13;
-    // Validate aggregate type is one of the allowed values&#13;
     var allowedTypes = ['COUNT', 'SUM', 'AVG', 'MAX', 'MIN', 'STDDEV', 'GROUP_CONCAT', 'GROUP_CONCAT_DISTINCT', 'ALL'];&#13;
     if (allowedTypes.indexOf(aggregateType) === -1) {&#13;
       outputs.success = false;&#13;
@@ -283,37 +294,36 @@
       return;&#13;
     }&#13;
 &#13;
-    // Determine which aggregates are applicable based on field type&#13;
-    var isNumericField = ['integer', 'decimal', 'float', 'currency', 'percent', 'price'].indexOf(fieldType) !== -1;&#13;
+    var numericTypes = ['integer', 'decimal', 'float', 'currency', 'percent', 'price'];&#13;
+    var isNumericField = numericTypes.indexOf(fieldType) !== -1;&#13;
     var skippedAggregates = [];&#13;
     var applicableAggregates = [];&#13;
-&#13;
-    // Numeric aggregates only work on numeric fields&#13;
     var numericAggregates = ['SUM', 'AVG', 'STDDEV', 'MAX', 'MIN'];&#13;
     var stringAggregates = ['GROUP_CONCAT', 'GROUP_CONCAT_DISTINCT', 'COUNT'];&#13;
+    var referenceAggregates = ['GROUP_CONCAT', 'GROUP_CONCAT_DISTINCT', 'COUNT'];&#13;
 &#13;
     if (aggregateType === 'ALL') {&#13;
-      // For ALL, add only applicable aggregates based on field type&#13;
-      aggregateResult.count = 0; // COUNT always works&#13;
       applicableAggregates.push('COUNT');&#13;
-&#13;
       if (isNumericField) {&#13;
+        applicableAggregates = applicableAggregates.concat(numericAggregates);&#13;
+      } else if (fieldType === 'reference') {&#13;
+        referenceAggregates.forEach(function(agg) {&#13;
+          if (applicableAggregates.indexOf(agg) === -1) {&#13;
+            applicableAggregates.push(agg);&#13;
+          }&#13;
+        });&#13;
         numericAggregates.forEach(function(agg) {&#13;
-          applicableAggregates.push(agg);&#13;
+          skippedAggregates.push(agg + ' (not applicable for reference field)');&#13;
         });&#13;
       } else {&#13;
+        stringAggregates.forEach(function(agg) {&#13;
+          if (agg !== 'COUNT') applicableAggregates.push(agg);&#13;
+        });&#13;
         numericAggregates.forEach(function(agg) {&#13;
           skippedAggregates.push(agg + ' (not applicable for ' + fieldType + ' field)');&#13;
         });&#13;
       }&#13;
-&#13;
-      stringAggregates.filter(function(agg) {&#13;
-        return agg !== 'COUNT';&#13;
-      }).forEach(function(agg) {&#13;
-        applicableAggregates.push(agg);&#13;
-      });&#13;
     } else {&#13;
-      // Single aggregate requested&#13;
       if (aggregateType === 'COUNT') {&#13;
         applicableAggregates.push('COUNT');&#13;
       } else if (numericAggregates.indexOf(aggregateType) !== -1 &amp;&amp; !isNumericField) {&#13;
@@ -323,7 +333,6 @@
       }&#13;
     }&#13;
 &#13;
-    // If no applicable aggregates, return error&#13;
     if (applicableAggregates.length === 0) {&#13;
       outputs.success = false;&#13;
       outputs.error = 'No applicable aggregates for field type: ' + fieldType + '. Requested: ' + aggregateType;&#13;
@@ -331,25 +340,27 @@
       return;&#13;
     }&#13;
 &#13;
-    // Create GlideAggregate instance&#13;
     var aggregator = new GlideAggregate(tableName);&#13;
     if (conditions) {&#13;
       aggregator.addEncodedQuery(conditions);&#13;
     }&#13;
     aggregator.setGroup(false);&#13;
 &#13;
-    // Add only applicable aggregates&#13;
     applicableAggregates.forEach(function(agg) {&#13;
-      aggregator.addAggregate(agg, fieldName);&#13;
+      if (agg === 'COUNT') {&#13;
+        aggregator.addAggregate('COUNT');&#13;
+      } else {&#13;
+        aggregator.addAggregate(agg, fieldName);&#13;
+      }&#13;
     });&#13;
 &#13;
-    // Execute the aggregate query&#13;
     aggregator.query();&#13;
 &#13;
-    // Process results&#13;
+    var aggregateResult = {};&#13;
+&#13;
     if (aggregator.next()) {&#13;
       applicableAggregates.forEach(function(agg) {&#13;
-        var rawValue = aggregator.getAggregate(agg, fieldName);&#13;
+        var rawValue = (agg === 'COUNT') ? aggregator.getAggregate('COUNT') : aggregator.getAggregate(agg, fieldName);&#13;
 &#13;
         switch (agg) {&#13;
           case 'COUNT':&#13;
@@ -380,18 +391,21 @@
       });&#13;
 &#13;
       outputs.success = true;&#13;
-      outputs.message = 'Aggregate(s) calculated successfully. Field type: ' + fieldType;&#13;
+      outputs.message = '\nAggregate(s) calculated successfully. ' +&#13;
+                        '\nField type detected: ' + fieldType + '. ' +&#13;
+                        '\nAggregate type requested: ' + aggregateType + '.';&#13;
       if (skippedAggregates.length &gt; 0) {&#13;
-        outputs.message += '. Skipped: ' + skippedAggregates.join('; ');&#13;
+        outputs.message += '\nSkipped aggregates: ' + skippedAggregates.join('; ');&#13;
       }&#13;
       outputs.aggregates = aggregateResult;&#13;
       outputs.skipped_aggregates = skippedAggregates;&#13;
     } else {&#13;
-      // No records matched the conditions&#13;
       outputs.success = true;&#13;
-      outputs.message = 'No records found matching the specified conditions. Field type: ' + fieldType;&#13;
+      outputs.message = '\nNo records found matching the specified conditions. ' +&#13;
+                        '\nField type detected: ' + fieldType + '. ' +&#13;
+                        '\nAggregate type requested: ' + aggregateType + '.';&#13;
       if (skippedAggregates.length &gt; 0) {&#13;
-        outputs.message += '. Skipped: ' + skippedAggregates.join('; ');&#13;
+        outputs.message += '\nSkipped aggregates: ' + skippedAggregates.join('; ');&#13;
       }&#13;
       outputs.aggregates = aggregateResult;&#13;
       outputs.skipped_aggregates = skippedAggregates;&#13;
@@ -809,14 +823,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-23 07:49:45</sys_created_on>
         <sys_id>bafa4dc947bcba10ca05a464116d4382</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-23 09:06:23</sys_updated_on>
+        <sys_updated_on>2025-10-23 10:46:05</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1319,14 +1333,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-23 07:25:36</sys_created_on>
         <sys_id>1575094147bcba10ca05a464116d431a</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-23 09:06:22</sys_updated_on>
+        <sys_updated_on>2025-10-23 10:46:05</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1403,14 +1417,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-23 07:09:57</sys_created_on>
         <sys_id>3bd18589477cba10ca05a464116d436d</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-23 09:06:22</sys_updated_on>
+        <sys_updated_on>2025-10-23 10:46:05</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1605,7 +1619,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>47fa4dc947bcba10ca05a464116d43bb</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -1613,7 +1627,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-23 09:06:23</sys_updated_on>
+        <sys_updated_on>2025-10-23 10:46:05</sys_updated_on>
         <type>complex_object_schema</type>
     </sys_complex_object>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
@@ -2116,14 +2130,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-23 07:09:57</sys_created_on>
         <sys_id>f3d18589477cba10ca05a464116d43d7</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-23 09:06:23</sys_updated_on>
+        <sys_updated_on>2025-10-23 10:46:05</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2582,17 +2596,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Get GlideAggregate(Multiple)">32a1c1c5477cba10ca05a464116d43da</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"c68c1dcd4730fa10ca05a464116d43e8","name":"plan","plan_signature":null}}</plan>
-        <snapshot>fd8c1dcd4730fa10ca05a464116d4377</snapshot>
+        <snapshot>da53f94d47f0fa10ca05a464116d4342</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-23 09:06:26</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>c68c1dcd4730fa10ca05a464116d43e8</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-23 09:06:26</sys_updated_on>
+        <sys_updated_on>2025-10-23 10:46:08</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -2769,10 +2783,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-23 09:06:24</sys_created_on>
         <sys_id>a58cd9cd4730fa10ca05a464116d43ce</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-23 09:06:24</sys_updated_on>
+        <sys_updated_on>2025-10-23 10:46:07</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=a58cd9cd4730fa10ca05a464116d43ce"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -2797,18 +2811,16 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-23 09:06:24</sys_created_on>
         <sys_id>fd8c1dcd4730fa10ca05a464116d4327</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-23 09:06:24</sys_updated_on>
+        <sys_updated_on>2025-10-23 10:46:07</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
   try {&#13;
-    // Normalize and validate required inputs&#13;
     var tableName = String(inputs.table_name || '').trim();&#13;
     var conditions = String(inputs.conditions || '').trim();&#13;
     var fieldName = String(inputs.field || '').trim();&#13;
     var aggregateType = String(inputs.aggregate_type || '').trim().toUpperCase();&#13;
 &#13;
-    // Input validation&#13;
     if (!tableName) {&#13;
       outputs.success = false;&#13;
       outputs.error = 'Missing required input: table_name';&#13;
@@ -2825,48 +2837,61 @@
       return;&#13;
     }&#13;
 &#13;
-    // Validate table exists&#13;
     var tableValidator = new GlideRecord(tableName);&#13;
     if (!tableValidator.isValid()) {&#13;
       outputs.success = false;&#13;
       outputs.error = 'Invalid table: ' + tableName;&#13;
       return;&#13;
     }&#13;
-&#13;
-    // Validate field exists on the table&#13;
     if (!tableValidator.isValidField(fieldName)) {&#13;
       outputs.success = false;&#13;
       outputs.error = 'Invalid field: ' + fieldName + ' on table: ' + tableName;&#13;
       return;&#13;
     }&#13;
 &#13;
-    // Get field type from sys_dictionary&#13;
-    var fieldType = null;&#13;
-    var fieldInfo = new GlideRecord('sys_dictionary');&#13;
-    fieldInfo.addQuery('name', tableName);&#13;
-    fieldInfo.addQuery('element', fieldName);&#13;
-    fieldInfo.setLimit(1);&#13;
-    fieldInfo.query();&#13;
-    if (fieldInfo.next()) {&#13;
-      fieldType = fieldInfo.getValue('internal_type');&#13;
+    function getParentTables(tableName) {&#13;
+      var parents = [];&#13;
+      var sysTable = new GlideRecord('sys_db_object');&#13;
+      sysTable.addQuery('name', tableName);&#13;
+      sysTable.setLimit(1);&#13;
+      sysTable.query();&#13;
+      if (sysTable.next()) {&#13;
+        var superClass = sysTable.getValue('super_class');&#13;
+        if (superClass &amp;&amp; superClass != tableName) {&#13;
+          parents.push(superClass);&#13;
+          parents = parents.concat(getParentTables(superClass));&#13;
+        }&#13;
+      }&#13;
+      return parents;&#13;
     }&#13;
 &#13;
+    function getFieldType(tableName, fieldName) {&#13;
+      var fieldType = null;&#13;
+      var dict = new GlideRecord('sys_dictionary');&#13;
+      dict.addQuery('name', tableName);&#13;
+      dict.addQuery('element', fieldName);&#13;
+      dict.setLimit(1);&#13;
+      dict.query();&#13;
+      if (dict.next()) {&#13;
+        fieldType = dict.getValue('internal_type');&#13;
+        if (fieldType) return fieldType;&#13;
+      }&#13;
+      var parents = getParentTables(tableName);&#13;
+      for (var i = 0; i &lt; parents.length; i++) {&#13;
+        var dictParent = new GlideRecord('sys_dictionary');&#13;
+        dictParent.addQuery('name', parents[i]);&#13;
+        dictParent.addQuery('element', fieldName);&#13;
+        dictParent.setLimit(1);&#13;
+        dictParent.query();&#13;
+        if (dictParent.next()) {&#13;
+          fieldType = dictParent.getValue('internal_type');&#13;
+          if (fieldType) return fieldType;&#13;
+        }&#13;
+      }&#13;
+      return 'string';&#13;
+    }&#13;
+    var fieldType = getFieldType(tableName, fieldName);&#13;
 &#13;
-&#13;
-    // Initialize result object with all possible aggregates&#13;
-    var aggregateResult = {&#13;
-      count: null,&#13;
-      sum: null,&#13;
-      avg: null,&#13;
-      max: null,&#13;
-      min: null,&#13;
-      stddev: null,&#13;
-      group_concat: null,&#13;
-      group_concat_distinct: null,&#13;
-      aggregate_type_requested: aggregateType&#13;
-    };&#13;
-&#13;
-    // Validate aggregate type is one of the allowed values&#13;
     var allowedTypes = ['COUNT', 'SUM', 'AVG', 'MAX', 'MIN', 'STDDEV', 'GROUP_CONCAT', 'GROUP_CONCAT_DISTINCT', 'ALL'];&#13;
     if (allowedTypes.indexOf(aggregateType) === -1) {&#13;
       outputs.success = false;&#13;
@@ -2874,37 +2899,36 @@
       return;&#13;
     }&#13;
 &#13;
-    // Determine which aggregates are applicable based on field type&#13;
-    var isNumericField = ['integer', 'decimal', 'float', 'currency', 'percent', 'price'].indexOf(fieldType) !== -1;&#13;
+    var numericTypes = ['integer', 'decimal', 'float', 'currency', 'percent', 'price'];&#13;
+    var isNumericField = numericTypes.indexOf(fieldType) !== -1;&#13;
     var skippedAggregates = [];&#13;
     var applicableAggregates = [];&#13;
-&#13;
-    // Numeric aggregates only work on numeric fields&#13;
     var numericAggregates = ['SUM', 'AVG', 'STDDEV', 'MAX', 'MIN'];&#13;
     var stringAggregates = ['GROUP_CONCAT', 'GROUP_CONCAT_DISTINCT', 'COUNT'];&#13;
+    var referenceAggregates = ['GROUP_CONCAT', 'GROUP_CONCAT_DISTINCT', 'COUNT'];&#13;
 &#13;
     if (aggregateType === 'ALL') {&#13;
-      // For ALL, add only applicable aggregates based on field type&#13;
-      aggregateResult.count = 0; // COUNT always works&#13;
       applicableAggregates.push('COUNT');&#13;
-&#13;
       if (isNumericField) {&#13;
+        applicableAggregates = applicableAggregates.concat(numericAggregates);&#13;
+      } else if (fieldType === 'reference') {&#13;
+        referenceAggregates.forEach(function(agg) {&#13;
+          if (applicableAggregates.indexOf(agg) === -1) {&#13;
+            applicableAggregates.push(agg);&#13;
+          }&#13;
+        });&#13;
         numericAggregates.forEach(function(agg) {&#13;
-          applicableAggregates.push(agg);&#13;
+          skippedAggregates.push(agg + ' (not applicable for reference field)');&#13;
         });&#13;
       } else {&#13;
+        stringAggregates.forEach(function(agg) {&#13;
+          if (agg !== 'COUNT') applicableAggregates.push(agg);&#13;
+        });&#13;
         numericAggregates.forEach(function(agg) {&#13;
           skippedAggregates.push(agg + ' (not applicable for ' + fieldType + ' field)');&#13;
         });&#13;
       }&#13;
-&#13;
-      stringAggregates.filter(function(agg) {&#13;
-        return agg !== 'COUNT';&#13;
-      }).forEach(function(agg) {&#13;
-        applicableAggregates.push(agg);&#13;
-      });&#13;
     } else {&#13;
-      // Single aggregate requested&#13;
       if (aggregateType === 'COUNT') {&#13;
         applicableAggregates.push('COUNT');&#13;
       } else if (numericAggregates.indexOf(aggregateType) !== -1 &amp;&amp; !isNumericField) {&#13;
@@ -2914,7 +2938,6 @@
       }&#13;
     }&#13;
 &#13;
-    // If no applicable aggregates, return error&#13;
     if (applicableAggregates.length === 0) {&#13;
       outputs.success = false;&#13;
       outputs.error = 'No applicable aggregates for field type: ' + fieldType + '. Requested: ' + aggregateType;&#13;
@@ -2922,25 +2945,27 @@
       return;&#13;
     }&#13;
 &#13;
-    // Create GlideAggregate instance&#13;
     var aggregator = new GlideAggregate(tableName);&#13;
     if (conditions) {&#13;
       aggregator.addEncodedQuery(conditions);&#13;
     }&#13;
     aggregator.setGroup(false);&#13;
 &#13;
-    // Add only applicable aggregates&#13;
     applicableAggregates.forEach(function(agg) {&#13;
-      aggregator.addAggregate(agg, fieldName);&#13;
+      if (agg === 'COUNT') {&#13;
+        aggregator.addAggregate('COUNT');&#13;
+      } else {&#13;
+        aggregator.addAggregate(agg, fieldName);&#13;
+      }&#13;
     });&#13;
 &#13;
-    // Execute the aggregate query&#13;
     aggregator.query();&#13;
 &#13;
-    // Process results&#13;
+    var aggregateResult = {};&#13;
+&#13;
     if (aggregator.next()) {&#13;
       applicableAggregates.forEach(function(agg) {&#13;
-        var rawValue = aggregator.getAggregate(agg, fieldName);&#13;
+        var rawValue = (agg === 'COUNT') ? aggregator.getAggregate('COUNT') : aggregator.getAggregate(agg, fieldName);&#13;
 &#13;
         switch (agg) {&#13;
           case 'COUNT':&#13;
@@ -2971,18 +2996,21 @@
       });&#13;
 &#13;
       outputs.success = true;&#13;
-      outputs.message = 'Aggregate(s) calculated successfully. Field type: ' + fieldType;&#13;
+      outputs.message = '\nAggregate(s) calculated successfully. ' +&#13;
+                        '\nField type detected: ' + fieldType + '. ' +&#13;
+                        '\nAggregate type requested: ' + aggregateType + '.';&#13;
       if (skippedAggregates.length &gt; 0) {&#13;
-        outputs.message += '. Skipped: ' + skippedAggregates.join('; ');&#13;
+        outputs.message += '\nSkipped aggregates: ' + skippedAggregates.join('; ');&#13;
       }&#13;
       outputs.aggregates = aggregateResult;&#13;
       outputs.skipped_aggregates = skippedAggregates;&#13;
     } else {&#13;
-      // No records matched the conditions&#13;
       outputs.success = true;&#13;
-      outputs.message = 'No records found matching the specified conditions. Field type: ' + fieldType;&#13;
+      outputs.message = '\nNo records found matching the specified conditions. ' +&#13;
+                        '\nField type detected: ' + fieldType + '. ' +&#13;
+                        '\nAggregate type requested: ' + aggregateType + '.';&#13;
       if (skippedAggregates.length &gt; 0) {&#13;
-        outputs.message += '. Skipped: ' + skippedAggregates.join('; ');&#13;
+        outputs.message += '\nSkipped aggregates: ' + skippedAggregates.join('; ');&#13;
       }&#13;
       outputs.aggregates = aggregateResult;&#13;
       outputs.skipped_aggregates = skippedAggregates;&#13;
@@ -4064,14 +4092,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-23 09:06:24</sys_created_on>
         <sys_id>e18cd9cd4730fa10ca05a464116d4393</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-23 09:06:24</sys_updated_on>
+        <sys_updated_on>2025-10-23 10:46:07</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -4409,14 +4437,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-23 09:06:25</sys_created_on>
         <sys_id>b98c1dcd4730fa10ca05a464116d4345</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-23 09:06:25</sys_updated_on>
+        <sys_updated_on>2025-10-23 10:46:07</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -4530,7 +4558,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7d8c1dcd4730fa10ca05a464116d432f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -4538,7 +4566,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-23 09:06:24</sys_updated_on>
+        <sys_updated_on>2025-10-23 10:46:07</sys_updated_on>
         <type>complex_object_schema</type>
     </sys_complex_object>
     <sys_hub_action_output action="INSERT_OR_UPDATE">
@@ -4726,7 +4754,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-23 09:06:25</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=f58c1dcd4730fa10ca05a464116d4377^sys_idNOT IN3d8c1dcd4730fa10ca05a464116d4377"/>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=f58c1dcd4730fa10ca05a464116d4377^sys_idNOT IN1e53f94d47f0fa10ca05a464116d4341"/>
     <sys_hub_status_condition action="INSERT_OR_UPDATE">
         <action_status_metadata_id display_value="Created 2025-10-23 02:06:25">f58c1dcd4730fa10ca05a464116d4377</action_status_metadata_id>
         <condition>{{step[b9c2c56e-4f59-44aa-b717-00cb3a915d34].error}}ISNOTEMPTY</condition>
@@ -4735,11 +4763,11 @@
         <order>1</order>
         <status>{"version":"1.0","serializationFormat":"JSON","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"message\\\":\\\"{{step[b9c2c56e-4f59-44aa-b717-00cb3a915d34].error}}\\\"}\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":"1"}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}}}</status>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-23 09:06:25</sys_created_on>
-        <sys_id>3d8c1dcd4730fa10ca05a464116d4377</sys_id>
+        <sys_created_on>2025-10-23 10:46:07</sys_created_on>
+        <sys_id>1e53f94d47f0fa10ca05a464116d4341</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-23 09:06:25</sys_updated_on>
+        <sys_updated_on>2025-10-23 10:46:07</sys_updated_on>
     </sys_hub_status_condition>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>aggregate_type</element>
