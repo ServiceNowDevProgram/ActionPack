@@ -31,7 +31,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>0bc59fe183bc7210f4185860ceaad3b4</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>Lowest common manager</sys_name>
         <sys_overrides/>
         <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
@@ -39,7 +39,7 @@
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_0bc59fe183bc7210f4185860ceaad3b4</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-25 07:55:43</sys_updated_on>
+        <sys_updated_on>2025-10-25 18:13:56</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -128,10 +128,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-25 07:45:42</sys_created_on>
         <sys_id>363d13ad83bc7210f4185860ceaad3fd</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-25 07:52:50</sys_updated_on>
+        <sys_updated_on>2025-10-25 18:13:49</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=363d13ad83bc7210f4185860ceaad3fd"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -142,25 +142,26 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-25 07:45:42</sys_created_on>
         <sys_id>3a3d53ad83bc7210f4185860ceaad32d</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-25 07:52:50</sys_updated_on>
+        <sys_updated_on>2025-10-25 18:13:49</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
+    //Get list of all manager for user 1&#13;
     var managerArr = [];&#13;
     var gr1 = new GlideRecord('sys_user');&#13;
     if (gr1.get(inputs.user1)) {&#13;
-        while (gr1.u_manager) {&#13;
-            var mgrId = gr1.u_manager.sys_id.toString();&#13;
+        while (gr1.manager) {&#13;
+            var mgrId = gr1.manager.sys_id.toString();&#13;
             managerArr.push(mgrId);&#13;
             if (!gr1.get(mgrId)) break; // move up the hierarchy&#13;
         }&#13;
     }&#13;
-&#13;
+    // Check if any manager exist in the list for user2&#13;
     var commonManager = null;&#13;
     var gr2 = new GlideRecord('sys_user');&#13;
     if (gr2.get(inputs.user2)) {&#13;
         while (gr2.u_manager) {&#13;
-            commonMgrId = gr2.u_manager.sys_id.toString();&#13;
+            commonMgrId = gr2.manager.sys_id.toString();&#13;
             if (managerArr.includes(commonMgrId)) {&#13;
                 commonManager = commonMgrId;&#13;
                 break;&#13;
@@ -174,6 +175,7 @@
         var mgr = new GlideRecord('sys_user');&#13;
         mgr.get(commonManager);&#13;
         outputs.common_manager = mgr.name.toString();&#13;
+    //Incase if they don't have manager in common&#13;
     } else {&#13;
         outputs.common_manager = "They don't have a manager in common.";&#13;
     }&#13;
@@ -757,14 +759,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-25 07:45:42</sys_created_on>
         <sys_id>4f3d53ad83bc7210f4185860ceaad339</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-25 07:55:41</sys_updated_on>
+        <sys_updated_on>2025-10-25 18:13:54</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1113,17 +1115,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Lowest common manager">0bc59fe183bc7210f4185860ceaad3b4</action_id>
         <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"bd8fdb6183fc7210f4185860ceaad323","name":"plan","plan_signature":null}}</plan>
-        <snapshot>218f9b6183fc7210f4185860ceaad3fd</snapshot>
+        <snapshot>a50d2dbd83b8b210f4185860ceaad3af</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-25 07:55:43</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bd8fdb6183fc7210f4185860ceaad323</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-25 07:55:43</sys_updated_on>
+        <sys_updated_on>2025-10-25 18:13:56</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1250,10 +1252,10 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-25 07:55:42</sys_created_on>
         <sys_id>d18f9b6183fc7210f4185860ceaad3b6</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-25 07:55:42</sys_updated_on>
+        <sys_updated_on>2025-10-25 18:13:56</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=d18f9b6183fc7210f4185860ceaad3b6"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1264,25 +1266,26 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-25 07:55:42</sys_created_on>
         <sys_id>218f9b6183fc7210f4185860ceaad3d8</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-25 07:55:42</sys_updated_on>
+        <sys_updated_on>2025-10-25 18:13:56</sys_updated_on>
         <value>(function execute(inputs, outputs) {&#13;
+    //Get list of all manager for user 1&#13;
     var managerArr = [];&#13;
     var gr1 = new GlideRecord('sys_user');&#13;
     if (gr1.get(inputs.user1)) {&#13;
-        while (gr1.u_manager) {&#13;
-            var mgrId = gr1.u_manager.sys_id.toString();&#13;
+        while (gr1.manager) {&#13;
+            var mgrId = gr1.manager.sys_id.toString();&#13;
             managerArr.push(mgrId);&#13;
             if (!gr1.get(mgrId)) break; // move up the hierarchy&#13;
         }&#13;
     }&#13;
-&#13;
+    // Check if any manager exist in the list for user2&#13;
     var commonManager = null;&#13;
     var gr2 = new GlideRecord('sys_user');&#13;
     if (gr2.get(inputs.user2)) {&#13;
         while (gr2.u_manager) {&#13;
-            commonMgrId = gr2.u_manager.sys_id.toString();&#13;
+            commonMgrId = gr2.manager.sys_id.toString();&#13;
             if (managerArr.includes(commonMgrId)) {&#13;
                 commonManager = commonMgrId;&#13;
                 break;&#13;
@@ -1296,6 +1299,7 @@
         var mgr = new GlideRecord('sys_user');&#13;
         mgr.get(commonManager);&#13;
         outputs.common_manager = mgr.name.toString();&#13;
+    //Incase if they don't have manager in common&#13;
     } else {&#13;
         outputs.common_manager = "They don't have a manager in common.";&#13;
     }&#13;
@@ -2066,14 +2070,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2025-10-25 07:55:43</sys_created_on>
         <sys_id>e18f9b6183fc7210f4185860ceaad3e4</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
         <sys_update_name/>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-25 07:55:43</sys_updated_on>
+        <sys_updated_on>2025-10-25 18:13:56</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -2099,7 +2103,7 @@
         <sys_updated_by>admin</sys_updated_by>
         <sys_updated_on>2025-10-25 07:55:43</sys_updated_on>
     </sys_hub_action_status_metadata>
-    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=e98f9b6183fc7210f4185860ceaad3fc^sys_idNOT INad8f9b6183fc7210f4185860ceaad3fc"/>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=e98f9b6183fc7210f4185860ceaad3fc^sys_idNOT IN290d2dbd83b8b210f4185860ceaad3ae"/>
     <sys_hub_status_condition action="INSERT_OR_UPDATE">
         <action_status_metadata_id display_value="Created 2025-10-25 00:55:43">e98f9b6183fc7210f4185860ceaad3fc</action_status_metadata_id>
         <condition>{{action.user1}}={{action.user2}}</condition>
@@ -2108,11 +2112,11 @@
         <order>1</order>
         <status>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":"1"}},"message":{"$cv":{"$c":"java.lang.String","$v":"Both users should be different"}}},"complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"4adfb7bc-9d67-498d-88d0-8d6c3d584fed\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</status>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2025-10-25 07:55:43</sys_created_on>
-        <sys_id>ad8f9b6183fc7210f4185860ceaad3fc</sys_id>
+        <sys_created_on>2025-10-25 18:13:56</sys_created_on>
+        <sys_id>290d2dbd83b8b210f4185860ceaad3ae</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2025-10-25 07:55:43</sys_updated_on>
+        <sys_updated_on>2025-10-25 18:13:56</sys_updated_on>
     </sys_hub_status_condition>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>user1</element>
