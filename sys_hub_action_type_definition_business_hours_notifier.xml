@@ -1,0 +1,40 @@
+<record_update>
+    <sys_id>business_hours_notifier</sys_id>
+    <name>Business Hours Notifier</name>
+    <scope>Global</scope>
+    <description>
+        Checks whether the current time is within defined business hours and outputs a boolean.
+    </description>
+    <inputs>
+        <input>
+            <name>department</name>
+            <type>string</type>
+            <mandatory>true</mandatory>
+        </input>
+        <input>
+            <name>start_time</name>
+            <type>string</type>
+            <mandatory>true</mandatory>
+        </input>
+        <input>
+            <name>end_time</name>
+            <type>string</type>
+            <mandatory>true</mandatory>
+        </input>
+        <input>
+            <name>timezone</name>
+            <type>string</type>
+            <mandatory>false</mandatory>
+        </input>
+    </inputs>
+    <outputs>
+        <output>
+            <name>within_hours</name>
+            <type>boolean</type>
+        </output>
+        <output>
+            <name>message</name>
+            <type>string</type>
+        </output>
+    </outputs>
+</record_update>
