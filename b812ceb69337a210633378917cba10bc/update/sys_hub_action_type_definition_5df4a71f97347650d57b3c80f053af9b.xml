@@ -1,0 +1,4213 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <active>true</active>
+        <annotation>Calculate commission based on sale amount, region, and agent tier.</annotation>
+        <attributes>{labelCacheCleanUpExecuted=true}</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Calculate commission based on sale amount, region, and agent tier.</description>
+        <flow_priority/>
+        <ih_action>false</ih_action>
+        <internal_name>commission_formula</internal_name>
+        <label_cache>[{"name":"{{action._}}","label":"action➛","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.sale_amount}}","label":"action➛Sale Amount","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.region}}","label":"action➛Region","type":"action","ref":"","reference_display":"","base_type":"choice","parent_table_name":"","column_name":"","choices":[{"label":"North America","value":"NA","order":0.0},{"label":"Europe, the Middle East and Africa","value":"EMEA","order":1.0},{"label":"Asia-Pacific","value":"APAC","order":2.0},{"label":"Latin America","value":"LATAM","order":3.0}],"attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"4a2c9afd-b3e5-4dd6-a080-aef98738a108"}},{"name":"{{action.tier_level}}","label":"action➛Tier Level","type":"action","ref":"","reference_display":"","base_type":"choice","parent_table_name":"","column_name":"","choices":[{"label":"Tier 1","value":"Tier 1","order":1.0},{"label":"Tier 2","value":"Tier 2","order":2.0},{"label":"Tier 3","value":"Tier 3","order":3.0}],"attributes":{}},{"name":"{{action.agent_tier_level}}","label":"action➛Tier Level","type":"action","ref":"","reference_display":"","base_type":"choice","parent_table_name":"","column_name":"","choices":[{"label":"Tier 1","value":"Tier 1","order":1.0},{"label":"Tier 2","value":"Tier 2","order":2.0},{"label":"Tier 3","value":"Tier 3","order":3.0},{"label":"Tier 4","value":"Tier 4","order":4.0}],"attributes":{}},{"name":"{{action.agent_tier_level1}}","label":"action➛Agent Tier Level","type":"action","ref":"","reference_display":"","base_type":"choice","parent_table_name":"","column_name":"","choices":[{"label":"Tier 1","value":"1","order":0.0},{"label":"Tier 2","value":"2","order":1.0},{"label":"Tier 3","value":"3","order":2.0},{"label":"Tier 4","value":"4","order":3.0}],"attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"9d8aef41-5d98-4b35-bcce-332ad691af83"}},{"name":"{{step[b15cf521-627d-4411-903a-daa7a2c2e23e].commission_rate}}","label":"step➛Script step➛Commission Rate","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[b15cf521-627d-4411-903a-daa7a2c2e23e].sale_amount}}","label":"step➛Script step➛Sale Amount","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[b15cf521-627d-4411-903a-daa7a2c2e23e].commission_amount}}","label":"step➛Script step➛Commission Amount","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
+        <master_snapshot>bb00b3d797f47650d57b3c80f053af02</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Region Tiered Commission Action</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 18:48:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5df4a71f97347650d57b3c80f053af9b</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>Region Tiered Commission Action</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_5df4a71f97347650d57b3c80f053af9b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=5df4a71f97347650d57b3c80f053af9b"/>
+    <sys_variable_value action="delete_multiple" query="document_key=5df4a71f97347650d57b3c80f053af9b"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>5df4a71f97347650d57b3c80f053af9b</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:23</sys_created_on>
+        <sys_id>700e2f9397f47650d57b3c80f053af34</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:23</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">740e2f9397f47650d57b3c80f053af14</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>5df4a71f97347650d57b3c80f053af9b</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:23</sys_created_on>
+        <sys_id>b40e2f9397f47650d57b3c80f053af34</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:23</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"794bc342-9c9d-444b-a3f2-dd4b6a5a0173\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
+        <variable display_value="Action Status">e80e2f9397f47650d57b3c80f053af05</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=5df4a71f97347650d57b3c80f053af9b"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>commission_amount</field>
+        <id>5df4a71f97347650d57b3c80f053af9b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:23</sys_created_on>
+        <sys_id>fc0e2f9397f47650d57b3c80f053af32</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:23</sys_updated_on>
+        <table>var__m_sys_hub_action_output_5df4a71f97347650d57b3c80f053af9b</table>
+        <value>{{step[b15cf521-627d-4411-903a-daa7a2c2e23e].commission_amount}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>commission_rate</field>
+        <id>5df4a71f97347650d57b3c80f053af9b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:23</sys_created_on>
+        <sys_id>b80e2f9397f47650d57b3c80f053af32</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:23</sys_updated_on>
+        <table>var__m_sys_hub_action_output_5df4a71f97347650d57b3c80f053af9b</table>
+        <value>{{step[b15cf521-627d-4411-903a-daa7a2c2e23e].commission_rate}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sale_amount</field>
+        <id>5df4a71f97347650d57b3c80f053af9b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:23</sys_created_on>
+        <sys_id>bc0e2f9397f47650d57b3c80f053af33</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:23</sys_updated_on>
+        <table>var__m_sys_hub_action_output_5df4a71f97347650d57b3c80f053af9b</table>
+        <value>{{step[b15cf521-627d-4411-903a-daa7a2c2e23e].sale_amount}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>5df4a71f97347650d57b3c80f053af9b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:23</sys_created_on>
+        <sys_id>780e2f9397f47650d57b3c80f053af33</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:23</sys_updated_on>
+        <table>var__m_sys_hub_action_output_5df4a71f97347650d57b3c80f053af9b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>5df4a71f97347650d57b3c80f053af9b</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:23</sys_created_on>
+        <sys_id>340e2f9397f47650d57b3c80f053af33</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:23</sys_updated_on>
+        <table>var__m_sys_hub_action_output_5df4a71f97347650d57b3c80f053af9b</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=5df4a71f97347650d57b3c80f053af9b^sys_idNOT IN540eeb9397f47650d57b3c80f053afad"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Region Tiered Commission Action">5df4a71f97347650d57b3c80f053af9b</action>
+        <cid>b15cf521-627d-4411-903a-daa7a2c2e23e</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:21</sys_created_on>
+        <sys_id>540eeb9397f47650d57b3c80f053afad</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=540eeb9397f47650d57b3c80f053afad"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>540eeb9397f47650d57b3c80f053afad</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>ac0eeb9397f47650d57b3c80f053affd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+        <value/>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>540eeb9397f47650d57b3c80f053afad</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>ec0eeb9397f47650d57b3c80f053affc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=540eeb9397f47650d57b3c80f053afad"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>540eeb9397f47650d57b3c80f053afad</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>ec0eeb9397f47650d57b3c80f053affb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>region</field>
+        <id>540eeb9397f47650d57b3c80f053afad</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>6c0eeb9397f47650d57b3c80f053afff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_540eeb9397f47650d57b3c80f053afad</table>
+        <value>{{action.region}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>saleAmount</field>
+        <id>540eeb9397f47650d57b3c80f053afad</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>e00eeb9397f47650d57b3c80f053afff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_540eeb9397f47650d57b3c80f053afad</table>
+        <value>{{action.sale_amount}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>540eeb9397f47650d57b3c80f053afad</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>2c0eeb9397f47650d57b3c80f053affc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value>(function execute(inputs, outputs) {&#13;
+/**&#13;
+ * Calculate commission based on sale amount, region, and agent tier.&#13;
+ * - Base tiers (by amount, USD):&#13;
+ *   &lt; 1,000 → 3%&#13;
+ *   1,000–4,999.99 → 5%&#13;
+ *   5,000–49,999.99 → 7%&#13;
+ *   ≥ 50,000 → 10%&#13;
+ *&#13;
+ * - Region adders (percentage points):&#13;
+ *   NA +5%, EMEA +6%, LATAM +4%, APAC +3%&#13;
+ *&#13;
+ * - Agent tier adders (percentage points):&#13;
+ *   Tier 1 +7%, Tier 2 +4%, Tier 3 +2%, Tier 4 +0%&#13;
+ *&#13;
+ * @param {number} amount - Sale amount in USD&#13;
+ * @param {string} region - One of: 'NA','EMEA','LATAM','APAC' (case-insensitive)&#13;
+ * @param {number|string} tier - 1,2,3,4 (number or numeric string)&#13;
+ * @returns {{commissionRate:number, saleAmount:number, commissionAmount:number, detail:string}}&#13;
+ */&#13;
+//function calculateCommission(amount, region, tier) {&#13;
+&#13;
+  // Normalize/validate inputs&#13;
+  var amt = Number(inputs.saleAmount);&#13;
+  if (!isFinite(amt) || amt &lt; 0) amt = 0;&#13;
+&#13;
+  var reg = String(inputs.region || '').trim().toUpperCase();&#13;
+  var tierNum = parseInt(inputs.tier, 10);&#13;
+  if (![1,2,3,4].includes(tierNum)) tierNum = 4; // default to no extra if invalid&#13;
+&#13;
+  // Base rate by amount&#13;
+  var baseRate;&#13;
+  if (amt &lt; 1000) baseRate = 0.03;&#13;
+  else if (amt &lt; 5000) baseRate = 0.05;&#13;
+  else if (amt &lt; 50000) baseRate = 0.07;&#13;
+  else baseRate = 0.10;&#13;
+&#13;
+  // Region adders&#13;
+  var regionAdders = {&#13;
+    'NA': 0.05,&#13;
+    'EMEA': 0.06,&#13;
+    'LATAM': 0.04,&#13;
+    'APAC': 0.03&#13;
+  };&#13;
+  var regionAdder = regionAdders[reg] || 0;&#13;
+&#13;
+  // Tier adders&#13;
+  var tierAdders = {&#13;
+    1: 0.07,&#13;
+    2: 0.04,&#13;
+    3: 0.02,&#13;
+    4: 0.00&#13;
+  };&#13;
+  var tierAdder = tierAdders[tierNum];&#13;
+&#13;
+  // Final rate (additive)&#13;
+  var commissionRate = baseRate + regionAdder + tierAdder;&#13;
+&#13;
+  // Commission amount&#13;
+  var commissionAmount = amt * commissionRate;&#13;
+&#13;
+  // Rounding helpers&#13;
+  function round(n, places) {&#13;
+    var p = Math.pow(10, places);&#13;
+    return Math.round((n + Number.EPSILON) * p) / p;&#13;
+  }&#13;
+&#13;
+  var result = {&#13;
+    commissionRate: round(commissionRate, 4),     // e.g., 0.1900 for 19%&#13;
+    saleAmount: round(amt, 2),&#13;
+    commissionAmount: round(commissionAmount, 2),&#13;
+    detail: [&#13;
+      'base=' + (baseRate*100).toFixed(2) + '%',&#13;
+      'region=' + reg + ' +' + (regionAdder*100).toFixed(2) + 'pp',&#13;
+      'tier=' + tierNum + ' +' + (tierAdder*100).toFixed(2) + 'pp'&#13;
+    ].join(' | ')&#13;
+  };&#13;
+outputs.commission_rate = result.commissionRate&#13;
+outputs.sale_amount = result.saleAmount&#13;
+outputs.commission_amount = result.commissionAmount&#13;
+&#13;
+})(inputs, outputs);&#13;
+</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>tier</field>
+        <id>540eeb9397f47650d57b3c80f053afad</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>280eeb9397f47650d57b3c80f053afff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_540eeb9397f47650d57b3c80f053afad</table>
+        <value>{{action.agent_tier_level1}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_540eeb9397f47650d57b3c80f053afad^id=540eeb9397f47650d57b3c80f053afad"/>
+    <sys_element_mapping action="delete_multiple" query="id=540eeb9397f47650d57b3c80f053afad"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>540eeb9397f47650d57b3c80f053afad</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>ec0eeb9397f47650d57b3c80f053affb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>region</field>
+        <id>540eeb9397f47650d57b3c80f053afad</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>6c0eeb9397f47650d57b3c80f053afff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_540eeb9397f47650d57b3c80f053afad</table>
+        <value>{{action.region}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>saleAmount</field>
+        <id>540eeb9397f47650d57b3c80f053afad</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>e00eeb9397f47650d57b3c80f053afff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_540eeb9397f47650d57b3c80f053afad</table>
+        <value>{{action.sale_amount}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>540eeb9397f47650d57b3c80f053afad</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>2c0eeb9397f47650d57b3c80f053affc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value>(function execute(inputs, outputs) {&#13;
+/**&#13;
+ * Calculate commission based on sale amount, region, and agent tier.&#13;
+ * - Base tiers (by amount, USD):&#13;
+ *   &lt; 1,000 → 3%&#13;
+ *   1,000–4,999.99 → 5%&#13;
+ *   5,000–49,999.99 → 7%&#13;
+ *   ≥ 50,000 → 10%&#13;
+ *&#13;
+ * - Region adders (percentage points):&#13;
+ *   NA +5%, EMEA +6%, LATAM +4%, APAC +3%&#13;
+ *&#13;
+ * - Agent tier adders (percentage points):&#13;
+ *   Tier 1 +7%, Tier 2 +4%, Tier 3 +2%, Tier 4 +0%&#13;
+ *&#13;
+ * @param {number} amount - Sale amount in USD&#13;
+ * @param {string} region - One of: 'NA','EMEA','LATAM','APAC' (case-insensitive)&#13;
+ * @param {number|string} tier - 1,2,3,4 (number or numeric string)&#13;
+ * @returns {{commissionRate:number, saleAmount:number, commissionAmount:number, detail:string}}&#13;
+ */&#13;
+//function calculateCommission(amount, region, tier) {&#13;
+&#13;
+  // Normalize/validate inputs&#13;
+  var amt = Number(inputs.saleAmount);&#13;
+  if (!isFinite(amt) || amt &lt; 0) amt = 0;&#13;
+&#13;
+  var reg = String(inputs.region || '').trim().toUpperCase();&#13;
+  var tierNum = parseInt(inputs.tier, 10);&#13;
+  if (![1,2,3,4].includes(tierNum)) tierNum = 4; // default to no extra if invalid&#13;
+&#13;
+  // Base rate by amount&#13;
+  var baseRate;&#13;
+  if (amt &lt; 1000) baseRate = 0.03;&#13;
+  else if (amt &lt; 5000) baseRate = 0.05;&#13;
+  else if (amt &lt; 50000) baseRate = 0.07;&#13;
+  else baseRate = 0.10;&#13;
+&#13;
+  // Region adders&#13;
+  var regionAdders = {&#13;
+    'NA': 0.05,&#13;
+    'EMEA': 0.06,&#13;
+    'LATAM': 0.04,&#13;
+    'APAC': 0.03&#13;
+  };&#13;
+  var regionAdder = regionAdders[reg] || 0;&#13;
+&#13;
+  // Tier adders&#13;
+  var tierAdders = {&#13;
+    1: 0.07,&#13;
+    2: 0.04,&#13;
+    3: 0.02,&#13;
+    4: 0.00&#13;
+  };&#13;
+  var tierAdder = tierAdders[tierNum];&#13;
+&#13;
+  // Final rate (additive)&#13;
+  var commissionRate = baseRate + regionAdder + tierAdder;&#13;
+&#13;
+  // Commission amount&#13;
+  var commissionAmount = amt * commissionRate;&#13;
+&#13;
+  // Rounding helpers&#13;
+  function round(n, places) {&#13;
+    var p = Math.pow(10, places);&#13;
+    return Math.round((n + Number.EPSILON) * p) / p;&#13;
+  }&#13;
+&#13;
+  var result = {&#13;
+    commissionRate: round(commissionRate, 4),     // e.g., 0.1900 for 19%&#13;
+    saleAmount: round(amt, 2),&#13;
+    commissionAmount: round(commissionAmount, 2),&#13;
+    detail: [&#13;
+      'base=' + (baseRate*100).toFixed(2) + '%',&#13;
+      'region=' + reg + ' +' + (regionAdder*100).toFixed(2) + 'pp',&#13;
+      'tier=' + tierNum + ' +' + (tierAdder*100).toFixed(2) + 'pp'&#13;
+    ].join(' | ')&#13;
+  };&#13;
+outputs.commission_rate = result.commissionRate&#13;
+outputs.sale_amount = result.saleAmount&#13;
+outputs.commission_amount = result.commissionAmount&#13;
+&#13;
+})(inputs, outputs);&#13;
+</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>tier</field>
+        <id>540eeb9397f47650d57b3c80f053afad</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>280eeb9397f47650d57b3c80f053afff</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_540eeb9397f47650d57b3c80f053afad</table>
+        <value>{{action.agent_tier_level1}}</value>
+    </sys_element_mapping>
+    <sys_translated_text action="delete_multiple" query="documentkey=540eeb9397f47650d57b3c80f053afad"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=540eeb9397f47650d57b3c80f053afad^sys_idNOT IN4b8e6fd397f47650d57b3c80f053afff,500eeb9397f47650d57b3c80f053afb8,838eafd397f47650d57b3c80f053af29"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=choice,uiTypeLabel=Choice</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>1</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>region</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Choice">choice</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Script step">540eeb9397f47650d57b3c80f053afad</model>
+        <model_id>540eeb9397f47650d57b3c80f053afad</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_540eeb9397f47650d57b3c80f053afad</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:30:43</sys_created_on>
+        <sys_id>4b8e6fd397f47650d57b3c80f053afff</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>saleAmount</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">540eeb9397f47650d57b3c80f053afad</model>
+        <model_id>540eeb9397f47650d57b3c80f053afad</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_540eeb9397f47650d57b3c80f053afad</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:21</sys_created_on>
+        <sys_id>500eeb9397f47650d57b3c80f053afb8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=choice,uiTypeLabel=Choice</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>1</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>tier</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Choice">choice</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Script step">540eeb9397f47650d57b3c80f053afad</model>
+        <model_id>540eeb9397f47650d57b3c80f053afad</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_540eeb9397f47650d57b3c80f053afad</name>
+        <next_element/>
+        <order>200</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:30:43</sys_created_on>
+        <sys_id>838eafd397f47650d57b3c80f053af29</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=540eeb9397f47650d57b3c80f053afad^sys_idNOT IN2c0eeb9397f47650d57b3c80f053afd2,640eeb9397f47650d57b3c80f053afeb,a00eeb9397f47650d57b3c80f053afe6"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=62b70be1-5f96-4fc4-ab4f-d1f5cec9b40c</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>commission_rate</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Commission Rate</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">540eeb9397f47650d57b3c80f053afad</model>
+        <model_id>540eeb9397f47650d57b3c80f053afad</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_540eeb9397f47650d57b3c80f053afad</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>2c0eeb9397f47650d57b3c80f053afd2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=f95109ba-9a24-4e9a-9490-a65e2867af1f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>commission_amount</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Commission Amount</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">540eeb9397f47650d57b3c80f053afad</model>
+        <model_id>540eeb9397f47650d57b3c80f053afad</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_540eeb9397f47650d57b3c80f053afad</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>640eeb9397f47650d57b3c80f053afeb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=f10860d9-741c-4b46-8568-d24fd66910e7</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sale_amount</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Sale Amount</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">540eeb9397f47650d57b3c80f053afad</model>
+        <model_id>540eeb9397f47650d57b3c80f053afad</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_540eeb9397f47650d57b3c80f053afad</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>a00eeb9397f47650d57b3c80f053afe6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=540eeb9397f47650d57b3c80f053afad"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>commission_rate</element>
+        <help/>
+        <hint/>
+        <label>Commission Rate</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_540eeb9397f47650d57b3c80f053afad</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>200eeb9397f47650d57b3c80f053afe5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>commission_amount</element>
+        <help/>
+        <hint/>
+        <label>Commission Amount</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_540eeb9397f47650d57b3c80f053afad</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>a40eeb9397f47650d57b3c80f053afef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>sale_amount</element>
+        <help/>
+        <hint/>
+        <label>Sale Amount</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_540eeb9397f47650d57b3c80f053afad</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>e00eeb9397f47650d57b3c80f053afea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_input action="delete_multiple" query="model=5df4a71f97347650d57b3c80f053af9b^sys_idNOT INc00e2f1397f47650d57b3c80f053af2a,d00eeb9397f47650d57b3c80f053af78,dc0eeb9397f47650d57b3c80f053af85"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=73483627-e10f-4ed6-889f-844ebbf6d0b3</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sale_amount</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Sale Amount</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Region Tiered Commission Action">5df4a71f97347650d57b3c80f053af9b</model>
+        <model_id>5df4a71f97347650d57b3c80f053af9b</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_5df4a71f97347650d57b3c80f053af9b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:20</sys_created_on>
+        <sys_id>c00e2f1397f47650d57b3c80f053af2a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c00e2f1397f47650d57b3c80f053af2a"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=choice,uiTypeLabel=Choice,uiUniqueId=4a2c9afd-b3e5-4dd6-a080-aef98738a108</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>NA</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>region</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Choice">choice</internal_type>
+        <label>Region</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Region Tiered Commission Action">5df4a71f97347650d57b3c80f053af9b</model>
+        <model_id>5df4a71f97347650d57b3c80f053af9b</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_5df4a71f97347650d57b3c80f053af9b</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:21</sys_created_on>
+        <sys_id>d00eeb9397f47650d57b3c80f053af78</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d00eeb9397f47650d57b3c80f053af78"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=choice,uiTypeLabel=Choice,uiUniqueId=9d8aef41-5d98-4b35-bcce-332ad691af83</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>4</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>agent_tier_level1</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Choice">choice</internal_type>
+        <label>Agent Tier Level</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Region Tiered Commission Action">5df4a71f97347650d57b3c80f053af9b</model>
+        <model_id>5df4a71f97347650d57b3c80f053af9b</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_5df4a71f97347650d57b3c80f053af9b</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:21</sys_created_on>
+        <sys_id>dc0eeb9397f47650d57b3c80f053af85</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=dc0eeb9397f47650d57b3c80f053af85"/>
+    <sys_hub_action_output action="delete_multiple" query="model=5df4a71f97347650d57b3c80f053af9b^sys_idNOT IN300e2f9397f47650d57b3c80f053af25,740e2f9397f47650d57b3c80f053af14,e80e2f9397f47650d57b3c80f053af05,f80e2f9397f47650d57b3c80f053af1e,fc0e2f9397f47650d57b3c80f053af0d"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=0f12d697-3fa3-4fc0-b67a-18b6c1bcf891</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sale_amount</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Sale Amount</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Region Tiered Commission Action">5df4a71f97347650d57b3c80f053af9b</model>
+        <model_id>5df4a71f97347650d57b3c80f053af9b</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_5df4a71f97347650d57b3c80f053af9b</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:23</sys_created_on>
+        <sys_id>300e2f9397f47650d57b3c80f053af25</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=300e2f9397f47650d57b3c80f053af25"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=300e2f9397f47650d57b3c80f053af25"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=ba4f2ec9-125c-45a9-903f-8e40ab3fec7c,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Region Tiered Commission Action">5df4a71f97347650d57b3c80f053af9b</model>
+        <model_id>5df4a71f97347650d57b3c80f053af9b</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_5df4a71f97347650d57b3c80f053af9b</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:23</sys_created_on>
+        <sys_id>740e2f9397f47650d57b3c80f053af14</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=740e2f9397f47650d57b3c80f053af14"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=740e2f9397f47650d57b3c80f053af14"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDACTIONSTATUS,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=613c17da-5946-41ba-83dc-87783cda0bda</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Region Tiered Commission Action">5df4a71f97347650d57b3c80f053af9b</model>
+        <model_id>5df4a71f97347650d57b3c80f053af9b</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_5df4a71f97347650d57b3c80f053af9b</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:22</sys_created_on>
+        <sys_id>e80e2f9397f47650d57b3c80f053af05</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e80e2f9397f47650d57b3c80f053af05"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e80e2f9397f47650d57b3c80f053af05"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=a89b8203-6f95-47b1-8192-d393c531503d</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>commission_rate</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Commission Rate</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Region Tiered Commission Action">5df4a71f97347650d57b3c80f053af9b</model>
+        <model_id>5df4a71f97347650d57b3c80f053af9b</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_5df4a71f97347650d57b3c80f053af9b</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:23</sys_created_on>
+        <sys_id>f80e2f9397f47650d57b3c80f053af1e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=f80e2f9397f47650d57b3c80f053af1e"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=f80e2f9397f47650d57b3c80f053af1e"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=8d336ce8-71e1-41d1-969f-7cb0cb05cdb2</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>commission_amount</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Commission Amount</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Region Tiered Commission Action">5df4a71f97347650d57b3c80f053af9b</model>
+        <model_id>5df4a71f97347650d57b3c80f053af9b</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_5df4a71f97347650d57b3c80f053af9b</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:23</sys_created_on>
+        <sys_id>fc0e2f9397f47650d57b3c80f053af0d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=fc0e2f9397f47650d57b3c80f053af0d"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=fc0e2f9397f47650d57b3c80f053af0d"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=5df4a71f97347650d57b3c80f053af9b"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=5df4a71f97347650d57b3c80f053af9b^sys_idNOT INb80e2f9397f47650d57b3c80f053af37"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="Region Tiered Commission Action">5df4a71f97347650d57b3c80f053af9b</action_type_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:23</sys_created_on>
+        <sys_id>b80e2f9397f47650d57b3c80f053af37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:23</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=b80e2f9397f47650d57b3c80f053af37"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>sale_amount</element>
+        <help/>
+        <hint/>
+        <label>Sale Amount</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_5df4a71f97347650d57b3c80f053af9b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:21</sys_created_on>
+        <sys_id>500eeb9397f47650d57b3c80f053af77</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>region</element>
+        <help/>
+        <hint/>
+        <label>Region</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_5df4a71f97347650d57b3c80f053af9b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:21</sys_created_on>
+        <sys_id>5c0eeb9397f47650d57b3c80f053af84</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>agent_tier_level1</element>
+        <help/>
+        <hint/>
+        <label>Agent Tier Level</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_5df4a71f97347650d57b3c80f053af9b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:21</sys_created_on>
+        <sys_id>d80eeb9397f47650d57b3c80f053af90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_5df4a71f97347650d57b3c80f053af9b^sys_idNOT IN100eeb9397f47650d57b3c80f053af7d,1c0eeb9397f47650d57b3c80f053af8a,500eeb9397f47650d57b3c80f053af8a,540eeb9397f47650d57b3c80f053af7c,900eeb9397f47650d57b3c80f053af8c,940eeb9397f47650d57b3c80f053af7e,d40eeb9397f47650d57b3c80f053af8b,d80eeb9397f47650d57b3c80f053af7d"/>
+    <sys_choice field="agent_tier_level1" table="var__m_sys_hub_action_input_5df4a71f97347650d57b3c80f053af9b">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>agent_tier_level1</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Tier 2</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_5df4a71f97347650d57b3c80f053af9b</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-30 19:28:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>1c0eeb9397f47650d57b3c80f053af8a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-30 19:30:42</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>agent_tier_level1</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Tier 1</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_5df4a71f97347650d57b3c80f053af9b</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-30 19:28:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>500eeb9397f47650d57b3c80f053af8a</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-30 19:30:42</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>agent_tier_level1</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Tier 4</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_5df4a71f97347650d57b3c80f053af9b</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-30 19:28:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>900eeb9397f47650d57b3c80f053af8c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-30 19:30:42</sys_updated_on>
+            <value>4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>agent_tier_level1</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Tier 3</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_5df4a71f97347650d57b3c80f053af9b</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-30 19:28:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d40eeb9397f47650d57b3c80f053af8b</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-30 19:30:42</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+    </sys_choice>
+    <sys_choice field="region" table="var__m_sys_hub_action_input_5df4a71f97347650d57b3c80f053af9b">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>region</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Europe, the Middle East and Africa</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_5df4a71f97347650d57b3c80f053af9b</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-30 19:28:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>100eeb9397f47650d57b3c80f053af7d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-30 19:30:42</sys_updated_on>
+            <value>EMEA</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>region</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>North America</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_5df4a71f97347650d57b3c80f053af9b</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-30 19:28:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>540eeb9397f47650d57b3c80f053af7c</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-30 19:30:42</sys_updated_on>
+            <value>NA</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>region</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Latin America</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_5df4a71f97347650d57b3c80f053af9b</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-30 19:28:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>940eeb9397f47650d57b3c80f053af7e</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-30 19:30:42</sys_updated_on>
+            <value>LATAM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>region</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Asia-Pacific</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_5df4a71f97347650d57b3c80f053af9b</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-30 19:28:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d80eeb9397f47650d57b3c80f053af7d</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-30 19:30:42</sys_updated_on>
+            <value>APAC</value>
+        </sys_choice>
+    </sys_choice>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>sale_amount</element>
+        <help/>
+        <hint/>
+        <label>Sale Amount</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_5df4a71f97347650d57b3c80f053af9b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:23</sys_created_on>
+        <sys_id>340e2f9397f47650d57b3c80f053af2a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_5df4a71f97347650d57b3c80f053af9b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:23</sys_created_on>
+        <sys_id>780e2f9397f47650d57b3c80f053af1d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_5df4a71f97347650d57b3c80f053af9b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:23</sys_created_on>
+        <sys_id>7c0e2f9397f47650d57b3c80f053af0c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>commission_rate</element>
+        <help/>
+        <hint/>
+        <label>Commission Rate</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_5df4a71f97347650d57b3c80f053af9b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:23</sys_created_on>
+        <sys_id>bc0e2f9397f47650d57b3c80f053af23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>commission_amount</element>
+        <help/>
+        <hint/>
+        <label>Commission Amount</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_5df4a71f97347650d57b3c80f053af9b</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:28:23</sys_created_on>
+        <sys_id>f00e2f9397f47650d57b3c80f053af13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:28:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_5df4a71f97347650d57b3c80f053af9b"/>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=5df4a71f97347650d57b3c80f053af9b^sys_idNOT INa810f3d797f47650d57b3c80f053af31"/>
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="Region Tiered Commission Action">5df4a71f97347650d57b3c80f053af9b</action_id>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"a810f3d797f47650d57b3c80f053af31","name":"plan","plan_signature":null}}</plan>
+        <snapshot>5c10b3d797f47650d57b3c80f053afc7</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:22</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a810f3d797f47650d57b3c80f053af31</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:22</sys_updated_on>
+    </sys_hub_action_plan>
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <annotation>Calculate commission based on sale amount, region, and agent tier.</annotation>
+        <attributes>{labelCacheCleanUpExecuted=true}</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Calculate commission based on sale amount, region, and agent tier.</description>
+        <flow_priority/>
+        <internal_name>commission_formula</internal_name>
+        <label_cache>[{"name":"{{action._}}","label":"action➛","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.sale_amount}}","label":"action➛Sale Amount","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.region}}","label":"action➛Region","type":"action","ref":"","reference_display":"","base_type":"choice","parent_table_name":"","column_name":"","choices":[{"label":"North America","value":"NA","order":0.0},{"label":"Europe, the Middle East and Africa","value":"EMEA","order":1.0},{"label":"Asia-Pacific","value":"APAC","order":2.0},{"label":"Latin America","value":"LATAM","order":3.0}],"attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"4a2c9afd-b3e5-4dd6-a080-aef98738a108"}},{"name":"{{action.tier_level}}","label":"action➛Tier Level","type":"action","ref":"","reference_display":"","base_type":"choice","parent_table_name":"","column_name":"","choices":[{"label":"Tier 1","value":"Tier 1","order":1.0},{"label":"Tier 2","value":"Tier 2","order":2.0},{"label":"Tier 3","value":"Tier 3","order":3.0}],"attributes":{}},{"name":"{{action.agent_tier_level}}","label":"action➛Tier Level","type":"action","ref":"","reference_display":"","base_type":"choice","parent_table_name":"","column_name":"","choices":[{"label":"Tier 1","value":"Tier 1","order":1.0},{"label":"Tier 2","value":"Tier 2","order":2.0},{"label":"Tier 3","value":"Tier 3","order":3.0},{"label":"Tier 4","value":"Tier 4","order":4.0}],"attributes":{}},{"name":"{{action.agent_tier_level1}}","label":"action➛Agent Tier Level","type":"action","ref":"","reference_display":"","base_type":"choice","parent_table_name":"","column_name":"","choices":[{"label":"Tier 1","value":"1","order":0.0},{"label":"Tier 2","value":"2","order":1.0},{"label":"Tier 3","value":"3","order":2.0},{"label":"Tier 4","value":"4","order":3.0}],"attributes":{"uiTypeLabel":"Choice","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"choice","uiUniqueId":"9d8aef41-5d98-4b35-bcce-332ad691af83"}},{"name":"{{step[b15cf521-627d-4411-903a-daa7a2c2e23e].commission_rate}}","label":"step➛Script step➛Commission Rate","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[b15cf521-627d-4411-903a-daa7a2c2e23e].sale_amount}}","label":"step➛Script step➛Sale Amount","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[b15cf521-627d-4411-903a-daa7a2c2e23e].commission_amount}}","label":"step➛Script step➛Commission Amount","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
+        <master>true</master>
+        <name>Region Tiered Commission Action</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="Region Tiered Commission Action">5df4a71f97347650d57b3c80f053af9b</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>bb00b3d797f47650d57b3c80f053af02</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:20</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=bb00b3d797f47650d57b3c80f053af02"/>
+    <sys_variable_value action="delete_multiple" query="document_key=bb00b3d797f47650d57b3c80f053af02"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>bb00b3d797f47650d57b3c80f053af02</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>1410b3d797f47650d57b3c80f053afc4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON","complexObjectSchema":{"FlowDesigner:FDACTIONSTATUS":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDACTIONSTATUS.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"794bc342-9c9d-444b-a3f2-dd4b6a5a0173\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDACTIONSTATUS\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
+        <variable display_value="Action Status">0410b3d797f47650d57b3c80f053af88</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>bb00b3d797f47650d57b3c80f053af02</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>dc10b3d797f47650d57b3c80f053afc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">4010b3d797f47650d57b3c80f053af97</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=bb00b3d797f47650d57b3c80f053af02"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>commission_amount</field>
+        <id>bb00b3d797f47650d57b3c80f053af02</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>5c10b3d797f47650d57b3c80f053afc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table>var__m_sys_hub_action_output_bb00b3d797f47650d57b3c80f053af02</table>
+        <value>{{step[b15cf521-627d-4411-903a-daa7a2c2e23e].commission_amount}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>commission_rate</field>
+        <id>bb00b3d797f47650d57b3c80f053af02</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>1810b3d797f47650d57b3c80f053afc2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table>var__m_sys_hub_action_output_bb00b3d797f47650d57b3c80f053af02</table>
+        <value>{{step[b15cf521-627d-4411-903a-daa7a2c2e23e].commission_rate}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sale_amount</field>
+        <id>bb00b3d797f47650d57b3c80f053af02</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>1c10b3d797f47650d57b3c80f053afc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table>var__m_sys_hub_action_output_bb00b3d797f47650d57b3c80f053af02</table>
+        <value>{{step[b15cf521-627d-4411-903a-daa7a2c2e23e].sale_amount}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>bb00b3d797f47650d57b3c80f053af02</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>d410b3d797f47650d57b3c80f053afc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table>var__m_sys_hub_action_output_bb00b3d797f47650d57b3c80f053af02</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>bb00b3d797f47650d57b3c80f053af02</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>9010b3d797f47650d57b3c80f053afc3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table>var__m_sys_hub_action_output_bb00b3d797f47650d57b3c80f053af02</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=bb00b3d797f47650d57b3c80f053af02^sys_idNOT IN4010b3d797f47650d57b3c80f053af3c"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="Region Tiered Commission Action">bb00b3d797f47650d57b3c80f053af02</action>
+        <cid>b15cf521-627d-4411-903a-daa7a2c2e23e</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:20</sys_created_on>
+        <sys_id>4010b3d797f47650d57b3c80f053af3c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4010b3d797f47650d57b3c80f053af3c"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>4010b3d797f47650d57b3c80f053af3c</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>8010b3d797f47650d57b3c80f053af80</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>4010b3d797f47650d57b3c80f053af3c</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>c410b3d797f47650d57b3c80f053af80</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <value/>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=4010b3d797f47650d57b3c80f053af3c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>4010b3d797f47650d57b3c80f053af3c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>8810b3d797f47650d57b3c80f053af7f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>region</field>
+        <id>4010b3d797f47650d57b3c80f053af3c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>8010b3d797f47650d57b3c80f053af82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_4010b3d797f47650d57b3c80f053af3c</table>
+        <value>{{action.region}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>saleAmount</field>
+        <id>4010b3d797f47650d57b3c80f053af3c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>0810b3d797f47650d57b3c80f053af81</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_4010b3d797f47650d57b3c80f053af3c</table>
+        <value>{{action.sale_amount}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>4010b3d797f47650d57b3c80f053af3c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>cc10b3d797f47650d57b3c80f053af7f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value>(function execute(inputs, outputs) {&#13;
+/**&#13;
+ * Calculate commission based on sale amount, region, and agent tier.&#13;
+ * - Base tiers (by amount, USD):&#13;
+ *   &lt; 1,000 → 3%&#13;
+ *   1,000–4,999.99 → 5%&#13;
+ *   5,000–49,999.99 → 7%&#13;
+ *   ≥ 50,000 → 10%&#13;
+ *&#13;
+ * - Region adders (percentage points):&#13;
+ *   NA +5%, EMEA +6%, LATAM +4%, APAC +3%&#13;
+ *&#13;
+ * - Agent tier adders (percentage points):&#13;
+ *   Tier 1 +7%, Tier 2 +4%, Tier 3 +2%, Tier 4 +0%&#13;
+ *&#13;
+ * @param {number} amount - Sale amount in USD&#13;
+ * @param {string} region - One of: 'NA','EMEA','LATAM','APAC' (case-insensitive)&#13;
+ * @param {number|string} tier - 1,2,3,4 (number or numeric string)&#13;
+ * @returns {{commissionRate:number, saleAmount:number, commissionAmount:number, detail:string}}&#13;
+ */&#13;
+//function calculateCommission(amount, region, tier) {&#13;
+&#13;
+  // Normalize/validate inputs&#13;
+  var amt = Number(inputs.saleAmount);&#13;
+  if (!isFinite(amt) || amt &lt; 0) amt = 0;&#13;
+&#13;
+  var reg = String(inputs.region || '').trim().toUpperCase();&#13;
+  var tierNum = parseInt(inputs.tier, 10);&#13;
+  if (![1,2,3,4].includes(tierNum)) tierNum = 4; // default to no extra if invalid&#13;
+&#13;
+  // Base rate by amount&#13;
+  var baseRate;&#13;
+  if (amt &lt; 1000) baseRate = 0.03;&#13;
+  else if (amt &lt; 5000) baseRate = 0.05;&#13;
+  else if (amt &lt; 50000) baseRate = 0.07;&#13;
+  else baseRate = 0.10;&#13;
+&#13;
+  // Region adders&#13;
+  var regionAdders = {&#13;
+    'NA': 0.05,&#13;
+    'EMEA': 0.06,&#13;
+    'LATAM': 0.04,&#13;
+    'APAC': 0.03&#13;
+  };&#13;
+  var regionAdder = regionAdders[reg] || 0;&#13;
+&#13;
+  // Tier adders&#13;
+  var tierAdders = {&#13;
+    1: 0.07,&#13;
+    2: 0.04,&#13;
+    3: 0.02,&#13;
+    4: 0.00&#13;
+  };&#13;
+  var tierAdder = tierAdders[tierNum];&#13;
+&#13;
+  // Final rate (additive)&#13;
+  var commissionRate = baseRate + regionAdder + tierAdder;&#13;
+&#13;
+  // Commission amount&#13;
+  var commissionAmount = amt * commissionRate;&#13;
+&#13;
+  // Rounding helpers&#13;
+  function round(n, places) {&#13;
+    var p = Math.pow(10, places);&#13;
+    return Math.round((n + Number.EPSILON) * p) / p;&#13;
+  }&#13;
+&#13;
+  var result = {&#13;
+    commissionRate: round(commissionRate, 4),     // e.g., 0.1900 for 19%&#13;
+    saleAmount: round(amt, 2),&#13;
+    commissionAmount: round(commissionAmount, 2),&#13;
+    detail: [&#13;
+      'base=' + (baseRate*100).toFixed(2) + '%',&#13;
+      'region=' + reg + ' +' + (regionAdder*100).toFixed(2) + 'pp',&#13;
+      'tier=' + tierNum + ' +' + (tierAdder*100).toFixed(2) + 'pp'&#13;
+    ].join(' | ')&#13;
+  };&#13;
+outputs.commission_rate = result.commissionRate&#13;
+outputs.sale_amount = result.saleAmount&#13;
+outputs.commission_amount = result.commissionAmount&#13;
+&#13;
+})(inputs, outputs);&#13;
+</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>tier</field>
+        <id>4010b3d797f47650d57b3c80f053af3c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>4c10b3d797f47650d57b3c80f053af81</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_4010b3d797f47650d57b3c80f053af3c</table>
+        <value>{{action.agent_tier_level1}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_4010b3d797f47650d57b3c80f053af3c^id=4010b3d797f47650d57b3c80f053af3c"/>
+    <sys_element_mapping action="delete_multiple" query="id=4010b3d797f47650d57b3c80f053af3c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>4010b3d797f47650d57b3c80f053af3c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>8810b3d797f47650d57b3c80f053af7f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>region</field>
+        <id>4010b3d797f47650d57b3c80f053af3c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>8010b3d797f47650d57b3c80f053af82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_4010b3d797f47650d57b3c80f053af3c</table>
+        <value>{{action.region}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>saleAmount</field>
+        <id>4010b3d797f47650d57b3c80f053af3c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>0810b3d797f47650d57b3c80f053af81</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_4010b3d797f47650d57b3c80f053af3c</table>
+        <value>{{action.sale_amount}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>4010b3d797f47650d57b3c80f053af3c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>cc10b3d797f47650d57b3c80f053af7f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value>(function execute(inputs, outputs) {&#13;
+/**&#13;
+ * Calculate commission based on sale amount, region, and agent tier.&#13;
+ * - Base tiers (by amount, USD):&#13;
+ *   &lt; 1,000 → 3%&#13;
+ *   1,000–4,999.99 → 5%&#13;
+ *   5,000–49,999.99 → 7%&#13;
+ *   ≥ 50,000 → 10%&#13;
+ *&#13;
+ * - Region adders (percentage points):&#13;
+ *   NA +5%, EMEA +6%, LATAM +4%, APAC +3%&#13;
+ *&#13;
+ * - Agent tier adders (percentage points):&#13;
+ *   Tier 1 +7%, Tier 2 +4%, Tier 3 +2%, Tier 4 +0%&#13;
+ *&#13;
+ * @param {number} amount - Sale amount in USD&#13;
+ * @param {string} region - One of: 'NA','EMEA','LATAM','APAC' (case-insensitive)&#13;
+ * @param {number|string} tier - 1,2,3,4 (number or numeric string)&#13;
+ * @returns {{commissionRate:number, saleAmount:number, commissionAmount:number, detail:string}}&#13;
+ */&#13;
+//function calculateCommission(amount, region, tier) {&#13;
+&#13;
+  // Normalize/validate inputs&#13;
+  var amt = Number(inputs.saleAmount);&#13;
+  if (!isFinite(amt) || amt &lt; 0) amt = 0;&#13;
+&#13;
+  var reg = String(inputs.region || '').trim().toUpperCase();&#13;
+  var tierNum = parseInt(inputs.tier, 10);&#13;
+  if (![1,2,3,4].includes(tierNum)) tierNum = 4; // default to no extra if invalid&#13;
+&#13;
+  // Base rate by amount&#13;
+  var baseRate;&#13;
+  if (amt &lt; 1000) baseRate = 0.03;&#13;
+  else if (amt &lt; 5000) baseRate = 0.05;&#13;
+  else if (amt &lt; 50000) baseRate = 0.07;&#13;
+  else baseRate = 0.10;&#13;
+&#13;
+  // Region adders&#13;
+  var regionAdders = {&#13;
+    'NA': 0.05,&#13;
+    'EMEA': 0.06,&#13;
+    'LATAM': 0.04,&#13;
+    'APAC': 0.03&#13;
+  };&#13;
+  var regionAdder = regionAdders[reg] || 0;&#13;
+&#13;
+  // Tier adders&#13;
+  var tierAdders = {&#13;
+    1: 0.07,&#13;
+    2: 0.04,&#13;
+    3: 0.02,&#13;
+    4: 0.00&#13;
+  };&#13;
+  var tierAdder = tierAdders[tierNum];&#13;
+&#13;
+  // Final rate (additive)&#13;
+  var commissionRate = baseRate + regionAdder + tierAdder;&#13;
+&#13;
+  // Commission amount&#13;
+  var commissionAmount = amt * commissionRate;&#13;
+&#13;
+  // Rounding helpers&#13;
+  function round(n, places) {&#13;
+    var p = Math.pow(10, places);&#13;
+    return Math.round((n + Number.EPSILON) * p) / p;&#13;
+  }&#13;
+&#13;
+  var result = {&#13;
+    commissionRate: round(commissionRate, 4),     // e.g., 0.1900 for 19%&#13;
+    saleAmount: round(amt, 2),&#13;
+    commissionAmount: round(commissionAmount, 2),&#13;
+    detail: [&#13;
+      'base=' + (baseRate*100).toFixed(2) + '%',&#13;
+      'region=' + reg + ' +' + (regionAdder*100).toFixed(2) + 'pp',&#13;
+      'tier=' + tierNum + ' +' + (tierAdder*100).toFixed(2) + 'pp'&#13;
+    ].join(' | ')&#13;
+  };&#13;
+outputs.commission_rate = result.commissionRate&#13;
+outputs.sale_amount = result.saleAmount&#13;
+outputs.commission_amount = result.commissionAmount&#13;
+&#13;
+})(inputs, outputs);&#13;
+</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>tier</field>
+        <id>4010b3d797f47650d57b3c80f053af3c</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>4c10b3d797f47650d57b3c80f053af81</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_4010b3d797f47650d57b3c80f053af3c</table>
+        <value>{{action.agent_tier_level1}}</value>
+    </sys_element_mapping>
+    <sys_translated_text action="delete_multiple" query="documentkey=4010b3d797f47650d57b3c80f053af3c"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=4010b3d797f47650d57b3c80f053af3c^sys_idNOT IN0c10b3d797f47650d57b3c80f053af42,8810b3d797f47650d57b3c80f053af49,c010b3d797f47650d57b3c80f053af50"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>saleAmount</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>saleAmount</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">4010b3d797f47650d57b3c80f053af3c</model>
+        <model_id>4010b3d797f47650d57b3c80f053af3c</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_4010b3d797f47650d57b3c80f053af3c</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:20</sys_created_on>
+        <sys_id>0c10b3d797f47650d57b3c80f053af42</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=choice,uiTypeLabel=Choice</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>1</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>region</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Choice">choice</internal_type>
+        <label>region</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Script step">4010b3d797f47650d57b3c80f053af3c</model>
+        <model_id>4010b3d797f47650d57b3c80f053af3c</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_4010b3d797f47650d57b3c80f053af3c</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:20</sys_created_on>
+        <sys_id>8810b3d797f47650d57b3c80f053af49</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=choice,uiTypeLabel=Choice</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>1</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>tier</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Choice">choice</internal_type>
+        <label>tier</label>
+        <mandatory>true</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Script step">4010b3d797f47650d57b3c80f053af3c</model>
+        <model_id>4010b3d797f47650d57b3c80f053af3c</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_4010b3d797f47650d57b3c80f053af3c</name>
+        <next_element/>
+        <order>200</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:20</sys_created_on>
+        <sys_id>c010b3d797f47650d57b3c80f053af50</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=4010b3d797f47650d57b3c80f053af3c^sys_idNOT IN0410b3d797f47650d57b3c80f053af5e,0810b3d797f47650d57b3c80f053af57,0810b3d797f47650d57b3c80f053af70"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=f10860d9-741c-4b46-8568-d24fd66910e7</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sale_amount</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Sale Amount</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">4010b3d797f47650d57b3c80f053af3c</model>
+        <model_id>4010b3d797f47650d57b3c80f053af3c</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_4010b3d797f47650d57b3c80f053af3c</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>0410b3d797f47650d57b3c80f053af5e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=62b70be1-5f96-4fc4-ab4f-d1f5cec9b40c</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>commission_rate</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Commission Rate</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">4010b3d797f47650d57b3c80f053af3c</model>
+        <model_id>4010b3d797f47650d57b3c80f053af3c</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_4010b3d797f47650d57b3c80f053af3c</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>0810b3d797f47650d57b3c80f053af57</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=f95109ba-9a24-4e9a-9490-a65e2867af1f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>commission_amount</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Commission Amount</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">4010b3d797f47650d57b3c80f053af3c</model>
+        <model_id>4010b3d797f47650d57b3c80f053af3c</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_4010b3d797f47650d57b3c80f053af3c</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>0810b3d797f47650d57b3c80f053af70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4010b3d797f47650d57b3c80f053af3c"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>commission_rate</element>
+        <help/>
+        <hint/>
+        <label>Commission Rate</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_4010b3d797f47650d57b3c80f053af3c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>4c10b3d797f47650d57b3c80f053af5c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>sale_amount</element>
+        <help/>
+        <hint/>
+        <label>Sale Amount</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_4010b3d797f47650d57b3c80f053af3c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>8810b3d797f47650d57b3c80f053af62</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>commission_amount</element>
+        <help/>
+        <hint/>
+        <label>Commission Amount</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_4010b3d797f47650d57b3c80f053af3c</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>8c10b3d797f47650d57b3c80f053af74</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_input action="delete_multiple" query="model=bb00b3d797f47650d57b3c80f053af02^sys_idNOT IN3b00b3d797f47650d57b3c80f053af07,3b00b3d797f47650d57b3c80f053af0f,8810b3d797f47650d57b3c80f053af28"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=73483627-e10f-4ed6-889f-844ebbf6d0b3</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sale_amount</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Sale Amount</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Region Tiered Commission Action">bb00b3d797f47650d57b3c80f053af02</model>
+        <model_id>bb00b3d797f47650d57b3c80f053af02</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_bb00b3d797f47650d57b3c80f053af02</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:20</sys_created_on>
+        <sys_id>3b00b3d797f47650d57b3c80f053af07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3b00b3d797f47650d57b3c80f053af07"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=choice,uiTypeLabel=Choice,uiUniqueId=4a2c9afd-b3e5-4dd6-a080-aef98738a108</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>NA</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>region</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Choice">choice</internal_type>
+        <label>Region</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Region Tiered Commission Action">bb00b3d797f47650d57b3c80f053af02</model>
+        <model_id>bb00b3d797f47650d57b3c80f053af02</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_bb00b3d797f47650d57b3c80f053af02</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:20</sys_created_on>
+        <sys_id>3b00b3d797f47650d57b3c80f053af0f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3b00b3d797f47650d57b3c80f053af0f"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=choice,uiTypeLabel=Choice,uiUniqueId=9d8aef41-5d98-4b35-bcce-332ad691af83</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice>3</choice>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>4</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>agent_tier_level1</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Choice">choice</internal_type>
+        <label>Agent Tier Level</label>
+        <mandatory>false</mandatory>
+        <max_length>32</max_length>
+        <model display_value="Region Tiered Commission Action">bb00b3d797f47650d57b3c80f053af02</model>
+        <model_id>bb00b3d797f47650d57b3c80f053af02</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_bb00b3d797f47650d57b3c80f053af02</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:20</sys_created_on>
+        <sys_id>8810b3d797f47650d57b3c80f053af28</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=8810b3d797f47650d57b3c80f053af28"/>
+    <sys_hub_action_output action="delete_multiple" query="model=bb00b3d797f47650d57b3c80f053af02^sys_idNOT IN0410b3d797f47650d57b3c80f053af88,0410b3d797f47650d57b3c80f053afa1,4010b3d797f47650d57b3c80f053af97,9010b3d797f47650d57b3c80f053afa8,c010b3d797f47650d57b3c80f053af90"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDACTIONSTATUS,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=613c17da-5946-41ba-83dc-87783cda0bda</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Region Tiered Commission Action">bb00b3d797f47650d57b3c80f053af02</model>
+        <model_id>bb00b3d797f47650d57b3c80f053af02</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_bb00b3d797f47650d57b3c80f053af02</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>0410b3d797f47650d57b3c80f053af88</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0410b3d797f47650d57b3c80f053af88"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0410b3d797f47650d57b3c80f053af88"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=a89b8203-6f95-47b1-8192-d393c531503d</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>commission_rate</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Commission Rate</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Region Tiered Commission Action">bb00b3d797f47650d57b3c80f053af02</model>
+        <model_id>bb00b3d797f47650d57b3c80f053af02</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_bb00b3d797f47650d57b3c80f053af02</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>0410b3d797f47650d57b3c80f053afa1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0410b3d797f47650d57b3c80f053afa1"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0410b3d797f47650d57b3c80f053afa1"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=ba4f2ec9-125c-45a9-903f-8e40ab3fec7c,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Region Tiered Commission Action">bb00b3d797f47650d57b3c80f053af02</model>
+        <model_id>bb00b3d797f47650d57b3c80f053af02</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_bb00b3d797f47650d57b3c80f053af02</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>4010b3d797f47650d57b3c80f053af97</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4010b3d797f47650d57b3c80f053af97"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4010b3d797f47650d57b3c80f053af97"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=0f12d697-3fa3-4fc0-b67a-18b6c1bcf891</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sale_amount</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Sale Amount</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Region Tiered Commission Action">bb00b3d797f47650d57b3c80f053af02</model>
+        <model_id>bb00b3d797f47650d57b3c80f053af02</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_bb00b3d797f47650d57b3c80f053af02</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>9010b3d797f47650d57b3c80f053afa8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=9010b3d797f47650d57b3c80f053afa8"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9010b3d797f47650d57b3c80f053afa8"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=8d336ce8-71e1-41d1-969f-7cb0cb05cdb2</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>commission_amount</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Commission Amount</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Region Tiered Commission Action">bb00b3d797f47650d57b3c80f053af02</model>
+        <model_id>bb00b3d797f47650d57b3c80f053af02</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_bb00b3d797f47650d57b3c80f053af02</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>c010b3d797f47650d57b3c80f053af90</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c010b3d797f47650d57b3c80f053af90"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c010b3d797f47650d57b3c80f053af90"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=bb00b3d797f47650d57b3c80f053af02"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=bb00b3d797f47650d57b3c80f053af02^sys_idNOT IN1810b3d797f47650d57b3c80f053afc7"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="Region Tiered Commission Action">bb00b3d797f47650d57b3c80f053af02</action_type_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>1810b3d797f47650d57b3c80f053afc7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=1810b3d797f47650d57b3c80f053afc7"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>sale_amount</element>
+        <help/>
+        <hint/>
+        <label>Sale Amount</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_bb00b3d797f47650d57b3c80f053af02</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:20</sys_created_on>
+        <sys_id>7300b3d797f47650d57b3c80f053af0e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>agent_tier_level1</element>
+        <help/>
+        <hint/>
+        <label>Agent Tier Level</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_bb00b3d797f47650d57b3c80f053af02</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:20</sys_created_on>
+        <sys_id>8c10b3d797f47650d57b3c80f053af33</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>region</element>
+        <help/>
+        <hint/>
+        <label>Region</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_bb00b3d797f47650d57b3c80f053af02</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:20</sys_created_on>
+        <sys_id>c010b3d797f47650d57b3c80f053af27</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_bb00b3d797f47650d57b3c80f053af02^sys_idNOT IN0010b3d797f47650d57b3c80f053af2f,0810b3d797f47650d57b3c80f053af14,4410b3d797f47650d57b3c80f053af2e,4c10b3d797f47650d57b3c80f053af13,8810b3d797f47650d57b3c80f053af2d,8c10b3d797f47650d57b3c80f053af15,c010b3d797f47650d57b3c80f053af15,cc10b3d797f47650d57b3c80f053af2c"/>
+    <sys_choice field="agent_tier_level1" table="var__m_sys_hub_action_input_bb00b3d797f47650d57b3c80f053af02">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>agent_tier_level1</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Tier 4</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_bb00b3d797f47650d57b3c80f053af02</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-30 19:37:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0010b3d797f47650d57b3c80f053af2f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-30 19:37:20</sys_updated_on>
+            <value>4</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>agent_tier_level1</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Tier 3</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_bb00b3d797f47650d57b3c80f053af02</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-30 19:37:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4410b3d797f47650d57b3c80f053af2e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-30 19:37:20</sys_updated_on>
+            <value>3</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>agent_tier_level1</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Tier 2</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_bb00b3d797f47650d57b3c80f053af02</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-30 19:37:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8810b3d797f47650d57b3c80f053af2d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-30 19:37:20</sys_updated_on>
+            <value>2</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>agent_tier_level1</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Tier 1</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_bb00b3d797f47650d57b3c80f053af02</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-30 19:37:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>cc10b3d797f47650d57b3c80f053af2c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-30 19:37:20</sys_updated_on>
+            <value>1</value>
+        </sys_choice>
+    </sys_choice>
+    <sys_choice field="region" table="var__m_sys_hub_action_input_bb00b3d797f47650d57b3c80f053af02">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>region</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Europe, the Middle East and Africa</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_bb00b3d797f47650d57b3c80f053af02</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-30 19:37:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>0810b3d797f47650d57b3c80f053af14</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-30 19:37:20</sys_updated_on>
+            <value>EMEA</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>region</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>North America</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_bb00b3d797f47650d57b3c80f053af02</name>
+            <sequence>0</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-30 19:37:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>4c10b3d797f47650d57b3c80f053af13</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-30 19:37:20</sys_updated_on>
+            <value>NA</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>region</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Latin America</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_bb00b3d797f47650d57b3c80f053af02</name>
+            <sequence>3</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-30 19:37:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8c10b3d797f47650d57b3c80f053af15</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-30 19:37:20</sys_updated_on>
+            <value>LATAM</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>region</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Asia-Pacific</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_bb00b3d797f47650d57b3c80f053af02</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-10-30 19:37:20</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c010b3d797f47650d57b3c80f053af15</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-10-30 19:37:20</sys_updated_on>
+            <value>APAC</value>
+        </sys_choice>
+    </sys_choice>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_bb00b3d797f47650d57b3c80f053af02</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>0c10b3d797f47650d57b3c80f053af8e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_bb00b3d797f47650d57b3c80f053af02</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>4c10b3d797f47650d57b3c80f053af9f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>sale_amount</element>
+        <help/>
+        <hint/>
+        <label>Sale Amount</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_bb00b3d797f47650d57b3c80f053af02</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>5810b3d797f47650d57b3c80f053afad</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>commission_amount</element>
+        <help/>
+        <hint/>
+        <label>Commission Amount</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_bb00b3d797f47650d57b3c80f053af02</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>8810b3d797f47650d57b3c80f053af95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>commission_rate</element>
+        <help/>
+        <hint/>
+        <label>Commission Rate</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_bb00b3d797f47650d57b3c80f053af02</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-30 19:37:21</sys_created_on>
+        <sys_id>d810b3d797f47650d57b3c80f053afa6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Action Pack" source="x_snc_actionpack">b812ceb69337a210633378917cba10bc</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Action Pack">b812ceb69337a210633378917cba10bc</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-10-30 19:37:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_bb00b3d797f47650d57b3c80f053af02"/>
+    <sys_hub_action_type_definition action="UPDATE">
+        <sys_id>5df4a71f97347650d57b3c80f053af9b</sys_id>
+        <latest_snapshot>bb00b3d797f47650d57b3c80f053af02</latest_snapshot>
+        <compiler_build>glide-zurich-07-01-2025__patch2-09-24-2025_10-12-2025_0904.zip</compiler_build>
+    </sys_hub_action_type_definition>
+</record_update>
